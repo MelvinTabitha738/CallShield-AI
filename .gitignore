@@ -1,15 +1,47 @@
-spam_classifier_model/
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+*.py[codz]
+*$py.class
+
+# C extensions
 *.so
-*.egg
-*.egg-info/
-dist/
+
+# Distribution / packaging
+.Python
 build/
-.venv/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+.envrc
+.venv
+env/
 venv/
 ENV/
+env.bak/
+venv.bak/
+
+# Model files
+spam_classifier_model/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store

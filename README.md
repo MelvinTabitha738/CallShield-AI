@@ -1,6 +1,9 @@
-# Spam Detection App
+# CallShield-AI
+An AI-powered call security assistant that detects and prevents scam calls in real-time.
 
-## Setup and Run
+## RoBERTa Spam Detection Model
+
+### Setup and Run
 
 1. Install dependencies:
 ```bash
@@ -19,7 +22,7 @@ python app.py
 
 4. Open browser and go to: http://localhost:5000
 
-## Quick Test (without training)
+### Quick Test (without training)
 ```bash
 python predict.py
 ```
