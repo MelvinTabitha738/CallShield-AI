@@ -1,0 +1,6002 @@
+[
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 250. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 250. manze",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150. msee",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 1000 kwa hii number. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. bro",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 500. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 1000. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 150 kwa hii number. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. manze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 150 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? nkt",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 150. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? bro",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 500.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? nkt",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? maze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? manze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 1000. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 500. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 250. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? manze",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 500. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. bro",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. jo",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 250. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 500 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 150 kwa hii number. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. jo",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 250 kwa hii number. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? manze",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. manze",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 1000 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. manze",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 150 kwa hii number. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 150 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 150 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. manze",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 500 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 1000. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 500.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 1000 kwa hii number. jo",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? bro",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 150 kwa hii number. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 1000 kwa hii number. msee",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 250 kwa hii number. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 1000 kwa hii number. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 500.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 150 kwa hii number. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 1000 kwa hii number. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. bro",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 1000 kwa hii number. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 150 kwa hii number. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. maze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 500 kwa hii number. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 500. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. jo",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. jo",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. maze",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 500 kwa hii number. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 1000 kwa hii number. jo",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 250 kwa hii number. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 150 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 500.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 500.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 1000 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 150 kwa hii number. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. jo",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 250. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 150 kwa hii number. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 1000 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 1000 kwa hii number. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. jo",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 1000. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. bro",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. manze",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. msee",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 500 kwa hii number. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 1000 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. manze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 500 kwa hii number. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. jo",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 250. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 1000. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 150 kwa hii number. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? jo",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 500 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 250. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 1000 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. msee",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 250. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. maze",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? bro",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. bro",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 1000 kwa hii number. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. bro",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 250 kwa hii number. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 500 kwa hii number. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. jo",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 150 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 500 kwa hii number. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? manze",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 500. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 250 kwa hii number. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 500 kwa hii number. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 250. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 150. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 500. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 50,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 250 KES only. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 100,000 KES. To claim, tuma 250 kwa hii number. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 500 kwa hii number. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. maze",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 150. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. msee",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 150. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? bro",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 500.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 20,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 250 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 1000 leo. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 20,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 150.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. manze",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 10,000 KES. To claim, tuma 1000 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 150 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. nkt",
+    "label": "spam"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. manze",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. bro",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 1000 KES delivery fee. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 100,000 KES. Activate by sending fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. maze",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. msee",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 1000 KES only.",
+    "label": "spam"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 200,000 KES. Activate by sending fee. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Boss, natuma estimate ya project saa hii. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting.",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 200,000 KES. To claim, tuma 250 kwa hii number.",
+    "label": "spam"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons. maze",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 10,000 KES instantly. Just lipa processing fee ya 150. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, I wanted to follow up on the report before today's meeting. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Congratulations! Umeshinda 50,000 KES. To claim, tuma 250 kwa hii number. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? maze",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 50,000 KES. Activate by sending fee. sasa",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. sasa",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open?",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. msee",
+    "label": "ham"
+  },
+  {
+    "text": "Good news! Umeshinda shopping voucher ya 10,000 KES. Activate by sending fee. si ni tricky",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 500 KES only. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. nkt",
+    "label": "ham"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. jo",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 500 KES delivery fee. si unajua",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 200,000 KES instantly. Just lipa processing fee ya 1000.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow.",
+    "label": "ham"
+  },
+  {
+    "text": "Hey, unaweza nitumia location ya shop?",
+    "label": "ham"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification. akia basi",
+    "label": "spam"
+  },
+  {
+    "text": "Safaricom bonus offer: get 100,000 KES instantly. Just lipa processing fee ya 250.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Hi, niko kwa gate. Can you open? manze",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 150 leo. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. bro",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, I'm calling to confirm your delivery time for tomorrow. si ni tricky",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen.",
+    "label": "spam"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job.",
+    "label": "ham"
+  },
+  {
+    "text": "This is NTSA. Your license is invalid. Pay penalty ya 500 leo.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, your line imechaguliwa for a special reward. Please send your M-PESA PIN for verification.",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, tunapeana jobs za remote work. Register with 150 KES only. manze",
+    "label": "spam"
+  },
+  {
+    "text": "Congratulations! Umeshinda 20,000 KES. To claim, tuma 150 kwa hii number. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Habari, tunatoa mkopo wa haraka bila security. Tuma registration fee sasa hivi. bro",
+    "label": "spam"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  },
+  {
+    "text": "This is KRA. Your account is flagged. Press 1 ama tutakutumia summons.",
+    "label": "spam"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call. si unajua",
+    "label": "ham"
+  },
+  {
+    "text": "Sasa bro, niko kwa stage, nataka kujua kama umefika job. akia basi",
+    "label": "ham"
+  },
+  {
+    "text": "Good morning, just checking if you're still available for the call.",
+    "label": "ham"
+  },
+  {
+    "text": "You have been selected for a free smartphone. To proceed, pay 250 KES delivery fee.",
+    "label": "spam"
+  },
+  {
+    "text": "Mama, umenunua unga? Niko kwa supermarket saa hii. jo",
+    "label": "ham"
+  },
+  {
+    "text": "Your bank account imekuwa suspended. Call us immediately or funds will be frozen. hivi",
+    "label": "spam"
+  },
+  {
+    "text": "Good afternoon, your appointment is scheduled for 3PM. hivi",
+    "label": "ham"
+  },
+  {
+    "text": "Hello, this is customer care. Kindly confirm your last transaction.",
+    "label": "ham"
+  }
+]
