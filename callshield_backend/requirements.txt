@@ -1,0 +1,22 @@
+# Core Django
+Django==4.2.10
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# Database
+psycopg2-binary==2.9.9
+
+# Authentication
+djangorestframework-simplejwt==5.3.1
+
+# Phone number validation
+phonenumbers==8.13.27
+
+# Environment variables
+python-decouple==3.8
+
+# For later (optional for now)
+# celery==5.3.4
+# redis==5.0.1
+# SMS (Production only - uncomment when deploying)
+ africastalking==1.2.6
