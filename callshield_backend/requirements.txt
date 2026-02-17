@@ -20,3 +20,5 @@ python-decouple==3.8
 # redis==5.0.1
 # SMS (Production only - uncomment when deploying)
  africastalking==1.2.6
+ # Image handling
+Pillow==10.2.0

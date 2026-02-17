@@ -18,8 +18,16 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('backend_apps.authentication.urls')),
+    path('api/scam-db/', include('backend_apps.scam_database.urls')),
 ]
+
+
+# Media files (for development)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

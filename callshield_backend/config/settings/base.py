@@ -16,6 +16,8 @@ from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+#BASE_DIR = Path(__file__).resolve().parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
     #Local apps
     'backend_apps.authentication',
+    'backend_apps.scam_database',
 ]
 
 MIDDLEWARE = [
@@ -149,6 +152,8 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.MultiPartParser',  
+        'rest_framework.parsers.FormParser',
     ],
 }
 
@@ -173,3 +178,7 @@ AUTH_USER_MODEL = 'authentication.User'
 # SMS Backend (for OTP)
 SMS_BACKEND = 'console'  # Options: 'console', 'email', 'africastalking'
 MOCK_OTP_ENABLED = True  # Accept "123456" always in development
+
+# Media files (uploaded content)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
