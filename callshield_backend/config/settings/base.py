@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     #Local apps
     'backend_apps.authentication',
     'backend_apps.scam_database',
+    'backend_apps.real_time_detection',
 ]
 
 MIDDLEWARE = [
