@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'backend_apps.authentication',
     'backend_apps.scam_database',
     'backend_apps.real_time_detection',
+    'backend_apps.analytics',
 ]
 
 MIDDLEWARE = [

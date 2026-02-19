@@ -26,6 +26,7 @@ urlpatterns = [
     path('api/auth/', include('backend_apps.authentication.urls')),
     path('api/scam-db/', include('backend_apps.scam_database.urls')),
     path('api/detection/', include('backend_apps.real_time_detection.urls')),
+    path('api/analytics/', include('backend_apps.analytics.urls')),
 ]
 
 
