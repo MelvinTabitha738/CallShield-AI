@@ -1,7 +1,8 @@
 import json
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import RobertaTokenizer, RobertaForSequenceClassification, AdamW
+from transformers import RobertaTokenizer, RobertaForSequenceClassification
+from torch.optim import AdamW
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
@@ -18,12 +19,21 @@ class SpamDataset(Dataset):
     def __len__(self):
         return len(self.labels)
 
-# Load data
-with open('spam_detection_dataset_1500.json', 'r') as f:
-    data = json.load(f)
+# Load both JSON datasets
+texts = []
+labels = []
 
-texts = [item['text'] for item in data]
-labels = [1 if item['label'] == 'spam' else 0 for item in data]
+with open('spam_detection_dataset_1500.json', 'r') as f:
+    data1 = json.load(f)
+    texts.extend([item['text'] for item in data1])
+    labels.extend([1 if item['label'] == 'spam' else 0 for item in data1])
+
+with open('training_data.json', 'r', encoding='utf-8') as f:
+    data2 = json.load(f)
+    texts.extend([item['text'] for item in data2])
+    labels.extend([1 if item['label'] == 'scam' else 0 for item in data2])
+
+print(f"Total samples: {len(texts)} (Spam: {sum(labels)}, Ham: {len(labels) - sum(labels)})")
 
 # Split data
 train_texts, val_texts, train_labels, val_labels = train_test_split(

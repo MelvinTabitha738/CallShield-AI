@@ -39,6 +39,14 @@ venv.bak/
 # Model files
 spam_classifier_model/
 
+# Uploads
+uploads/
+*.wav
+*.mp3
+*.ogg
+*.m4a
+*.flac
+
 # IDE
 .vscode/
 .idea/
