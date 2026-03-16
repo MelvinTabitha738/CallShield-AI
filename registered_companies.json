@@ -1,0 +1,34 @@
+{
+  "companies": [
+    {
+      "name": "Safaricom",
+      "phone_numbers": ["+254722000000", "0722000000", "+254100"],
+      "aliases": ["safcom", "saf", "safaricom customer care"]
+    },
+    {
+      "name": "KCB Bank",
+      "phone_numbers": ["+254711087000", "0711087000"],
+      "aliases": ["kcb", "kenya commercial bank", "kcb bank"]
+    },
+    {
+      "name": "Equity Bank",
+      "phone_numbers": ["+254763063000", "0763063000"],
+      "aliases": ["equity", "equity bank kenya"]
+    },
+    {
+      "name": "M-Pesa",
+      "phone_numbers": ["+254722000000", "0722000000"],
+      "aliases": ["mpesa", "m-pesa", "m pesa"]
+    },
+    {
+      "name": "Kenya Power (KPLC)",
+      "phone_numbers": ["+254703070707", "0703070707", "+254732170000"],
+      "aliases": ["kplc", "kenya power", "kenya power and lighting"]
+    },
+    {
+      "name": "Nairobi Water",
+      "phone_numbers": ["+254202757000", "0202757000"],
+      "aliases": ["nairobi water company", "water company"]
+    }
+  ]
+}

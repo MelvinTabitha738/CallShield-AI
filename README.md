@@ -1,62 +1,42 @@
-# CallShield-AI
-An AI-powered call security assistant that detects and prevents scam calls in real-time.
+---
+title: CallShield AI
+emoji: 🛡️
+colorFrom: purple
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
+# 🛡️ CallShield AI
+
+A real-time scam call detection system for Kenya, powered by a fine-tuned RoBERTa classifier and a rule-based Kenyan scam pattern engine.
 
 ## Features
-- 🎤 **Audio-to-Text**: Whisper medium model for accurate speech transcription
-- 🤖 **Spam Detection**: RoBERTa-based text classification
-- 🌐 **Web Interface**: Easy-to-use Flask web app
-- ⚡ **Real-time Analysis**: Fast processing pipeline
 
-## Setup and Run
+- **Text Analysis** — Paste a call transcript and get an instant scam risk score
+- **Audio Upload** — Upload a call recording (wav, mp3, m4a, etc.) — transcribed by Whisper then analyzed
+- **Live Microphone** — Stream your microphone in real time for live call monitoring
+- **Scam Type Detection** — Identifies the specific scam category (KRA Impersonation, M-Pesa Fraud, Phishing, etc.)
+- **Impersonation Detection** — Cross-checks caller number against a registry of verified Kenyan agency numbers
 
-### 1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## Scam Categories Detected
 
-**Note**: You also need FFmpeg installed:
-- **Windows**: Download from https://ffmpeg.org/download.html
-- **Linux**: `sudo apt install ffmpeg`
-- **Mac**: `brew install ffmpeg`
+| Category | Examples |
+|----------|---------|
+| KRA Impersonation | Fake tax demands, iTax threats |
+| M-Pesa Fraud | Fake reversals, wrong-number tricks |
+| Bank Impersonation | Fake Equity, KCB, NCBA calls |
+| Lottery/Prize Scam | You have won, unclaimed prizes |
+| Emergency Scam | Accident/hospital money requests |
+| Loan Scam | Job vacancy fees, advance fees |
+| Investment Scam | Unrealistic returns, inheritance funds |
+| Phishing | OTP theft, PIN requests, credential harvest |
 
-### 2. Train the spam detection model:
-```bash
-python train_model.py
-```
+## Tech Stack
 
-### 3. Run the web app:
-```bash
-python app.py
-```
-
-### 4. Open browser:
-Go to http://localhost:5000
-
-## Usage
-
-### Text Analysis
-- Type or paste text in the text tab
-- Click "Check Message"
-
-### Audio Analysis
-- Switch to Audio tab
-- Upload audio file (WAV, MP3, OGG, M4A, FLAC)
-- Click "Analyze Audio"
-- System will transcribe and analyze for spam
-
-## Command Line Usage
-
-### Analyze audio file:
-```bash
-python call_analyzer.py
-```
-
-### Test transcription only:
-```bash
-python audio_transcriber.py
-```
-
-### Test spam detection only:
-```bash
-python predict.py
-```
+- **ML Model**: RoBERTa fine-tuned for Kenyan scam/legitimate classification
+- **Speech-to-Text**: OpenAI Whisper (small)
+- **Rule Engine**: 23-flag Kenyan scam pattern analyzer (English + Swahili)
+- **Backend**: Flask + Flask-SocketIO
+- **Frontend**: Vanilla JS + Socket.IO

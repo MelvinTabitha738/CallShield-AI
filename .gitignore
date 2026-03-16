@@ -36,10 +36,9 @@ ENV/
 env.bak/
 venv.bak/
 
-# Model files
-spam_classifier_model/
-
 # Uploads
+
+
 uploads/
 *.wav
 *.mp3

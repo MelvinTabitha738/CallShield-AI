@@ -1,0 +1,2984 @@
+[
+  {
+    "id": 1,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "KRA",
+    "text": "Hello, this is Officer James Mwangi from Kenya Revenue Authority. Our records show unpaid taxes of KSh 45,000. If you do not pay within the next two hours, we will issue a warrant for your arrest. Pay via M-Pesa right now to avoid being taken into custody.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "demands_immediate_payment",
+      "threatens_arrest_or_legal",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 2,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "KRA",
+    "text": "Good afternoon, I am from KRA compliance. Your business has tax discrepancies of KSh 120,000. To avoid a court case, settle today. Provide your KRA PIN and ID number so we can process your case immediately.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "demands_immediate_payment",
+      "threatens_arrest_or_legal",
+      "requests_ID_number",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 3,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "KRA",
+    "text": "This is KRA enforcement. Your iTax account shows three years of unfiled returns. We are closing your business unless you pay KSh 85,000 as penalty right now. Send money to paybill 247247 and send us the transaction code.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "demands_immediate_payment",
+      "threatens_account_suspension",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "vague_case_reference"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "vague_case_reference": "Mentions a 'case', 'file', or 'report' without specific verifiable details"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 4,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "KRA",
+    "text": "Ninapigia kutoka KRA. Kodi yako ya biashara imeisha muda na unatakiwa kulipa faini ya shilingi elfu thelathini. Ikiwa hutalipa leo, tutafunga akaunti yako ya benki. Niambie namba yako ya kitambulisho ili nikuandalie risiti.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "demands_immediate_payment",
+      "threatens_account_suspension",
+      "requests_ID_number",
+      "creates_false_urgency",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 5,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "KRA",
+    "text": "We have audited your returns and found KSh 200,000 in undeclared income. This is a criminal offense. You have until 3 PM today to pay or we forward your file to the Director of Public Prosecutions. No extensions will be given.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "overstated_consequences",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 6,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "KRA",
+    "text": "Your KRA PIN has been flagged as inactive and your business will lose its tax compliance certificate today unless you call us back immediately and pay the reinstatement fee of KSh 7,500 via M-Pesa.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "threatens_account_suspension",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 7,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "police",
+    "text": "This is Inspector David Odhiambo from DCI Nairobi. Your name has come up in a fraud investigation. We need you to pay a bond of KSh 50,000 via M-Pesa. We do not want to embarrass you by coming to your home.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure",
+      "vague_case_reference"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "vague_case_reference": "Mentions a 'case', 'file', or 'report' without specific verifiable details"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 8,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "police",
+    "text": "I am Corporal Kipchoge from Kilimani Police. Your vehicle was in a hit and run last night. To settle out of court, pay KSh 30,000 to the victim right now or we will arrest you today.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 9,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "police",
+    "text": "Your relative has been arrested at Central Police Station on serious charges. Pay bail of KSh 40,000 via M-Pesa now. I am the duty officer. Court starts in one hour, there is no time to waste.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "exploits_family_emergency",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "exploits_family_emergency": "Claims a relative is in danger, arrested, or needs urgent help",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 10,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "police",
+    "text": "Habari, mimi ni Askari Mutua kutoka Langata. Mwanao ameshikiliwa kuhusiana na madawa ya kulevya. Ili umalize hali hii bila kwenda mahakamani, tuma KSh 25,000 sasa hivi kwa M-Pesa.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "exploits_family_emergency",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "exploits_family_emergency": "Claims a relative is in danger, arrested, or needs urgent help",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 11,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "police",
+    "text": "This is the Anti-Terrorism Police Unit. Your phone number has been linked to communications with a known terrorist network. Come to our offices within one hour or pay a clearance fee of KSh 80,000 to have your file closed.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "overstated_consequences",
+      "uses_emotional_pressure",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 12,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "police",
+    "text": "We have received a complaint against you from a neighbor. The case has been opened at Parklands Police Station. To avoid a formal summons, settle with the complainant today. Pay KSh 15,000 via M-Pesa and we close the file.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "requests_money_transfer",
+      "vague_case_reference",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "vague_case_reference": "Mentions a 'case', 'file', or 'report' without specific verifiable details",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 13,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "This is the Fraud Prevention Team at Equity Bank. We detected suspicious transactions of KSh 200,000. To freeze the fraudulent activity, provide your ATM PIN and the OTP that will be sent to your phone now.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 14,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "KCB Bank security desk calling. Someone is trying to transfer your savings. To stop the transfer I need your internet banking password and the verification code you just received. Please hurry.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 15,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "This is Co-operative Bank. Your account will be suspended in 30 minutes due to a security violation. Confirm your full name, ID number, account number, and banking password to reactivate your account.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "threatens_account_suspension",
+      "requests_ID_number",
+      "requests_account_details",
+      "requests_PIN_or_password",
+      "creates_false_urgency",
+      "credential_phishing"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 16,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "Ninapigia kutoka NCBA Bank. Akaunti yako imegundulika kuwa na shughuli ya kutia shaka. Ili kukizuia mtu asiibie pesa yako, ninahitaji namba yako ya siri ya ATM na kodi itakayotumwa kwenye simu yako.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 17,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "Standard Chartered fraud team calling. We have blocked your credit card due to unusual activity in Dubai. To unblock it and confirm you are the cardholder, read me the 3-digit CVV on the back of your card and the OTP we just sent you.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "credential_phishing",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 18,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "Your Absa bank account has reached our fraud threshold. We are placing a temporary hold on your funds. To lift the hold immediately, verify by providing your account number, the last 4 digits of your debit card, and your date of birth.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "threatens_account_suspension",
+      "requests_account_details",
+      "requests_ID_number",
+      "creates_false_urgency",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 19,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "bank",
+    "text": "Hello, Stanbic Bank here. A transaction of KSh 75,000 is pending from your account. We need to verify you authorized it. Tell me your mobile banking PIN and confirm the OTP we sent so we can verify and protect your account.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 20,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "Safaricom",
+    "text": "This is Safaricom customer care. Your M-Pesa account has been flagged for suspicious activity. Someone is using your line to send large amounts. Give me your M-Pesa PIN so we can reset it and protect your funds.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_telecom",
+      "requests_PIN_or_password",
+      "uses_emotional_pressure",
+      "credential_phishing",
+      "creates_false_urgency"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_telecom": "Pretends to be Safaricom, Airtel, or Telkom",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 21,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "Safaricom",
+    "text": "Hello, Safaricom technical team here. Your line is due for a 5G upgrade. To avoid losing your number, provide the OTP you received now and confirm the M-Pesa PIN linked to the account.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_telecom",
+      "requests_OTP",
+      "requests_PIN_or_password",
+      "creates_false_urgency",
+      "credential_phishing"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_telecom": "Pretends to be Safaricom, Airtel, or Telkom",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 22,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "Safaricom",
+    "text": "Safaricom is deactivating all unverified lines by end of today. To keep your number, dial back and provide your national ID number, SIM serial from the back of your card, and M-Pesa PIN.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_telecom",
+      "threatens_account_suspension",
+      "requests_ID_number",
+      "requests_PIN_or_password",
+      "creates_false_urgency",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_telecom": "Pretends to be Safaricom, Airtel, or Telkom",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 23,
+    "label": "scam",
+    "category": "authority_impersonation",
+    "subcategory": "Safaricom",
+    "text": "Tunakupigia kutoka Safaricom huduma kwa wateja. Akaunti yako ya M-Pesa itafungwa usiku huu kwa sababu ya shughuli ya kutia shaka. Ili kuizuia hii, tuma kwa WhatsApp picha ya kitambulisho chako na PIN yako ya M-Pesa.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_telecom",
+      "threatens_account_suspension",
+      "requests_ID_number",
+      "requests_PIN_or_password",
+      "creates_false_urgency",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_telecom": "Pretends to be Safaricom, Airtel, or Telkom",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 24,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "Safaricom_promo",
+    "text": "Congratulations! Your Safaricom number has been selected as the lucky winner of our 20th anniversary promotion. You have won KSh 500,000 and a Toyota. To claim, pay a processing fee of KSh 5,000 via M-Pesa and provide your full name and ID number.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "requests_ID_number",
+      "unsolicited_prize_notification",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 25,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "Safaricom_promo",
+    "text": "Your number ending 7823 won the Safaricom weekly draw of KSh 1,000,000. Pay a KSh 3,500 release fee to confirm you are genuine. Send via M-Pesa to 0712345678 and your winnings arrive within 24 hours.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "unsolicited_prize_notification",
+      "demands_immediate_payment"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 26,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "Safaricom_promo",
+    "text": "Hongera sana! Namba yako imechaguliwa kupitia mfumo wa Safaricom na umeshinda KSh 750,000. Ili kupokea zawadi, tuma KSh 2,000 kama ada ya utoaji. Bahati yako ni kubwa sana.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "unsolicited_prize_notification",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 27,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "international",
+    "text": "The International Mobile Lottery Board draw has selected you. Your prize is USD 85,000. Pay a tax clearance fee of KSh 8,000. This offer expires in 48 hours.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "creates_false_urgency",
+      "unsolicited_prize_notification"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 28,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "international",
+    "text": "The United Nations Development Program lottery selected your phone number for USD 50,000 as part of a poverty alleviation initiative. Send your ID scan, date of birth, and a registration fee of KSh 12,000 to this email.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "requests_ID_number",
+      "unsolicited_prize_notification",
+      "impersonates_authority"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition",
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 29,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "local_promo",
+    "text": "Umeshinda zawadi ya KSh 200,000 kutoka kampuni yetu. Ili tukutumie pesa, tutahitaji jina lako kamili, namba ya kitambulisho, na malipo ya ada ya usimamizi ya KSh 1,500 kupitia M-Pesa.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "requests_ID_number",
+      "unsolicited_prize_notification"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 30,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "local_promo",
+    "text": "You won a brand new smartphone from an online competition your friend entered on your behalf. To ship it, pay delivery and customs clearance of KSh 4,000. Send now and we dispatch your parcel today.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "demands_immediate_payment",
+      "unsolicited_prize_notification"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 31,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "sports_betting",
+    "text": "Hongera! Umeshinda jackpot ya SportPesa ya KSh 2,000,000. Ili kudai zawadi, tuma KSh 5,000 kama ada ya ushuru wa serikali. Hii ndiyo sheria kwa malipo yanayozidi milioni moja.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "impersonates_authority",
+      "unsolicited_prize_notification"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 32,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "WhatsApp_chain",
+    "text": "BREAKING: Equity Bank is celebrating 20 years and giving KSh 50,000 to 100 lucky customers. Send this to 10 contacts and enter your ID on equitybank-promotion.freesite.com. Winners receive prize within 24 hours.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requests_ID_number",
+      "unsolicited_prize_notification",
+      "impersonates_authority",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition",
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 33,
+    "label": "scam",
+    "category": "fake_lottery",
+    "subcategory": "fuel_promo",
+    "text": "Total Energies is giving away free fuel worth KSh 10,000 to customers this month. Your car registration was selected. To redeem, click this link, enter your ID number and M-Pesa number, and pay a small verification fee of KSh 500.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "requests_ID_number",
+      "advance_fee_fraud",
+      "unsolicited_prize_notification"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 34,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "arrest_warrant",
+    "text": "Final warning. A warrant of arrest has been issued in your name by Milimani Law Courts. Pay a compounding fee of KSh 60,000 now or our officers are on their way to your address.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "vague_case_reference",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "vague_case_reference": "Mentions a 'case', 'file', or 'report' without specific verifiable details",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 35,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "arrest_warrant",
+    "text": "Your National ID has been flagged by Immigration. You are suspected of money laundering. You have 30 minutes to pay KSh 95,000 to clear your name before we involve Interpol. Do not share this call with anyone.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "overstated_consequences",
+      "instructs_secrecy",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "instructs_secrecy": "Tells the victim not to tell anyone, not to call police, or to keep the call confidential",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 36,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "account_suspension",
+    "text": "Your M-Pesa account will be permanently closed in 15 minutes unless you verify your details now. Provide full name, ID number, date of birth, and M-Pesa PIN to avoid losing access to your money.",
+    "pattern_flags": [
+      "threatens_account_suspension",
+      "demands_immediate_payment",
+      "requests_ID_number",
+      "requests_PIN_or_password",
+      "creates_false_urgency",
+      "credential_phishing",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 37,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "account_suspension",
+    "text": "Akaunti yako ya benki itafungwa saa mbili usiku huu kama hutawasiliana nasi. Piga simu mara moja kwa namba hii ili kuthibitisha utambulisho wako.",
+    "pattern_flags": [
+      "threatens_account_suspension",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "impersonates_bank",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 38,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "family_emergency",
+    "text": "Your son has been in a serious accident on Thika Road. He is at KNH and needs emergency surgery costing KSh 70,000. The hospital requires payment before they can operate. Send money via M-Pesa now. It is life and death.",
+    "pattern_flags": [
+      "exploits_family_emergency",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "exploits_family_emergency": "Claims a relative is in danger, arrested, or needs urgent help",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 39,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "family_emergency",
+    "text": "Mama yako yuko hospitali sasa hivi. Amegongwa na gari. Daktari anasema anahitaji malipo ya KSh 45,000 kwa upasuaji wa haraka. Tuma pesa kwa M-Pesa sasa hivi.",
+    "pattern_flags": [
+      "exploits_family_emergency",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "exploits_family_emergency": "Claims a relative is in danger, arrested, or needs urgent help",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 40,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "family_emergency",
+    "text": "Your daughter was arrested at JKIA attempting to smuggle goods. To prevent her from being charged and deported, pay KSh 120,000 immediately. The case can be settled quietly if you act in the next 20 minutes.",
+    "pattern_flags": [
+      "exploits_family_emergency",
+      "impersonates_authority",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "instructs_secrecy",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "exploits_family_emergency": "Claims a relative is in danger, arrested, or needs urgent help",
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "instructs_secrecy": "Tells the victim not to tell anyone, not to call police, or to keep the call confidential",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 41,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "debt_collection",
+    "text": "We are a debt recovery firm. Your outstanding loan of KSh 15,000 has been sold to our agency. If you do not pay today, agents will go to your workplace and home. You have until 5 PM.",
+    "pattern_flags": [
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "requests_money_transfer",
+      "overstated_consequences",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 42,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "blackmail",
+    "text": "We have photos and videos from your phone. Pay KSh 50,000 to this M-Pesa number within one hour or we start sending them out. Do not call police. Do not tell anyone.",
+    "pattern_flags": [
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "instructs_secrecy",
+      "uses_emotional_pressure",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "instructs_secrecy": "Tells the victim not to tell anyone, not to call police, or to keep the call confidential",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 43,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "fake_investment",
+    "text": "This opportunity closes in two hours. Our forex platform gives a guaranteed 300% return in 7 days. Minimum KSh 5,000. Many have made millions. Miss this and you will regret it.",
+    "pattern_flags": [
+      "offers_unrealistic_reward",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "requests_money_transfer",
+      "advance_fee_fraud"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 44,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "utility_threat",
+    "text": "This is Kenya Power. A balance discrepancy on your postpaid account means your electricity will be disconnected in 45 minutes unless you pay KSh 12,500 via M-Pesa Paybill 888880 now.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_utility",
+      "threatens_account_suspension",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_utility": "Pretends to be Kenya Power, Water, or another utility",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 45,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "cyber_crime",
+    "text": "Your computer IP address is linked to illegal content downloads. This is a criminal offense in Kenya. An investigation is open. Pay a settlement of KSh 25,000 within one hour to close the case before it reaches your employer.",
+    "pattern_flags": [
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "overstated_consequences",
+      "uses_emotional_pressure",
+      "instructs_secrecy",
+      "vague_case_reference"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "instructs_secrecy": "Tells the victim not to tell anyone, not to call police, or to keep the call confidential",
+      "vague_case_reference": "Mentions a 'case', 'file', or 'report' without specific verifiable details"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 46,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "immigration",
+    "text": "Kenya Immigration Services: your passport has been flagged for a travel violation. A deportation order will be issued in your name unless you pay a clearance fee of KSh 40,000 by end of today. Keep this call confidential.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "overstated_consequences",
+      "instructs_secrecy",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "instructs_secrecy": "Tells the victim not to tell anyone, not to call police, or to keep the call confidential",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 47,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "loan_fraud",
+    "text": "Recovery Capital Limited: you have an unpaid digital loan of KSh 8,500 from three months ago. We will report to your employer and restrict all your mobile services. Pay KSh 14,000 including penalty right now via M-Pesa.",
+    "pattern_flags": [
+      "demands_immediate_payment",
+      "threatens_account_suspension",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "overstated_consequences",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 48,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "NTSA",
+    "text": "Calling from NTSA. Your vehicle KCB 723X has three traffic violations totaling KSh 18,000. Your logbook will be suspended. Pay to our M-Pesa shortcode immediately and send us the confirmation.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "demands_immediate_payment",
+      "threatens_account_suspension",
+      "creates_false_urgency",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 49,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "court_summons",
+    "text": "Milimani Commercial Courts: a civil suit has been filed against you seeking KSh 500,000. A default judgment will be entered today unless you call this number and arrange an out-of-court settlement immediately.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "vague_case_reference"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "vague_case_reference": "Mentions a 'case', 'file', or 'report' without specific verifiable details"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 50,
+    "label": "scam",
+    "category": "urgency_threat",
+    "subcategory": "CBK",
+    "text": "Central Bank of Kenya monetary policy unit: your business accounts are flagged under anti-money laundering rules. Pay a compliance bond of KSh 150,000 within the hour or all accounts will be frozen. This is a direct order from the Governor's office.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "threatens_account_suspension",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "overstated_consequences",
+      "uses_emotional_pressure",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "overstated_consequences": "Exaggerates consequences (deportation, Interpol, permanent account loss) to maximize fear",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 51,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "national_ID",
+    "text": "We are conducting a national data verification exercise commissioned by the government. To update the national registry, we need your ID number, date of birth, mother's maiden name, and home address. This is mandatory.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "requests_ID_number",
+      "credential_phishing",
+      "unsolicited_contact",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 52,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "national_ID",
+    "text": "Tunapigia kutoka Huduma Nchini ili kukuandikisha kwenye mfumo mpya wa vitambulisho. Tunahitaji namba yako ya zamani ya kitambulisho, sahihi yako ya kidole, na namba ya simu uliyosajili nayo.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "requests_ID_number",
+      "credential_phishing",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 4,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 4
+  },
+  {
+    "id": 53,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "banking_credentials",
+    "text": "This is a customer service survey on behalf of your bank. Please confirm your account number, last four digits of your debit card, and your internet banking username. This helps us match our records.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_account_details",
+      "credential_phishing",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 54,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "banking_credentials",
+    "text": "Your bank has upgraded its security system. All customers must re-register. I need your full name, account number, ATM PIN, and the OTP sent to your phone. Without this, your account will be blocked by end of today.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "threatens_account_suspension",
+      "requests_account_details",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "credential_phishing"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "threatens_account_suspension": "Threatens to block, freeze, or suspend an account or service",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 55,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "OTP_theft",
+    "text": "Hello, I accidentally sent KSh 10,000 to your M-Pesa by mistake. Please share the code that just came to your phone because that is the reversal code Safaricom uses to process the refund.",
+    "pattern_flags": [
+      "fake_reversal_trick",
+      "requests_OTP",
+      "uses_emotional_pressure",
+      "unsolicited_contact",
+      "credential_phishing"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "fake_reversal_trick": "Claims to have sent money by mistake and needs a 'code' or return transfer",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 56,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "OTP_theft",
+    "text": "Samahani sana, nilituma pesa kwa namba yako kwa makosa. KSh 5,000. Tafadhali nipelekee kodi itakayokuja kwenye simu yako ili mfumo uweze kufanya marekebisho.",
+    "pattern_flags": [
+      "fake_reversal_trick",
+      "requests_OTP",
+      "uses_emotional_pressure",
+      "unsolicited_contact",
+      "credential_phishing"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "fake_reversal_trick": "Claims to have sent money by mistake and needs a 'code' or return transfer",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 57,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "OTP_theft",
+    "text": "I sent you KSh 8,000 through your Airtel Money by mistake. For the reversal to go through, Airtel requires you to share the 4-digit code they sent you. Please share it quickly before the transaction expires.",
+    "pattern_flags": [
+      "fake_reversal_trick",
+      "requests_OTP",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "fake_reversal_trick": "Claims to have sent money by mistake and needs a 'code' or return transfer",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 58,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "fake_survey",
+    "text": "I am a researcher from Strathmore University on mobile phone usage in Kenya. Can you tell me your full name, age, occupation, mobile network, approximate monthly income, and the password format you typically use for online accounts?",
+    "pattern_flags": [
+      "impersonates_authority",
+      "requests_ID_number",
+      "credential_phishing",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 4,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 4
+  },
+  {
+    "id": 59,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "fake_job",
+    "text": "Your CV has been shortlisted for a data entry job paying KSh 80,000 monthly. The position is remote and starts immediately. I need a scanned copy of your ID, KRA PIN certificate, bank account details, and a registration fee of KSh 2,000.",
+    "pattern_flags": [
+      "offers_unrealistic_reward",
+      "job_offer_with_fee",
+      "requests_ID_number",
+      "requests_account_details",
+      "advance_fee_fraud",
+      "credential_phishing"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "job_offer_with_fee": "Offers a job but requires payment of a registration or background check fee",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 60,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "fake_job",
+    "text": "Congratulations, you have been selected for a government-sponsored internship paying KSh 35,000 per month. To secure your placement before someone else takes it, pay a background check fee of KSh 3,000 today. Slots close at midnight.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "job_offer_with_fee",
+      "advance_fee_fraud",
+      "creates_false_urgency",
+      "offers_unrealistic_reward",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "job_offer_with_fee": "Offers a job but requires payment of a registration or background check fee",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 61,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "pension_fraud",
+    "text": "This is NSSF calling. Your pension contributions are being migrated to the new system. Confirm your full name, ID number, NSSF membership number, employer, and M-Pesa PIN for verification.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "requests_ID_number",
+      "requests_PIN_or_password",
+      "credential_phishing",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 62,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "social_media_hack",
+    "text": "Hi, your WhatsApp has been compromised and someone is impersonating you. We are from the Meta safety team. Provide your login email and the 6-digit verification code just sent to your phone to secure your account.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "requests_OTP",
+      "credential_phishing",
+      "creates_false_urgency",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 63,
+    "label": "scam",
+    "category": "data_harvesting",
+    "subcategory": "NHIF_fraud",
+    "text": "This is NHIF calling to update your beneficiary details under the new SHIF regulations. We require your full name, ID number, date of birth, and bank account number where claims are deposited.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "requests_ID_number",
+      "requests_account_details",
+      "credential_phishing",
+      "unsolicited_contact"
+    ],
+    "pattern_count": 5,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "unsolicited_contact": "Caller initiates contact with no prior relationship or context"
+    },
+    "risk_score": 5
+  },
+  {
+    "id": 64,
+    "label": "scam",
+    "category": "mixed",
+    "subcategory": "authority_lottery",
+    "text": "This is a combined alert from Safaricom and Kenya Police. Your number was used in a cyber fraud case worth KSh 3,000,000. You have been identified. To clear your name, call our taskforce and make a good faith payment of KSh 20,000.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "impersonates_telecom",
+      "threatens_arrest_or_legal",
+      "demands_immediate_payment",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "requests_money_transfer"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "impersonates_telecom": "Pretends to be Safaricom, Airtel, or Telkom",
+      "threatens_arrest_or_legal": "Threatens arrest, court case, warrant, or legal action",
+      "demands_immediate_payment": "Payment must be made right now, within minutes or hours",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 65,
+    "label": "scam",
+    "category": "mixed",
+    "subcategory": "lottery_data_harvest",
+    "text": "You have won KSh 300,000. To verify your identity as the winner, provide your full name, ID number, date of birth, occupation, and M-Pesa PIN. Our system will transfer winnings directly to your account.",
+    "pattern_flags": [
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requests_ID_number",
+      "requests_PIN_or_password",
+      "credential_phishing",
+      "advance_fee_fraud",
+      "unsolicited_prize_notification"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "credential_phishing": "Collects login credentials, passwords, or security codes",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "unsolicited_prize_notification": "Notifies of winning a prize without the victim entering any competition"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 66,
+    "label": "scam",
+    "category": "mixed",
+    "subcategory": "police_investment",
+    "text": "This is DCI Financial Crimes Unit. We are investigating an investment fraud scheme but need an undercover informant. Invest KSh 50,000 with the fraudulent platform as part of our sting operation. We will return your money plus a reward of KSh 200,000 after the operation.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_police",
+      "offers_unrealistic_reward",
+      "advance_fee_fraud",
+      "requests_money_transfer",
+      "uses_emotional_pressure"
+    ],
+    "pattern_count": 6,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_police": "Pretends to be DCI, Kenya Police, or law enforcement",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "requests_money_transfer": "Asks victim to send money via M-Pesa, bank transfer, or agent",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment"
+    },
+    "risk_score": 6
+  },
+  {
+    "id": 67,
+    "label": "scam",
+    "category": "mixed",
+    "subcategory": "bank_urgency_data",
+    "text": "Equity Bank fraud team: your account is being drained right now. I need your ATM PIN and OTP to freeze the transaction immediately. There are only 3 minutes before the transfer completes.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_bank",
+      "requests_PIN_or_password",
+      "requests_OTP",
+      "creates_false_urgency",
+      "uses_emotional_pressure",
+      "credential_phishing"
+    ],
+    "pattern_count": 7,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_bank": "Pretends to be a bank employee or fraud department",
+      "requests_PIN_or_password": "Asks for M-Pesa PIN, ATM PIN, internet banking password, or account password",
+      "requests_OTP": "Asks for the one-time password or verification code sent to the victim's phone",
+      "creates_false_urgency": "Invents a deadline (minutes, hours) to prevent the victim from thinking or consulting others",
+      "uses_emotional_pressure": "Uses fear, panic, guilt, or excitement to cloud judgment",
+      "credential_phishing": "Collects login credentials, passwords, or security codes"
+    },
+    "risk_score": 7
+  },
+  {
+    "id": 68,
+    "label": "scam",
+    "category": "mixed",
+    "subcategory": "KRA_lottery",
+    "text": "Your KRA PIN was selected for a government cash transfer of KSh 150,000 under the Inua Jamii social protection program. To receive the funds, pay a KSh 2,500 registration fee and provide your ID number and bank details.",
+    "pattern_flags": [
+      "impersonates_authority",
+      "impersonates_KRA",
+      "lottery_no_entry",
+      "offers_unrealistic_reward",
+      "requires_processing_fee",
+      "advance_fee_fraud",
+      "requests_ID_number",
+      "requests_account_details"
+    ],
+    "pattern_count": 8,
+    "pattern_explanations": {
+      "impersonates_authority": "Caller claims to be from a government body, bank, or known institution",
+      "impersonates_KRA": "Pretends to be Kenya Revenue Authority",
+      "lottery_no_entry": "Claims victim won a lottery or competition they never entered",
+      "offers_unrealistic_reward": "Promises money, prizes, or benefits that seem too good to be true",
+      "requires_processing_fee": "Asks for a small fee to 'release' a prize, job, or refund",
+      "advance_fee_fraud": "Victim must pay upfront to receive a larger sum later",
+      "requests_ID_number": "Asks for national ID number, KRA PIN, or passport number",
+      "requests_account_details": "Asks for bank account number, card number, or mobile money details"
+    },
+    "risk_score": 8
+  },
+  {
+    "id": 69,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "statement_notification",
+    "text": "Good afternoon, this is Mary from Equity Bank customer service. Your monthly account statement is now ready and has been sent to your registered email. You can also view it on the Equity Mobile app. Is there anything else I can help you with today?",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 70,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "loan_follow_up",
+    "text": "Hello, calling from KCB Bank regarding your loan application submitted on Monday. We need one additional document. Could you please visit your nearest branch or upload your latest three-month payslip through the app? Your application reference is 2024LN78234.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 71,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "suspicious_transaction_check",
+    "text": "Hi, this is the fraud desk at NCBA Bank. We noticed a transaction of KSh 45,000 from your account that seems unusual. We are not asking for any passwords. Can you confirm if you authorized this transaction? If not, please call the number on the back of your card.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 72,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "card_delivery",
+    "text": "Good morning, this is Cooperative Bank. Your replacement debit card is ready for collection at your home branch in Westlands. Please bring your national ID. The branch is open Monday to Friday 8 AM to 4 PM and Saturday 9 AM to noon.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 73,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "interest_update",
+    "text": "This is Co-operative Bank. Effective 1st January 2025, the interest rate on your fixed deposit will be adjusted to 11.5% per annum in line with market rates. Your principal and interest remain fully secured. Call 0703 027 000 for questions.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 74,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "forex_rate_alert",
+    "text": "Good morning, calling from your relationship manager at Standard Chartered. The USD/KES rate has moved favorably and is now at 128. You had indicated interest in a forex transaction. Shall I proceed or would you like to wait? No commitment required at this stage.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 75,
+    "label": "legitimate",
+    "category": "telecom_service",
+    "subcategory": "plan_upgrade",
+    "text": "Habari, ninapigia kutoka Safaricom kuhusiana na kifurushi cha data. Kuna toleo jipya linatolea data nyingi zaidi kwa bei ile ile. Je, ungependa kupata maelezo zaidi? Hakuna malipo yoyote sasa hivi.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 76,
+    "label": "legitimate",
+    "category": "telecom_service",
+    "subcategory": "network_maintenance",
+    "text": "This is an automated message from Airtel Kenya. We will be conducting network maintenance in your area between 11 PM and 2 AM tonight. You may experience brief service interruptions. No action is required on your part.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 77,
+    "label": "legitimate",
+    "category": "telecom_service",
+    "subcategory": "SIM_registration",
+    "text": "Hello, this is Safaricom. Our records show your SIM registration is incomplete per Communications Authority requirements. Please visit any Safaricom shop with your original national ID to complete registration by the 31st to avoid service interruption.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 78,
+    "label": "legitimate",
+    "category": "telecom_service",
+    "subcategory": "roaming_alert",
+    "text": "Automated message from Safaricom. We have detected your handset is now in Tanzania. International roaming has been enabled. Standard roaming rates apply. To set a roaming budget limit, dial 444 or visit our website. Welcome to Tanzania.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 79,
+    "label": "legitimate",
+    "category": "telecom_service",
+    "subcategory": "data_exhausted",
+    "text": "This is an automated Safaricom alert. Your daily data bundle has been exhausted. To purchase a new bundle, dial *544# or use the MySafaricom app. Standard out-of-bundle rates will apply until you resubscribe.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 80,
+    "label": "legitimate",
+    "category": "government_service",
+    "subcategory": "KRA_appointment",
+    "text": "Automated reminder from Kenya Revenue Authority. You have a scheduled appointment at Times Tower on Thursday at 10 AM for your tax compliance review. Bring original ID and company registration documents. To reschedule, visit itax.kra.go.ke or call 0711 099 999.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 81,
+    "label": "legitimate",
+    "category": "government_service",
+    "subcategory": "NHIF_notification",
+    "text": "Hello, this message is from NHIF. Your monthly contribution has been received and your cover is active. To change your hospital of choice, visit the nearest NHIF office with your membership card and ID. For enquiries call 0800 720 601 which is toll-free.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 82,
+    "label": "legitimate",
+    "category": "government_service",
+    "subcategory": "passport_ready",
+    "text": "Habari, hii ni taarifa kutoka Wizara ya Mambo ya Ndani. Pasipoti yako iko tayari kukusanywa katika ofisi ya uhamiaji uliyoomba. Tafadhali lete risiti ya malipo na kitambulisho chako cha asili unapokuja.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 83,
+    "label": "legitimate",
+    "category": "government_service",
+    "subcategory": "voter_registration",
+    "text": "Automated message from IEBC. Voter registration for the forthcoming by-election is ongoing until the 30th of this month. Visit your nearest registration center with your national ID. Registration is free. Register and make your vote count.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 84,
+    "label": "legitimate",
+    "category": "government_service",
+    "subcategory": "eCitizen_notification",
+    "text": "This is an eCitizen notification. The application you submitted for a business name registration on 12th November has been approved. Your certificate is ready for download on ecitizen.go.ke. Log in using your registered email and national ID number.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 85,
+    "label": "legitimate",
+    "category": "medical",
+    "subcategory": "appointment_reminder",
+    "text": "This is an automated reminder from Nairobi Hospital. You have an appointment with Dr. Kariuki in the Cardiology Department this Friday at 2:30 PM. Please arrive 15 minutes early for registration. To reschedule, call 0730 160 000.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 86,
+    "label": "legitimate",
+    "category": "medical",
+    "subcategory": "lab_results",
+    "text": "Calling from Lancet Laboratories regarding your test results. Your results are ready and have been sent directly to Dr. Wambui as requested. For a personal copy, visit any branch with your ID and collection slip.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 87,
+    "label": "legitimate",
+    "category": "medical",
+    "subcategory": "prescription_ready",
+    "text": "Good morning, this is Goodlife Pharmacy. The prescription you dropped off on Monday is ready for collection. The total cost is KSh 2,400 which you can pay by M-Pesa, card, or cash at the counter. The pharmacy is open until 9 PM.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 88,
+    "label": "legitimate",
+    "category": "retail_service",
+    "subcategory": "order_ready",
+    "text": "Hi, this is Jumia Kenya. Your order number JM-9823711 is out for delivery today. Our rider will call when 30 minutes away. If unavailable, reschedule through the app or call 0800 722 000. No payment required as this was a prepaid order.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 89,
+    "label": "legitimate",
+    "category": "retail_service",
+    "subcategory": "refund_notice",
+    "text": "Calling from Naivas Supermarket. Your refund of KSh 3,500 for the faulty blender purchased on 14th November has been processed. It will reflect on your M-Pesa within 5 to 7 business days. We apologize for the inconvenience.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 90,
+    "label": "legitimate",
+    "category": "retail_service",
+    "subcategory": "survey_request",
+    "text": "Hi, this is Quickmart Supermarkets. You recently shopped with us and we would love your feedback. Would you answer 3 quick questions about your experience? This is optional and no personal information or payment is required.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 91,
+    "label": "legitimate",
+    "category": "utility_service",
+    "subcategory": "payment_confirmation",
+    "text": "This is Kenya Power. We have received your electricity payment of KSh 4,200 for account 0045872391. Your credit balance is now sufficient for approximately 45 days. To report power issues, call 95551 or use the Kenya Power app.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 92,
+    "label": "legitimate",
+    "category": "utility_service",
+    "subcategory": "meter_reading",
+    "text": "Habari, ninapigia kutoka Nairobi City Water. Mfanyakazi wetu wa kusoma mita atafika nyumba yako kesho kati ya saa tatu na saa saba asubuhi. Tafadhali hakikisha lango la nje wazi.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 93,
+    "label": "legitimate",
+    "category": "insurance",
+    "subcategory": "policy_renewal",
+    "text": "Hello, this is Jubilee Insurance. Your motor vehicle policy JB-2024-0087 is due for renewal in 14 days. A renewal notice has been sent to your email. Please log into jubileeinsurance.com or visit a branch to renew. Drive safe.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 94,
+    "label": "legitimate",
+    "category": "insurance",
+    "subcategory": "claim_update",
+    "text": "Good morning, calling from CIC Insurance claims department regarding claim reference 4892-T. Your claim has been approved for KSh 18,000. Payment will be processed to your bank account within 10 business days. Call 0703 099 120 for questions.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 95,
+    "label": "legitimate",
+    "category": "employer_HR",
+    "subcategory": "payroll_notice",
+    "text": "This is HR from your company. Your December payslip is now available on the employee self-service portal. Please log in and download it. Also, SACCO deduction forms for January should be submitted to HR by this Friday.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 96,
+    "label": "legitimate",
+    "category": "employer_HR",
+    "subcategory": "training_invite",
+    "text": "Good morning. This is your company training department. The mandatory data protection compliance training on Wednesday has been moved to Thursday. It will be held in Conference Room B from 9 AM to 1 PM. Please confirm attendance by replying to the email sent to your work address.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 97,
+    "label": "legitimate",
+    "category": "educational",
+    "subcategory": "admission_notice",
+    "text": "Good afternoon, calling from the University of Nairobi admissions office. Your application for the Bachelor of Commerce program has been successful for the September 2024 intake. Check your email for the formal offer letter and registration instructions. Congratulations.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 98,
+    "label": "legitimate",
+    "category": "real_estate",
+    "subcategory": "viewing_appointment",
+    "text": "Hello, this is Grace from Hass Consult Property Agency confirming your property viewing appointment for the two-bedroom apartment in Kilimani tomorrow at 3 PM. Our agent will meet you at the gate. Call or WhatsApp if you need to reschedule.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 99,
+    "label": "legitimate",
+    "category": "financial_services",
+    "subcategory": "investment_update",
+    "text": "Good afternoon, this is your relationship manager at Britam Asset Managers. Your quarterly investment report for September 2024 is available on your client portal. Your unit trust fund recorded a 12.3% return this quarter. Login at britam.com or call your branch.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 100,
+    "label": "legitimate",
+    "category": "financial_services",
+    "subcategory": "savings_maturity",
+    "text": "This is Sanlam Life Insurance. Your endowment savings plan has matured and a payout of KSh 250,000 is ready. Please visit any Sanlam branch with your original ID and policy document to collect your maturity benefit. Congratulations on completing your savings journey.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 101,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "cheque_clearance",
+    "text": "Good afternoon, calling from DTB Bank. The cheque you deposited on Monday for KSh 180,000 has cleared successfully and the funds are now available in your account. For any questions, please visit your branch or call our customer care line.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 102,
+    "label": "legitimate",
+    "category": "telecom_service",
+    "subcategory": "upgrade_offer",
+    "text": "This is Telkom Kenya calling about your current postpaid plan. We have a new unlimited calls and 20GB data plan at the same price you currently pay. There is no contract change required. Would you like me to send details via SMS for you to consider at your convenience?",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 103,
+    "label": "legitimate",
+    "category": "government_service",
+    "subcategory": "NSSF_statement",
+    "text": "This is an automated message from NSSF. Your annual member statement for the year ending June 2024 is now ready. Log in to the NSSF self-service portal at nssf.or.ke using your membership number to view and download your statement.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 104,
+    "label": "legitimate",
+    "category": "medical",
+    "subcategory": "vaccination_reminder",
+    "text": "This is an automated reminder from your child's school health program. The next round of routine vaccinations is scheduled for next Thursday at the school health clinic from 8 AM to 12 noon. No appointment is needed and the vaccines are provided free of charge.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 105,
+    "label": "legitimate",
+    "category": "retail_service",
+    "subcategory": "loyalty_points",
+    "text": "Hello, this is Carrefour Kenya. You have accumulated 5,000 loyalty points on your My Club card worth KSh 500 in store credit. Points expire on 31st December. Present your card at any Carrefour checkout to redeem them before they expire.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 106,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "tax_compliance_reminder",
+    "text": "Good morning, this is an automated message from Kenya Revenue Authority. Your annual income tax return for the year of income 2023 is due by 30th June 2024. Please log into itax.kra.go.ke to file your return. Filing is free. For assistance call the KRA Contact Centre on 0711 099 999.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 107,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "PIN_certificate_ready",
+    "text": "Hello, this is KRA. The KRA PIN certificate you applied for is now ready for download on your iTax account. Log in at itax.kra.go.ke using your PIN and password. If you need assistance visiting a KRA office, please carry your original national ID.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 108,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "tax_refund_notification",
+    "text": "This is Kenya Revenue Authority. Your income tax refund claim of KSh 12,400 for the year of income 2022 has been reviewed and approved. The refund will be credited to your registered bank account within 30 days. For queries, visit any KRA office or call 0711 099 999.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 109,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "compliance_certificate",
+    "text": "Good afternoon. This is an automated KRA notification. Your tax compliance certificate has been successfully renewed and is valid until 31st December 2024. You can download it from your iTax dashboard under the certificates tab. No further action is required.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 110,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "VAT_filing_reminder",
+    "text": "Kumbusho kutoka Mamlaka ya Mapato Kenya. Fomu yako ya VAT ya mwezi uliopita inatakiwa kuwasilishwa ifikapo tarehe 20. Tafadhali ingia kwenye itax.kra.go.ke kufanya mawasilisho. Kwa msaada piga simu 0711 099 999.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 111,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "audit_appointment",
+    "text": "This is Kenya Revenue Authority. We are scheduling a routine desk audit of your business returns for the period 2021 to 2023. You will receive a formal letter to your registered address with the appointment date and the documents required. This is a standard compliance exercise. No payment is required at this stage.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 112,
+    "label": "legitimate",
+    "category": "KRA",
+    "subcategory": "withholding_tax_reminder",
+    "text": "Hello, this is KRA reminding you that withholding tax certificates for your employees must be issued by 28th February. Please log into iTax to generate and download them. For step-by-step guidance, visit kra.go.ke or call our helpline.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 113,
+    "label": "legitimate",
+    "category": "police",
+    "subcategory": "lost_property_found",
+    "text": "Good afternoon, this is Kilimani Police Station. We are calling to inform you that a wallet matching the description of the one reported lost last week has been found and handed in at the station. Please come to the station during working hours with your ID to identify and collect it.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 114,
+    "label": "legitimate",
+    "category": "police",
+    "subcategory": "witness_statement_request",
+    "text": "Hello, this is Sergeant Achieng from Parklands Police Station. You were listed as a potential witness in an incident that occurred on Waiyaki Way on 5th November. We would like you to come in and record a voluntary statement at your earliest convenience. There is no obligation, but your account may help the investigation.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 115,
+    "label": "legitimate",
+    "category": "police",
+    "subcategory": "community_policing_notice",
+    "text": "This is an automated community alert from Nairobi County Policing Authority. There has been a reported increase in residential break-ins in the Lavington area over the past two weeks. Please ensure your home is secured and report any suspicious activity to your nearest police station or call 999.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 116,
+    "label": "legitimate",
+    "category": "police",
+    "subcategory": "traffic_fine_confirmation",
+    "text": "This is NTSA. Your payment of KSh 3,000 for traffic offence citation KE-20241105-07823 has been received and the fine is now cleared. You can verify the clearance on the NTSA TIMS portal at ntsa.go.ke. Drive safely.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 117,
+    "label": "legitimate",
+    "category": "police",
+    "subcategory": "vehicle_recovery",
+    "text": "Good morning, this is Ruaraka Police Station. We are calling regarding a vehicle with registration number KDD 458M that was reported stolen on 3rd October. The vehicle has been recovered and is currently impounded at the station. Please bring your logbook and ID to verify ownership and arrange collection.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 118,
+    "label": "legitimate",
+    "category": "police",
+    "subcategory": "case_progress_update",
+    "text": "Hello, this is Officer Mutiso from DCI Nairobi following up on case reference OB/143/2024 filed at our offices. We have made progress in the investigation and would like to update you. Please call back on this number or visit our offices at any time during business hours. No payment of any kind is involved.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 119,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "M-Pesa_reversal_confirmed",
+    "text": "This is an automated M-Pesa notification from Safaricom. A transaction reversal of KSh 2,500 has been processed successfully to your account. The funds will reflect within 24 hours. If you did not request this reversal, please call Safaricom customer care on 100.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 120,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "line_porting_confirmation",
+    "text": "This is Safaricom. We have received a number porting request for your line. If you initiated this request, no action is needed. If you did not make this request, please call 100 immediately to protect your number. Safaricom will never ask for your PIN during this process.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 121,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "Fuliza_limit_increase",
+    "text": "Hello, based on your M-Pesa usage history, your Fuliza M-Pesa overdraft limit has been reviewed and increased to KSh 8,000. This is automatic and no action is required. To check your current Fuliza balance and limit, dial *234#. Standard Fuliza daily maintenance fees apply.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 122,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "network_outage_apology",
+    "text": "Dear customer, we are aware of an M-Pesa service disruption affecting some customers in Mombasa and Kwale counties since 2 PM today. Our technical teams are working to restore full service. We apologize for the inconvenience. Please retry your transactions once service is restored.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 123,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "data_bundle_expiry",
+    "text": "Kumbusho kutoka Safaricom. Kifurushi chako cha data cha GB 5 kitaisha kesho saa sita mchana. Ili kuendelea kupata huduma, nunua kifurushi kipya kwa kupiga *544# au tumia programu ya MySafaricom. Asante kwa kutumia Safaricom.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 124,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "SIM_swap_alert",
+    "text": "Security alert from Safaricom. A SIM swap request was made for your line today at 10:43 AM. If you made this request, no action is needed. If you did NOT make this request, call 100 immediately. Safaricom will never ask for your PIN or OTP to process a SIM swap.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 125,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "KYC_update_request",
+    "text": "This is Safaricom. Communications Authority regulations require all subscribers to update their registration details. Please visit any Safaricom shop or authorized agent with your original national ID before 31st March to update your details. This service is free of charge.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 126,
+    "label": "legitimate",
+    "category": "Safaricom",
+    "subcategory": "Bonga_points_redemption",
+    "text": "Hello, you have 4,500 Bonga Points on your Safaricom line worth KSh 225 in airtime. To redeem, dial *126# and follow the prompts. Points expire on 31st December 2024. Redeem today and enjoy your reward. Thank you for being a loyal Safaricom customer.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 127,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "fraud_alert_no_credentials",
+    "text": "This is Equity Bank fraud monitoring team. We have flagged a login attempt on your Equity Mobile app from an unrecognized device in Kisumu at 11:15 PM. We have temporarily blocked the attempt. We will never ask for your PIN or password. If this was you, call 0763 000 000 to unblock your account.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 128,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "loan_disbursement",
+    "text": "Good morning. This is KCB Bank confirming that your personal loan of KSh 150,000 has been approved and disbursed to your KCB account ending 4821. Repayments will begin on 1st February at KSh 4,200 per month. Your loan agreement has been sent to your registered email.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 129,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "account_dormancy_notice",
+    "text": "Hello, this is Cooperative Bank. Your savings account ending 7734 has had no transactions for the past 12 months and is due to become dormant. To keep the account active, please make a transaction or visit any Co-op Bank branch with your ID before 31st January. No charges apply for reactivation.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 130,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "standing_order_failure",
+    "text": "This is NCBA Bank. Your standing order to Equity Bank for KSh 5,000 scheduled for today could not be processed due to insufficient funds in your account. Please top up and contact us to reschedule the payment. Call 0711 056 444 or visit your nearest branch.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 131,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "cheque_book_ready",
+    "text": "Hello, this is Standard Chartered Bank. Your new cheque book is ready for collection at our Westlands branch. Please bring your original ID when collecting. Branch hours are 9 AM to 3:30 PM on weekdays. Alternatively, we can courier it to your registered address for a small delivery fee.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 132,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "forex_transaction_confirmed",
+    "text": "This is DTB Bank confirming your foreign exchange transaction today. USD 500 has been debited from your foreign currency account and KSh 64,250 has been credited to your KES account at a rate of 128.50. Your transaction reference is FX20241112-4892.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 133,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "mortgage_update",
+    "text": "Good afternoon, calling from Stanbic Bank home loans department. Your mortgage statement for the period ending October 2024 is now available on the Stanbic mobile app. Your outstanding balance is KSh 3,450,000 and your next installment of KSh 32,400 is due on 1st December.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 134,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "account_upgrade_offer",
+    "text": "This is Absa Bank. Based on your banking relationship, you qualify for an upgrade from a Classic to a Gold account. This comes with a higher ATM withdrawal limit, priority banking, and a waiver on monthly fees for the first year. To upgrade, visit any branch with your ID. No charges apply today.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 135,
+    "label": "legitimate",
+    "category": "CBK",
+    "subcategory": "interest_rate_notice",
+    "text": "This is an automated public notice from the Central Bank of Kenya. The Monetary Policy Committee has revised the Central Bank Rate to 12.5% effective from today. Commercial banks will adjust their lending and deposit rates accordingly. For more details, visit centralbank.go.ke.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 136,
+    "label": "legitimate",
+    "category": "CBK",
+    "subcategory": "consumer_protection_alert",
+    "text": "Public alert from CBK Consumer Protection. We have received reports of individuals posing as CBK officials demanding payments from members of the public. CBK does not call individuals to request payments or fines. If you receive such a call, hang up and report it to 0800 724 724 which is toll-free.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 137,
+    "label": "legitimate",
+    "category": "NTSA",
+    "subcategory": "inspection_reminder",
+    "text": "This is an automated reminder from NTSA. Your vehicle with registration KBZ 112P is due for inspection this month. Visit an authorized vehicle inspection centre with the vehicle and your logbook. The inspection fee is KSh 1,370 payable via M-Pesa Paybill 500100. Do not pay to individuals.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 138,
+    "label": "legitimate",
+    "category": "NTSA",
+    "subcategory": "DL_renewal_reminder",
+    "text": "Hello, this is NTSA. Your driving licence expires on 15th January 2025. To renew, visit ntsa.go.ke or any Huduma Centre with your current licence and ID. The renewal fee is KSh 600 payable via eCitizen. Renewing early avoids inconvenience. Drive safely.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 139,
+    "label": "legitimate",
+    "category": "NTSA",
+    "subcategory": "logbook_transfer_complete",
+    "text": "This is NTSA confirming that the vehicle ownership transfer for registration KDG 556J has been completed. The new logbook has been processed in the new owner's name. The document will be dispatched via registered post to the address provided. Reference: NTSA-TR-20241109-00432.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 140,
+    "label": "legitimate",
+    "category": "NHIF",
+    "subcategory": "contribution_receipt",
+    "text": "This is NHIF. Your November 2024 contribution of KSh 500 has been received and your membership is active. Your dependants are covered under your plan. For queries or to add or remove a beneficiary, visit the nearest NHIF office with your membership card and ID. Helpline: 0800 720 601.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 141,
+    "label": "legitimate",
+    "category": "NHIF",
+    "subcategory": "claim_processed",
+    "text": "Hello, this is NHIF claims department. Your inpatient claim submitted by Aga Khan Hospital on your behalf for the period 5th to 9th November 2024 has been processed. KSh 45,000 has been paid directly to the hospital. Your remaining annual benefit is KSh 155,000.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 142,
+    "label": "legitimate",
+    "category": "NHIF",
+    "subcategory": "SHIF_transition_notice",
+    "text": "This is an important notice from NHIF. Under the Social Health Insurance Fund transition, all members are required to re-register through the SHIF portal at shif.go.ke or at any Huduma Centre. There is no fee for re-registration. Beware of individuals asking for money to register you.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 143,
+    "label": "legitimate",
+    "category": "NSSF",
+    "subcategory": "statement_available",
+    "text": "This is NSSF. Your annual member statement for the period ending June 2024 is now available. Log in at nssf.or.ke using your membership number or visit any NSSF office. Your total contribution balance is detailed in the statement. For queries call 020 271 6000.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 144,
+    "label": "legitimate",
+    "category": "NSSF",
+    "subcategory": "contribution_confirmation",
+    "text": "NSSF confirms receipt of your employer's monthly remittance covering 12 employees for October 2024. The total amount received was KSh 24,000. Statements for each employee have been updated on the member portal. For queries or discrepancies contact your nearest NSSF branch.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 145,
+    "label": "legitimate",
+    "category": "Kenya_Power",
+    "subcategory": "bill_ready",
+    "text": "This is Kenya Power. Your electricity bill for November 2024 is KSh 3,840 and is due for payment by 15th December. Pay via M-Pesa Paybill 888880 using your account number, at any Kenya Power office, or through your bank. Disconnection occurs 7 days after the due date.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 146,
+    "label": "legitimate",
+    "category": "Kenya_Power",
+    "subcategory": "outage_scheduled",
+    "text": "Kenya Power wishes to inform customers in South B, South C, and Langata that there will be a planned power interruption tomorrow between 8 AM and 5 PM for routine maintenance and system upgrade. We regret the inconvenience caused. Power will be restored by 5 PM.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 147,
+    "label": "legitimate",
+    "category": "Kenya_Power",
+    "subcategory": "meter_tampering_warning",
+    "text": "This is Kenya Power. Our field team has detected irregular consumption patterns on your prepaid meter that may indicate a fault or interference. A technician will visit your premises within 48 hours for inspection at no cost. Please ensure someone is available to provide access.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 148,
+    "label": "legitimate",
+    "category": "Kenya_Power",
+    "subcategory": "token_purchase_confirmed",
+    "text": "Kenya Power: your token purchase of KSh 1,000 for meter number 01234567890 has been received. Your token is 1234-5678-9012-3456-7890. Enter this on your meter keypad to load the units. Your new balance after loading will be approximately 48 units.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 149,
+    "label": "legitimate",
+    "category": "Immigration",
+    "subcategory": "passport_application_update",
+    "text": "This is the Department of Immigration Services. Your passport application reference PN-2024-0089234 is being processed. The expected processing time is 10 working days from the date of application. You will receive a notification when your passport is ready for collection. No additional fees are required.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 150,
+    "label": "legitimate",
+    "category": "Immigration",
+    "subcategory": "work_permit_renewal",
+    "text": "Good afternoon, this is the Department of Immigration. Your work permit class G expires on 31st January 2025. You are required to apply for renewal at least 30 days before expiry. Visit immigration.go.ke or any Immigration office to initiate the process. Early renewal avoids overstay penalties.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 151,
+    "label": "legitimate",
+    "category": "Nairobi_Water",
+    "subcategory": "bill_notification",
+    "text": "This is Nairobi City Water and Sewerage Company. Your water bill for account 00456123 for the month of November is KSh 1,240. Payment can be made via M-Pesa Paybill 444700, at our offices, or at any Cooperative Bank branch. Due date is 30th November.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 152,
+    "label": "legitimate",
+    "category": "Nairobi_Water",
+    "subcategory": "supply_interruption",
+    "text": "Nairobi Water informs customers in Westlands, Parklands, and Spring Valley that water supply will be interrupted on Thursday from 8 AM to 4 PM for pipeline maintenance. We advise customers to store adequate water. Supply will resume by 4 PM. We regret the inconvenience.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 153,
+    "label": "legitimate",
+    "category": "Judiciary",
+    "subcategory": "hearing_notice",
+    "text": "This is an automated notification from the Judiciary of Kenya. A hearing for case number HCCC 234 of 2024 in which you are listed as a witness has been scheduled for Tuesday 19th November at 9 AM at Milimani Law Courts, Court Room 12. No payment is required. Contact the court registry for directions.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 154,
+    "label": "legitimate",
+    "category": "Judiciary",
+    "subcategory": "ruling_ready",
+    "text": "The Judiciary of Kenya notifies you that the ruling in your civil case reference CMCC 1092 of 2023 has been delivered. You can obtain a certified copy of the ruling from the court registry upon payment of the standard certification fee of KSh 200. Contact Milimani court registry for arrangements.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 155,
+    "label": "legitimate",
+    "category": "Airtel",
+    "subcategory": "bundle_purchased",
+    "text": "Airtel Kenya confirms your data bundle purchase of 5GB valid for 7 days. Your current data balance is 5.0 GB. To check your balance dial *544#. Thank you for choosing Airtel.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 156,
+    "label": "legitimate",
+    "category": "Airtel",
+    "subcategory": "welcome_back_offer",
+    "text": "Hello, we noticed you have not been active on your Airtel line recently. We have added a free 200MB data bundle to your account valid for 3 days. No action required. We hope to see you back. To check your balance dial *544#.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 157,
+    "label": "legitimate",
+    "category": "Telkom",
+    "subcategory": "bill_reminder",
+    "text": "This is Telkom Kenya. Your postpaid bill for November 2024 is KSh 2,100 and is due on 30th November. Pay via M-Pesa Paybill 220220, at any Telkom shop, or through your bank. To view your bill details log in to my.telkom.co.ke. Thank you for being a Telkom customer.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 158,
+    "label": "legitimate",
+    "category": "insurance",
+    "subcategory": "medical_pre-authorization",
+    "text": "This is Jubilee Health Insurance pre-authorization team calling. We have received a request from Nairobi Hospital for inpatient admission on your behalf. Pre-authorization has been granted up to KSh 80,000. Please present your smart card or membership number at the hospital reception. Get well soon.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 159,
+    "label": "legitimate",
+    "category": "insurance",
+    "subcategory": "motor_claim_assessment",
+    "text": "Hello, calling from CIC Insurance. Following your motor accident claim submitted on 8th November, our assessor has reviewed the vehicle at Ngong Road Garage. The repair estimate is KSh 42,500. We have authorized the garage to proceed with repairs. The vehicle will be ready in 5 to 7 working days.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 160,
+    "label": "legitimate",
+    "category": "insurance",
+    "subcategory": "life_policy_maturity",
+    "text": "This is Britam Life Assurance. Your endowment life policy number BL-2009-4521 matures on 1st December 2024. The maturity amount is KSh 380,000. Please visit any Britam office with your original ID and policy document to initiate the payout process. Congratulations.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 161,
+    "label": "legitimate",
+    "category": "hospital",
+    "subcategory": "test_results_ready",
+    "text": "This is Aga Khan Hospital Laboratory. The test results requested by your doctor Dr. Ngugi on 10th November are now ready. They have been forwarded to your doctor's portal. You may also pick up a physical copy at the lab reception with your visit receipt and ID.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 162,
+    "label": "legitimate",
+    "category": "hospital",
+    "subcategory": "surgery_prep_instructions",
+    "text": "Good morning, this is the nursing team at Karen Hospital calling to prepare you for your scheduled procedure tomorrow at 7 AM. Please ensure you fast from midnight tonight, arrive at the admissions desk by 6 AM, and bring your insurance card, ID, and a responsible adult to drive you home post-procedure.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 163,
+    "label": "legitimate",
+    "category": "hospital",
+    "subcategory": "pharmacy_prescription_alert",
+    "text": "Hello, this is MP Shah Hospital pharmacy. The prescription written by Dr. Kamau during your consultation today is ready for collection. The total cost is KSh 3,200 which you can pay at the pharmacy counter by cash, card, or M-Pesa. The pharmacy closes at 9 PM.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 164,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "loan_approval",
+    "text": "Good news! This is Stima SACCO calling to inform you that your loan application of KSh 200,000 has been approved by the credit committee. The funds will be disbursed to your SACCO account within 3 working days. Repayment begins on 1st January at KSh 9,500 per month over 24 months.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 165,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "dividend_notice",
+    "text": "This is Kenya Police SACCO. The Annual General Meeting resolved to pay a dividend of 12% on share capital and an interest rebate of 8% on loans for the year ended December 2023. Your dividend and rebate amounts will be reflected in your member statement by end of this month.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 166,
+    "label": "legitimate",
+    "category": "County_Government",
+    "subcategory": "single_business_permit",
+    "text": "This is Nairobi City County. Your single business permit for the year 2025 is now due for renewal. The applicable fee for your business category is KSh 10,000. Pay via Nairobi County Paybill 522522 and upload your receipt on the county portal at nairobi.go.ke. Avoid penalties by renewing before 31st March.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 167,
+    "label": "legitimate",
+    "category": "County_Government",
+    "subcategory": "land_rates_bill",
+    "text": "Nairobi City County Land Rates Department: your annual land rates for plot LR 5678 are due. The outstanding amount is KSh 14,500 including arrears from the previous year. Pay at any county office or via M-Pesa Paybill 522522. Consult our offices on Mama Ngina Street for queries.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 168,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "loan_approval",
+    "text": "Hello my name is Charles from Power SACCO. I'm calling to inform you that your loan application of KSh 200,000 has been approved by the credit committee. The funds will be disbursed to your SACCO account within 3 working days. Repayment begins on 1st January at KSh 9,500 per month over 24 months.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 169,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "loan_approval",
+    "text": "Good afternoon, this is Mwalimu SACCO. We are pleased to inform you that your development loan of KSh 500,000 has been approved. Disbursement to your account will happen within 5 working days. Your monthly repayment is KSh 22,000 over 36 months starting next month.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 170,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "loan_approval",
+    "text": "This is Kenya Police SACCO credit department. Your emergency loan application of KSh 80,000 has been reviewed and approved. The amount will be credited to your account by end of business today. Deductions start from next month's payroll at KSh 4,000 per month.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 171,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "loan_repayment_reminder",
+    "text": "Hi, this is Stima SACCO. A friendly reminder that your loan repayment of KSh 12,500 is due on 30th this month. Please ensure your account has sufficient funds for the auto-deduction. Call our offices on 0703 070 707 if you need to discuss your repayment schedule.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 172,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "dividend_notice",
+    "text": "Good morning. This is Harambee SACCO calling to notify you that the AGM resolved a dividend payout of 12% on your shares for the financial year 2024. Your dividend of KSh 36,000 will be credited to your SACCO account by 15th February. No action is required from your end.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 173,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "loan_approval",
+    "text": "Hello, this is Equity Bank calling. Your personal loan application of KSh 300,000 has been approved. The amount will be disbursed to your Equity account ending in 4421 within 24 hours. Your monthly repayment will be KSh 14,200 for 24 months. Visit any branch or call 0763 063 000 for details.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 174,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "loan_approval",
+    "text": "Good morning. KCB Bank here. We are calling to confirm that your mortgage application for the property in Ruaka has been approved for KSh 4,500,000. Our mortgage officer will contact you within 2 business days to walk you through the offer letter and signing process.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 175,
+    "label": "legitimate",
+    "category": "bank",
+    "subcategory": "loan_repayment_reminder",
+    "text": "This is NCBA Bank. Your loan repayment of KSh 18,750 is due in 3 days. Please ensure your NCBA account is funded to avoid a late payment penalty. You can top up via M-Pesa Paybill 880100 or visit any branch. Call 0711 056 444 for assistance.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 176,
+    "label": "legitimate",
+    "category": "financial_services",
+    "subcategory": "insurance_payout",
+    "text": "Hello, this is CIC Insurance. We are pleased to inform you that your motor claim has been assessed and approved for KSh 85,000. A cheque will be processed within 7 working days and mailed to your registered address. Please call 0703 099 120 if you have any questions.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 177,
+    "label": "legitimate",
+    "category": "employer_HR",
+    "subcategory": "salary_advance",
+    "text": "This is the HR department. Your salary advance request of KSh 50,000 has been approved by management. The amount will be deposited to your bank account on Friday. The deduction of KSh 12,500 per month will start from next month's payroll for 4 months.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 178,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "account_update",
+    "text": "Hello, this is Imarika SACCO. We are updating our member records. Please visit our nearest branch with your national ID and latest payslip to update your membership details. No payments are required at this time. Our offices are open Monday to Friday 8am to 5pm.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 179,
+    "label": "legitimate",
+    "category": "bank_service",
+    "subcategory": "fixed_deposit_maturity",
+    "text": "Good afternoon, this is Cooperative Bank. Your fixed deposit of KSh 150,000 matures on 28th February. The maturity amount including interest is KSh 163,500. Please visit your nearest branch or call 0703 027 000 to give us instructions on how to roll over or withdraw the funds.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  },
+  {
+    "id": 180,
+    "label": "legitimate",
+    "category": "SACCO",
+    "subcategory": "shares_update",
+    "text": "This is Ukulima SACCO. Following the review of minimum share capital requirements, all members are required to increase their share capital to KSh 50,000 by 31st March. You currently hold KSh 38,000 in shares. You may top up through your normal monthly contributions or a lump sum deposit.",
+    "pattern_flags": [],
+    "pattern_count": 0,
+    "pattern_explanations": {},
+    "risk_score": 0
+  }
+]

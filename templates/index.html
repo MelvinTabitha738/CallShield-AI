@@ -1,166 +1,267 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CallShield AI - Real-time</title>
+    <title>CallShield AI</title>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        h1 { color: white; text-align: center; margin-bottom: 30px; }
+        .container { max-width: 820px; margin: 0 auto; }
+        h1 { color: white; text-align: center; margin-bottom: 20px; font-size: 28px; }
+
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
-        .tab { flex: 1; padding: 15px; background: rgba(255,255,255,0.2); border: none; color: white; cursor: pointer; border-radius: 10px; font-size: 16px; }
-        .tab.active { background: white; color: #667eea; }
-        .tab-content { display: none; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .tab { flex: 1; padding: 14px; background: rgba(255,255,255,0.2); border: none; color: white; cursor: pointer; border-radius: 10px; font-size: 15px; }
+        .tab.active { background: white; color: #667eea; font-weight: bold; }
+        .tab-content { display: none; background: white; padding: 28px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .tab-content.active { display: block; }
-        textarea { width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 10px; font-size: 16px; min-height: 150px; resize: vertical; }
-        button { width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; margin-top: 15px; }
+        textarea { width: 100%; padding: 14px; border: 2px solid #ddd; border-radius: 10px; font-size: 15px; min-height: 140px; resize: vertical; outline: none; }
+        textarea:focus { border-color: #667eea; }
+        button { width: 100%; padding: 14px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 15px; cursor: pointer; margin-top: 14px; }
         button:hover { background: #5568d3; }
-        .result { margin-top: 20px; padding: 20px; border-radius: 10px; }
-        .spam { background: #fee; border-left: 4px solid #f44; }
-        .ham { background: #efe; border-left: 4px solid #4f4; }
-        .recording { background: #f44 !important; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-        .file-label { display: block; padding: 15px; background: #f0f0f0; border: 2px dashed #ddd; border-radius: 10px; text-align: center; cursor: pointer; }
+        .file-label { display: block; padding: 14px; background: #f5f5f5; border: 2px dashed #ccc; border-radius: 10px; text-align: center; cursor: pointer; color: #555; }
         .file-input { display: none; }
+        .num-input { width: 100%; padding: 11px 14px; border: 2px solid #ddd; border-radius: 10px; font-size: 14px; margin-bottom: 12px; outline: none; }
+        .num-input:focus { border-color: #667eea; }
+        .recording { background: #e53935 !important; animation: pulse 1.2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.65} }
+
+        .risk-card { margin-top: 18px; padding: 18px; border-radius: 12px; border: 2px solid; }
+        .risk-title { font-size: 21px; font-weight: bold; margin-bottom: 10px; }
+        .risk-bar-wrap { background: #e8e8e8; border-radius: 20px; height: 16px; overflow: hidden; margin-bottom: 6px; }
+        .risk-bar { height: 100%; border-radius: 20px; transition: width 0.5s ease, background 0.5s ease; }
+        .risk-verdict { font-size: 13px; color: #555; margin-bottom: 6px; }
+        .transcription { background: #f7f7f7; padding: 11px; border-radius: 8px; margin-top: 10px; font-size: 13px; color: #333; line-height: 1.5; }
+        .warning-box { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 9px 13px; border-radius: 6px; margin-top: 8px; font-size: 13px; color: #856404; }
+
+        #mic-results { max-height: 440px; overflow-y: auto; margin-top: 14px; }
+        .mic-entry { border-radius: 10px; padding: 13px; margin-bottom: 9px; border: 1px solid #e0e0e0; }
+        .mic-entry .heard { font-size: 12px; color: #555; margin-top: 7px; line-height: 1.4; }
+        .analyzing-msg { color: #888; font-style: italic; font-size: 13px; padding: 10px 0; }
+        .rec-status { font-size: 13px; color: #e53935; margin-top: 8px; display: none; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🛡️ CallShield AI - Real-time</h1>
-        
-        <div class="tabs">
-            <button class="tab active" onclick="switchTab(0)">💬 Text</button>
-            <button class="tab" onclick="switchTab(1)">🎵 Audio</button>
-            <button class="tab" onclick="switchTab(2)">🎤 Microphone</button>
-        </div>
+<div class="container">
+    <h1>🛡️ CallShield AI</h1>
 
-        <div class="tab-content active">
-            <h2>Real-time Text Analysis</h2>
-            <p style="color: #666; margin-bottom: 10px;">Type below - analysis happens automatically after 2 seconds</p>
-            <textarea id="text-input" placeholder="Start typing..."></textarea>
-            <div id="text-result"></div>
-        </div>
-
-        <div class="tab-content">
-            <h2>Upload Audio File</h2>
-            <input type="file" id="audio-file" class="file-input" accept=".wav,.mp3,.ogg,.m4a,.flac">
-            <label for="audio-file" class="file-label">📁 Choose Audio File</label>
-            <p id="file-name" style="margin-top: 10px; color: #666;"></p>
-            <button onclick="analyzeAudio()">Analyze Audio</button>
-            <div id="audio-result"></div>
-        </div>
-
-        <div class="tab-content">
-            <h2>Live Microphone</h2>
-            <p style="color: #666; margin-bottom: 15px;">Speak into microphone - analysis every 3 seconds</p>
-            <button id="mic-btn" onclick="toggleMic()">🎤 Start Recording</button>
-            <div id="mic-results"></div>
-        </div>
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab(0)">💬 Text</button>
+        <button class="tab" onclick="switchTab(1)">🎵 Audio</button>
+        <button class="tab" onclick="switchTab(2)">🎤 Microphone</button>
     </div>
 
-    <script>
-        const socket = io();
-        let typingTimer;
-        let isRecording = false;
+    <!-- TEXT TAB -->
+    <div class="tab-content active">
+        <h2 style="margin-bottom:8px;">Real-time Text Analysis</h2>
+        <p style="color:#888;font-size:13px;margin-bottom:12px;">Analysis runs automatically 1.5 seconds after you stop typing</p>
+        <textarea id="text-input" placeholder="Paste or type a call transcript here..."></textarea>
+        <div id="text-result"></div>
+    </div>
 
-        function switchTab(index) {
-            document.querySelectorAll('.tab').forEach((t, i) => {
-                t.classList.toggle('active', i === index);
-            });
-            document.querySelectorAll('.tab-content').forEach((c, i) => {
-                c.classList.toggle('active', i === index);
-            });
+    <!-- AUDIO TAB -->
+    <div class="tab-content">
+        <h2 style="margin-bottom:14px;">Upload Audio File</h2>
+        <input type="text" id="caller-number" class="num-input" placeholder="Caller Number (optional — for impersonation check)">
+        <input type="file" id="audio-file" class="file-input" accept=".wav,.mp3,.ogg,.m4a,.flac,.webm,.mp4">
+        <label for="audio-file" class="file-label">📁 Click to choose audio file (wav, mp3, ogg, m4a, flac, mp4)</label>
+        <p id="file-name" style="margin-top:7px;color:#666;font-size:13px;"></p>
+        <button onclick="analyzeAudio()">🔍 Transcribe &amp; Analyze</button>
+        <div id="audio-result"></div>
+    </div>
+
+    <!-- MIC TAB -->
+    <div class="tab-content">
+        <h2 style="margin-bottom:8px;">Live Microphone</h2>
+        <p style="color:#888;font-size:13px;margin-bottom:14px;">Audio is captured every 3 seconds, transcribed by Whisper and analyzed instantly</p>
+        <button id="mic-btn" onclick="toggleMic()">🎤 Start Recording</button>
+        <div id="rec-status" class="rec-status">🔴 Recording — speak clearly into your microphone</div>
+        <div id="mic-results"></div>
+    </div>
+</div>
+
+<script>
+    const socket = io({ transports: ['websocket'] });
+    let typingTimer;
+    let isRecording = false;
+    let mediaRecorder, stream;
+
+    function switchTab(i) {
+        document.querySelectorAll('.tab').forEach((t,j) => t.classList.toggle('active', i===j));
+        document.querySelectorAll('.tab-content').forEach((c,j) => c.classList.toggle('active', i===j));
+    }
+
+    function riskColor(r) {
+        if (r < 30) return '#4caf50';
+        if (r < 60) return '#ff9800';
+        if (r < 90) return '#f44336';
+        return '#7b1fa2';
+    }
+    function riskBg(r) {
+        if (r < 30) return '#f0fff4';
+        if (r < 60) return '#fff8f0';
+        if (r < 90) return '#fff0f0';
+        return '#fdf0ff';
+    }
+    function riskVerdict(r) {
+        if (r < 30) return 'No significant scam indicators detected.';
+        if (r < 60) return 'Suspicious patterns found — proceed with caution.';
+        if (r < 90) return 'Strong scam signals — do not share personal info or money.';
+        return 'Critical — confirmed scam or agency impersonation. Hang up immediately.';
+    }
+    function riskIcon(r) {
+        if (r < 30) return '✅';
+        if (r < 60) return '⚠️';
+        if (r < 90) return '🚨';
+        return '🔴';
+    }
+
+    function buildRiskCard(risk, transcription, warning, scamType) {
+        const c = riskColor(risk), bg = riskBg(risk);
+        const hasRisk = risk >= 30;
+        const scamTypeBadge = hasRisk && scamType
+            ? `<div style="margin-top:10px;">
+                <span style="background:${c};color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600;letter-spacing:0.3px;">
+                  ⚠️ ${scamType}
+                </span>
+               </div>`
+            : '';
+        const verdictHtml = hasRisk
+            ? `<div class="risk-verdict">${riskVerdict(risk)}</div>`
+            : '';
+        return `
+        <div class="risk-card" style="background:${bg};border-color:${c}50;">
+            <div class="risk-title" style="color:${c}">${riskIcon(risk)} Scam Risk: ${risk}%</div>
+            <div class="risk-bar-wrap">
+                <div class="risk-bar" style="width:${risk}%;background:${c};"></div>
+            </div>
+            ${verdictHtml}
+            ${scamTypeBadge}
+            ${warning ? `<div class="warning-box">⚠️ ${warning}</div>` : ''}
+            ${transcription ? `<div class="transcription"><strong>Transcription:</strong><br>${transcription}</div>` : ''}
+        </div>`;
+    }
+
+    /* TEXT */
+    document.getElementById('text-input').addEventListener('input', function() {
+        clearTimeout(typingTimer);
+        const txt = this.value.trim();
+        if (txt.length > 10) {
+            document.getElementById('text-result').innerHTML = '<p class="analyzing-msg">⏳ Analyzing...</p>';
+            typingTimer = setTimeout(() => socket.emit('analyze_text', { text: txt }), 1500);
+        } else {
+            document.getElementById('text-result').innerHTML = '';
         }
+    });
 
-        // Real-time text
-        document.getElementById('text-input').addEventListener('input', function() {
-            clearTimeout(typingTimer);
-            const text = this.value;
-            
-            if (text.length > 10) {
-                typingTimer = setTimeout(() => {
-                    socket.emit('analyze_text', { text: text });
-                }, 2000);
-            }
-        });
+    socket.on('analysis_result', d => {
+        document.getElementById('text-result').innerHTML = buildRiskCard(d.scam_risk, null, d.warning || null, d.scam_type || null);
+    });
 
-        socket.on('analysis_result', function(data) {
-            const div = document.getElementById('text-result');
-            const cls = data.is_spam ? 'spam' : 'ham';
-            const lbl = data.is_spam ? '⚠️ SCAM' : '✅ Safe';
-            
-            div.innerHTML = `
-                <div class="result ${cls}">
-                    <h3>${lbl}</h3>
-                    <p>Confidence: ${(data.confidence * 100).toFixed(1)}%</p>
-                </div>
-            `;
-        });
+    /* AUDIO */
+    document.getElementById('audio-file').addEventListener('change', function() {
+        document.getElementById('file-name').textContent = this.files[0]?.name || '';
+    });
 
-        // Audio file
-        document.getElementById('audio-file').addEventListener('change', function() {
-            document.getElementById('file-name').textContent = this.files[0]?.name || '';
-        });
+    async function analyzeAudio() {
+        const file = document.getElementById('audio-file').files[0];
+        if (!file) return alert('Select a file first.');
 
-        async function analyzeAudio() {
-            const file = document.getElementById('audio-file').files[0];
-            if (!file) return alert('Select a file');
+        const resultDiv = document.getElementById('audio-result');
+        resultDiv.innerHTML = '<p class="analyzing-msg">⏳ Transcribing with Whisper...</p>';
 
-            const formData = new FormData();
-            formData.append('audio', file);
+        const fd = new FormData();
+        fd.append('audio', file);
+        const cn = document.getElementById('caller-number').value.trim();
+        if (cn) fd.append('caller_number', cn);
 
-            const res = await fetch('/analyze-audio', { method: 'POST', body: formData });
+        try {
+            const res = await fetch('/analyze-audio', { method: 'POST', body: fd });
             const data = await res.json();
-
-            if (data.error) return alert(data.error);
-
-            const cls = data.is_spam ? 'spam' : 'ham';
-            const lbl = data.is_spam ? '⚠️ SCAM' : '✅ Safe';
-            
-            document.getElementById('audio-result').innerHTML = `
-                <div class="result ${cls}">
-                    <h3>${lbl}</h3>
-                    <p>Confidence: ${(data.confidence * 100).toFixed(1)}%</p>
-                    <div style="background: #f5f5f5; padding: 10px; border-radius: 5px; margin-top: 10px;">
-                        <strong>Transcription:</strong><br>${data.transcribed_text}
-                    </div>
-                </div>
-            `;
+            if (data.error) return (resultDiv.innerHTML = `<p style="color:red;margin-top:12px;">${data.error}</p>`);
+            resultDiv.innerHTML = buildRiskCard(data.scam_risk, data.transcribed_text, data.warning || null, data.scam_type || null);
+        } catch (e) {
+            resultDiv.innerHTML = `<p style="color:red;margin-top:12px;">Error: ${e.message}</p>`;
         }
+    }
 
-        // Microphone
-        function toggleMic() {
-            const btn = document.getElementById('mic-btn');
-            
-            if (!isRecording) {
-                socket.emit('start_microphone');
-                btn.textContent = '⏹️ Stop';
+    /* MICROPHONE */
+    async function toggleMic() {
+        const btn = document.getElementById('mic-btn');
+        const statusEl = document.getElementById('rec-status');
+
+        if (!isRecording) {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({
+                    audio: { sampleRate: 16000, channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+                });
+
+                const mimeType = getSupportedMimeType();
+                mediaRecorder = new MediaRecorder(stream, mimeType ? { mimeType } : {});
+
+                mediaRecorder.ondataavailable = async (e) => {
+                    if (e.data.size < 500) return;
+
+                    const blob = new Blob([e.data], { type: mediaRecorder.mimeType });
+                    const ext = mediaRecorder.mimeType.includes('ogg') ? 'ogg' : 'webm';
+
+                    const feed = document.getElementById('mic-results');
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'mic-entry analyzing-msg';
+                    placeholder.textContent = '⏳ Transcribing...';
+                    feed.prepend(placeholder);
+
+                    const fd = new FormData();
+                    fd.append('audio', blob, `chunk.${ext}`);
+
+                    try {
+                        const res = await fetch('/analyze-audio', { method: 'POST', body: fd });
+                        const data = await res.json();
+
+                        if (data.error || !data.transcribed_text?.trim()) {
+                            placeholder.remove();
+                            return;
+                        }
+
+                        const c = riskColor(data.scam_risk), bg = riskBg(data.scam_risk);
+                        placeholder.className = 'mic-entry';
+                        placeholder.style.background = bg;
+                        placeholder.style.borderColor = c + '50';
+                        placeholder.innerHTML = `
+                            <div style="font-weight:bold;color:${c};font-size:16px;">${riskIcon(data.scam_risk)} Scam Risk: ${data.scam_risk}%</div>
+                            <div class="risk-bar-wrap" style="margin:6px 0 4px;">
+                                <div class="risk-bar" style="width:${data.scam_risk}%;background:${c};"></div>
+                            </div>
+                            <div style="font-size:12px;color:#666;">${riskVerdict(data.scam_risk)}</div>
+                            ${data.warning ? `<div class="warning-box" style="margin-top:6px;">⚠️ ${data.warning}</div>` : ''}
+                            <div class="heard">🗣️ "${data.transcribed_text.trim()}"</div>`;
+                    } catch (err) {
+                        placeholder.remove();
+                    }
+                };
+
+                mediaRecorder.start(3000);
+                btn.textContent = '⏹️ Stop Recording';
                 btn.classList.add('recording');
+                statusEl.style.display = 'block';
                 isRecording = true;
-            } else {
-                socket.emit('stop_microphone');
-                btn.textContent = '🎤 Start Recording';
-                btn.classList.remove('recording');
-                isRecording = false;
-            }
-        }
 
-        socket.on('mic_result', function(data) {
-            const div = document.getElementById('mic-results');
-            const cls = data.is_spam ? 'spam' : 'ham';
-            const lbl = data.is_spam ? '⚠️ SCAM' : '✅ Safe';
-            
-            div.innerHTML = `
-                <div class="result ${cls}" style="margin-top: 15px;">
-                    <h3>${lbl}</h3>
-                    <p>Confidence: ${(data.confidence * 100).toFixed(1)}%</p>
-                    <div style="background: #f5f5f5; padding: 10px; border-radius: 5px; margin-top: 10px;">
-                        <strong>Heard:</strong> ${data.transcribed_text}
-                    </div>
-                </div>
-            ` + div.innerHTML;
-        });
-    </script>
+            } catch (err) {
+                alert('Microphone error: ' + err.message);
+            }
+        } else {
+            mediaRecorder?.stop();
+            stream?.getTracks().forEach(t => t.stop());
+            btn.textContent = '🎤 Start Recording';
+            btn.classList.remove('recording');
+            statusEl.style.display = 'none';
+            isRecording = false;
+        }
+    }
+
+    function getSupportedMimeType() {
+        const types = ['audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus', 'audio/ogg'];
+        return types.find(t => MediaRecorder.isTypeSupported(t)) || '';
+    }
+</script>
 </body>
 </html>
