@@ -13,12 +13,9 @@ RUN pip install --no-cache-dir \
         torch==2.1.0 \
         --index-url https://download.pytorch.org/whl/cpu
 
-# Install all dependencies (includes numpy) before whisper model download
+# Install all dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Pre-download Whisper small model
-RUN python -c "import whisper; whisper.load_model('small')"
 
 COPY . .
 

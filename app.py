@@ -83,7 +83,7 @@ if os.path.exists('./spam_classifier_model'):
     print("Spam classifier loaded!")
 
 print("Loading Whisper small model...")
-transcriber = AudioTranscriber(model_size='small')
+transcriber = AudioTranscriber()
 print("Whisper model loaded!")
 
 print("Loading company verifier...")

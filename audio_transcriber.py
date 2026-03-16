@@ -2,7 +2,7 @@ import whisper
 import torch
 
 class AudioTranscriber:
-    def __init__(self, model_size='medium'):
+    def __init__(self, model_size='base'):
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print(f"Loading Whisper {model_size} model on {self.device}...")
         self.model = whisper.load_model(model_size, device=self.device)
