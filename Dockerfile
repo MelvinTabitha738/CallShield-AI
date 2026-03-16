@@ -21,9 +21,8 @@ RUN pip install --no-cache-dir \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Pre-download the Whisper 'small' model during build so the first
-# request isn't delayed by a 461 MB download at runtime.
-RUN python -c "import whisper; whisper.load_model('small')"
+# Pre-download the Whisper 'small' model during build
+RUN pip install --no-cache-dir numpy && python -c "import whisper; whisper.load_model('small')"
 
 # Copy application code and data files
 COPY . .
