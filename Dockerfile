@@ -1,23 +1,34 @@
 FROM python:3.10-slim
 
+# Install system dependencies as root
 RUN apt-get update && apt-get install -y --no-install-recommends \
         ffmpeg \
         gcc \
         g++ \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+# HF Spaces requires UID 1000
+RUN useradd -m -u 1000 user
+USER user
+ENV HOME=/home/user \
+    PATH=/home/user/.local/bin:$PATH \
+    XDG_CACHE_HOME=/home/user/.cache
 
-# Install CPU-only PyTorch first
-RUN pip install --no-cache-dir \
-        torch==2.1.0 \
+WORKDIR $HOME/app
+
+# Install CPU-only PyTorch first (must be before whisper to avoid GPU torch being pulled in)
+RUN pip install --no-cache-dir --user \
+        torch==2.5.1 \
         --index-url https://download.pytorch.org/whl/cpu
 
-# Install all dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install remaining dependencies
+COPY --chown=user requirements.txt .
+RUN pip install --no-cache-dir --user -r requirements.txt
 
-COPY . .
+# Pre-download Whisper base model so cold starts are instant
+RUN python -c "import whisper; whisper.load_model('base')"
+
+COPY --chown=user . .
 
 EXPOSE 7860
 
