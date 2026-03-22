@@ -53,6 +53,32 @@ class UserAnalyticsService:
             reported_by=user
         ).count()
 
+        pending_reports_count  = ScamIncident.objects.filter(
+            reported_by=user, verified=False
+        ).count()
+        verified_reports_count = ScamIncident.objects.filter(
+            reported_by=user, verified=True
+        ).count()
+
+        # Report history — last 90 days, most recent first
+        ninety_days_ago = timezone.now() - timedelta(days=90)
+        recent_reports_qs = ScamIncident.objects.filter(
+            reported_by=user,
+            reported_at__gte=ninety_days_ago
+        ).order_by('-reported_at')[:20]
+
+        report_history = [
+            {
+                'id':          str(r.id),
+                'scam_type':   r.scam_type,
+                'status':      'verified' if r.verified else 'pending',
+                'source':      r.source,
+                'reported_at': r.reported_at.isoformat(),
+                'severity':    r.severity,
+            }
+            for r in recent_reports_qs
+        ]
+
         training_contributions = ConfirmedScamConversation.objects.filter(
             session__user=user,
             user_consented_training=True
@@ -61,22 +87,18 @@ class UserAnalyticsService:
         # Get reporter credibility
         try:
             credibility = ReporterCredibility.objects.get(user=user)
-            community_score = credibility.trust_score
-            badge = credibility.tier
+            community_score = int(credibility.credibility_score * 100) 
+            badge = credibility.credibility_tier
         except ReporterCredibility.DoesNotExist:
             community_score = 0
             badge = 'new'
 
-        # Calculate users helped (approximate)
-        # Users who got warned because of this user's reports
-        user_report_hashes = ScamIncident.objects.filter(
-            reported_by=user
-        ).values_list('phone_number_hash', flat=True)
-
-        users_helped = CallSession.objects.filter(
-            caller_number_hash__in=user_report_hashes,
-            initial_risk_score__gte=50  # Pre-warned
-        ).exclude(user=user).values('user').distinct().count()
+        # Training contributions — calls where user consented for AI training
+        # This is concrete and accurate unlike hash-matching "users helped"
+        training_contributions = ConfirmedScamConversation.objects.filter(
+            session__user=user,
+            user_consented_training=True
+        ).count()
 
         # Call summary
         last_scam_session = CallSession.objects.filter(
@@ -114,11 +136,13 @@ class UserAnalyticsService:
             day_calls = day_sessions.count()
             day_scams = day_sessions.filter(peak_risk_score__gte=70).count()
 
-            recent_activity.append({
-                'date': date.isoformat(),
-                'calls': day_calls,
-                'scams': day_scams
-            })
+            # Only include days that had actual call activity
+            if day_calls > 0:
+                recent_activity.append({
+                    'date': date.isoformat(),
+                    'calls': day_calls,
+                    'scams': day_scams
+                })
 
         # Scam types encountered
         scam_types = CallSession.objects.filter(
@@ -185,33 +209,38 @@ class UserAnalyticsService:
                 }
             },
             'community': {
-                'reports_submitted': reports_submitted,
+                'reports_submitted': verified_reports_count,
                 'training_contributions': training_contributions,
                 'community_score': community_score,
-                'users_helped': users_helped,
                 'badge': badge,
-                'impact_message': cls._get_impact_message(users_helped)
+                'impact_message': cls._get_impact_message(reports_submitted, training_contributions)
             },
             'recent_activity': recent_activity,
             'scam_types_encountered': scam_types_list,
-            'most_common_scam': most_common_scam
+            'most_common_scam': most_common_scam,
+            'reports': {
+                'pending':  pending_reports_count,
+                'verified': verified_reports_count,
+                'history':  report_history,
+            }
         }
 
     @staticmethod
-    def _get_impact_message(users_helped):
-        """Generate motivational impact message."""
-        if users_helped == 0:
-            return "Submit your first report to help protect others!"
-        elif users_helped == 1:
-            return "Your reports helped protect 1 other user!"
-        elif users_helped < 10:
-            return f"Your reports helped protect {users_helped} other users!"
-        elif users_helped < 50:
-            return f"Amazing! Your reports helped protect {users_helped} users!"
-        elif users_helped < 100:
-            return f"Incredible! Your reports protected {users_helped} users!"
+    def _get_impact_message(reports_submitted, training_contributions):
+        """Generate impact message based on actual contributions."""
+        if reports_submitted == 0:
+            return "Submit a report to help protect the community."
+        elif training_contributions == 0:
+            if reports_submitted == 1:
+                return "Your report is under review. Thank you for contributing!"
+            else:
+                return f"You've submitted {reports_submitted} reports. Keep it up!"
+        elif training_contributions < 5:
+            return f"Your data is helping train CallShield's AI model."
+        elif training_contributions < 20:
+            return f"Great work — {training_contributions} training contributions so far!"
         else:
-            return f"Hero! Your reports protected {users_helped}+ users!"
+            return f"Excellent! {training_contributions} AI training contributions."
 
 
 class AdminAnalyticsService:
@@ -472,19 +501,22 @@ class AdminAnalyticsService:
             if total_users > 0 else 0
         )
 
-        # Top contributors
+        # Top contributors — use badge tier, never expose raw phone numbers
         top_contributors = ScamIncident.objects.values(
-            'reported_by__phone_number'
+            'reported_by__id',
+            'reported_by__phone_number_hash',
         ).annotate(
             report_count=Count('id')
         ).order_by('-report_count')[:5]
 
         top_list = [
             {
-                'phone': item['reported_by__phone_number'],
-                'reports': item['report_count']
+                'user_id': str(item['reported_by__id']),
+                # Show only first 8 chars of hash as a safe public identifier
+                'identifier': (item['reported_by__phone_number_hash'] or '')[:8] + '…',
+                'reports': item['report_count'],
             }
-            for item in top_contributors if item['reported_by__phone_number']
+            for item in top_contributors if item['reported_by__id']
         ]
 
         return {

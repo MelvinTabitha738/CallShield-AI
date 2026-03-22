@@ -1,8 +1,9 @@
+# backend_apps/real_time_detection/admin.py
+
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import (
     CallSession,
-    TranscriptChunk,
     RiskAlert,
     ConfirmedScamConversation,
 )
@@ -19,7 +20,7 @@ class CallSessionAdmin(admin.ModelAdmin):
         'peak_risk_score',
         'get_risk_badge',
         'alert_triggered',
-        'auto_report_recommended',
+        'scam_detected_by_ai',
         'chunks_processed',
         'get_duration',
         'content_deleted',
@@ -28,7 +29,8 @@ class CallSessionAdmin(admin.ModelAdmin):
     list_filter = (
         'status',
         'alert_triggered',
-        'user_confirmed_scam',
+        'scam_detected_by_ai',
+        'user_consented_storage',
         'content_deleted',
         'detected_scam_type',
     )
@@ -53,14 +55,14 @@ class CallSessionAdmin(admin.ModelAdmin):
                 'peak_risk_score', 'final_risk_score',
                 'ml_confidence', 'alert_threshold',
                 'alert_triggered', 'alert_count',
-                'auto_report_recommended',  
+                'scam_detected_by_ai', 'auto_report_recommended',
             ),
         }),
         ('Detection Results', {
             'fields': ('detected_scam_type', 'detected_patterns'),
         }),
-        ('User Feedback', {
-            'fields': ('user_confirmed_scam', 'user_feedback_notes'),
+        ('User Consent', {
+            'fields': ('user_consented_storage', 'user_feedback_notes'),
         }),
         ('Privacy & Deletion', {
             'fields': (
@@ -99,24 +101,6 @@ class CallSessionAdmin(admin.ModelAdmin):
             color, label,
         )
     get_risk_badge.short_description = 'Peak Risk'
-
-
-@admin.register(TranscriptChunk)
-class TranscriptChunkAdmin(admin.ModelAdmin):
-
-    list_display = (
-        'session',
-        'chunk_number',
-        'speaker',
-        'chunk_risk_score',
-        'ml_analyzed',
-        'ml_confidence',
-        'received_at',
-    )
-    list_filter  = ('speaker', 'ml_analyzed')
-    search_fields = ('session__id',)
-    readonly_fields = ('id', 'received_at')
-    ordering = ('session', 'chunk_number')
 
 
 @admin.register(RiskAlert)
@@ -170,3 +154,7 @@ class ConfirmedScamConversationAdmin(admin.ModelAdmin):
     def get_short_id(self, obj):
         return str(obj.id)[:8] + '…'
     get_short_id.short_description = 'ID'
+
+
+
+  

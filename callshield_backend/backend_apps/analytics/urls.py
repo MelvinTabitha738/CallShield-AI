@@ -34,6 +34,7 @@ urlpatterns = [
     ),
     
     #Public Analytics
+    
     path(
         'public/impact/',
         views.community_impact,
@@ -44,4 +45,5 @@ urlpatterns = [
         views.scam_intelligence,
         name='public-scam-intelligence'
     ),
+    path('public/mobile/', views.public_stats_mobile, name='public-stats-mobile'),
 ]

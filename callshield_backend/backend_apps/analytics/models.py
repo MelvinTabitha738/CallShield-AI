@@ -7,4 +7,4 @@ from django.db import models
 # - PhoneNumberActive, ScamIncident (scam_database)
 # - ReporterCredibility (scam_database)
 
-# All analytics are computed on-the-fly from existing data
+# All analytics are computed on-the-fly from existing datae

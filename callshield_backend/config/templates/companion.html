@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CallShield Live Monitor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header .logo { font-size: 24px; }
+    header h1 { font-size: 20px; font-weight: 700; color: #58a6ff; }
+    header span { font-size: 13px; color: #8b949e; margin-left: auto; }
+
+    /* ── Main ───────────────────────────────── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* ── Cards ──────────────────────────────── */
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 32px;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .card h2 { font-size: 18px; margin-bottom: 24px; color: #c9d1d9; }
+
+    /* ── Form ───────────────────────────────── */
+    .form-group { margin-bottom: 16px; }
+    label { display: block; font-size: 13px; color: #8b949e; margin-bottom: 6px; }
+    input[type="text"], input[type="tel"] {
+      width: 100%;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: #e6edf3;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus { border-color: #58a6ff; }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-primary:hover:not(:disabled) { background: #2ea043; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; margin-top: 10px; }
+    .btn-secondary:hover:not(:disabled) { background: #30363d; }
+
+    .msg { font-size: 13px; margin-top: 12px; min-height: 20px; }
+    .msg.error { color: #f85149; }
+    .msg.success { color: #3fb950; }
+    .msg.info { color: #8b949e; }
+
+    /* ── Waiting screen ─────────────────────── */
+    .waiting-content {
+      text-align: center;
+      padding: 16px 0;
+    }
+    .pulse-ring {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: #1f2937;
+      border: 3px solid #30363d;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 32px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(88,166,255,0.4); }
+      50%       { box-shadow: 0 0 0 16px rgba(88,166,255,0); }
+    }
+    .waiting-content p { color: #8b949e; font-size: 14px; margin-top: 8px; }
+    .waiting-content .hint {
+      margin-top: 24px;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #8b949e;
+      text-align: left;
+    }
+    .waiting-content .hint strong { color: #c9d1d9; }
+
+    /* ── Monitoring screen ──────────────────── */
+    .live-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #1a1f2e;
+      border: 1px solid #f85149;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      color: #f85149;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .live-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #f85149;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .risk-gauge {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .risk-number {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1;
+      transition: color 0.5s;
+    }
+    .risk-label {
+      font-size: 13px;
+      color: #8b949e;
+      margin-top: 4px;
+    }
+    .risk-bar-bg {
+      height: 8px;
+      background: #21262d;
+      border-radius: 4px;
+      margin: 12px 0;
+      overflow: hidden;
+    }
+    .risk-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s, background 0.5s;
+    }
+
+    .risk-level-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .info-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .info-box .label { font-size: 11px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }
+    .info-box .value { font-size: 18px; font-weight: 700; color: #e6edf3; margin-top: 2px; }
+
+    .section-title { font-size: 12px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px; }
+
+    .transcript-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 13px;
+      color: #c9d1d9;
+      min-height: 60px;
+      max-height: 100px;
+      overflow-y: auto;
+      font-style: italic;
+    }
+    .transcript-box.empty { color: #8b949e; font-style: normal; }
+
+    .patterns-list { display: flex; flex-wrap: wrap; gap: 6px; min-height: 28px; }
+    .pattern-tag {
+      background: #1a1f2e;
+      border: 1px solid #58a6ff;
+      color: #58a6ff;
+      border-radius: 12px;
+      padding: 3px 10px;
+      font-size: 12px;
+    }
+
+    .alert-box {
+      background: #2d1515;
+      border: 1px solid #f85149;
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .alert-box .alert-icon { font-size: 20px; flex-shrink: 0; }
+    .alert-box .alert-text { font-size: 14px; color: #ffa198; font-weight: 600; }
+    .alert-box .alert-sub  { font-size: 12px; color: #8b949e; margin-top: 4px; }
+
+    /* ── Summary screen ─────────────────────── */
+    .summary-icon { font-size: 48px; text-align: center; margin-bottom: 16px; }
+    .summary-stat {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #21262d;
+      font-size: 14px;
+    }
+    .summary-stat:last-child { border-bottom: none; }
+    .summary-stat .s-label { color: #8b949e; }
+    .summary-stat .s-value { font-weight: 600; color: #e6edf3; }
+
+    /* ── Mic status bar ─────────────────────── */
+    .mic-bar {
+      background: #161b22;
+      border-top: 1px solid #30363d;
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: #8b949e;
+    }
+    .mic-indicator {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #8b949e;
+    }
+    .mic-indicator.active { background: #3fb950; animation: blink 1s infinite; }
+    .mic-level-bg {
+      flex: 1; height: 6px; background: #21262d; border-radius: 3px; overflow: hidden; max-width: 180px;
+    }
+    .mic-level-fill { height: 100%; background: #3fb950; border-radius: 3px; width: 0%; transition: width 0.1s; }
+
+    /* ── Screen visibility ──────────────────── */
+    .screen { display: none; }
+    .screen.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span class="logo">🛡️</span>
+    <h1>CallShield Live Monitor</h1>
+    <span id="header-status">Browser Companion</span>
+  </header>
+
+  <main>
+
+    <!-- ── SCREEN 1: Login ──────────────────── -->
+    <div id="screen-login" class="screen active card">
+      <h2>Sign in to start monitoring</h2>
+
+      <div id="step-phone">
+        <div class="form-group">
+          <label>Phone Number (with country code)</label>
+          <input id="input-phone" type="tel" placeholder="+254700000000" />
+        </div>
+        <button class="btn btn-primary" onclick="requestOTP()">Send OTP</button>
+        <p id="msg-phone" class="msg info"></p>
+      </div>
+
+      <div id="step-otp" style="display:none;">
+        <div class="form-group">
+          <label>Enter OTP sent to your phone</label>
+          <input id="input-otp" type="text" placeholder="123456" maxlength="6" />
+        </div>
+        <button class="btn btn-primary" onclick="verifyOTP()">Verify & Continue</button>
+        <button class="btn btn-secondary" onclick="backToPhone()">Back</button>
+        <p id="msg-otp" class="msg info"></p>
+      </div>
+    </div>
+
+    <!-- ── SCREEN 2: Waiting ─────────────────── -->
+    <div id="screen-waiting" class="screen card">
+      <h2>Companion Ready</h2>
+      <div class="waiting-content">
+        <div class="pulse-ring">🎙️</div>
+        <h3 style="color:#58a6ff;">Ready to monitor</h3>
+        <p>Place your phone on speakerphone near this laptop, then click Start.</p>
+        <div class="hint">
+          <strong>How to use:</strong><br>
+          1. Put your phone on speakerphone near the laptop mic<br>
+          2. Answer or make the call<br>
+          3. Click <strong style="color:#3fb950;">Start Monitoring</strong> below
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:20px;">
+        <label>Caller's Phone Number (optional)</label>
+        <input id="input-caller" type="tel" placeholder="+254700000000 or leave blank" />
+      </div>
+      <button class="btn btn-primary" style="margin-top:8px;" onclick="manualStart()">🎙️ Start Monitoring</button>
+      <button class="btn btn-secondary" onclick="logout()">Sign Out</button>
+    </div>
+
+    <!-- ── SCREEN 3: Monitoring ──────────────── -->
+    <div id="screen-monitoring" class="screen card">
+
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:4px;">
+        <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+        <span id="chunk-counter" style="font-size:12px;color:#8b949e;">Chunk 0</span>
+      </div>
+
+      <!-- Risk gauge -->
+      <div class="risk-gauge">
+        <div id="risk-number" class="risk-number" style="color:#3fb950;">0</div>
+        <div class="risk-label">Risk Score / 100</div>
+        <div class="risk-bar-bg">
+          <div id="risk-bar" class="risk-bar-fill" style="width:0%;background:#3fb950;"></div>
+        </div>
+        <span id="risk-level-badge" class="risk-level-badge" style="background:#1a2e1a;color:#3fb950;">SAFE</span>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="label">Peak Risk</div>
+          <div class="value" id="peak-score">0</div>
+        </div>
+        <div class="info-box">
+          <div class="label">ML Confidence</div>
+          <div class="value" id="ml-confidence">—</div>
+        </div>
+      </div>
+
+      <!-- Transcript -->
+      <div class="section-title">Latest Transcript</div>
+      <div id="transcript-box" class="transcript-box empty">Waiting for speech...</div>
+
+      <!-- Patterns -->
+      <div class="section-title">Detected Patterns</div>
+      <div id="patterns-list" class="patterns-list">
+        <span style="font-size:12px;color:#8b949e;">None detected</span>
+      </div>
+
+      <!-- Stop button -->
+      <button class="btn btn-secondary" style="margin-top:16px;" onclick="stopSession()">⏹ Stop Monitoring</button>
+
+      <!-- Alert -->
+      <div id="alert-box" class="alert-box" style="display:none;">
+        <span class="alert-icon">⚠️</span>
+        <div>
+          <div class="alert-text" id="alert-text">Scam detected</div>
+          <div class="alert-sub" id="alert-sub"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── SCREEN 4: Summary ──────────────────── -->
+    <div id="screen-summary" class="screen card">
+      <div class="summary-icon" id="summary-icon">✅</div>
+      <h2 id="summary-title" style="text-align:center;margin-bottom:20px;">Call Ended</h2>
+
+      <div class="summary-stat">
+        <span class="s-label">Final Risk Score</span>
+        <span class="s-value" id="sum-risk">—</span>
+      </div>
+      <div class="summary-stat">
+        <span class="s-label">Peak Risk Score</span>
+        <span class="s-value" id="sum-peak">—</span>
+      </div>
+      <div class="summary-stat">
+        <span class="s-label">Chunks Analyzed</span>
+        <span class="s-value" id="sum-chunks">—</span>
+      </div>
+      <div class="summary-stat">
+        <span class="s-label">Scam Alert Triggered</span>
+        <span class="s-value" id="sum-alert">—</span>
+      </div>
+
+      <button class="btn btn-primary" style="margin-top:24px;" onclick="showWaiting()">Monitor Next Call</button>
+    </div>
+
+  </main>
+
+  <!-- Mic status bar (shown during monitoring) -->
+  <div class="mic-bar" id="mic-bar" style="display:none;">
+    <div class="mic-indicator active" id="mic-dot"></div>
+    <span id="mic-status">Microphone active</span>
+    <div class="mic-level-bg"><div class="mic-level-fill" id="mic-level-fill"></div></div>
+    <span id="mic-rms" style="min-width:60px;">Vol: —</span>
+  </div>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// State
+// ─────────────────────────────────────────────────────────────
+let token         = localStorage.getItem('cs_token') || null;
+let phone         = localStorage.getItem('cs_phone') || null;
+let sessionId     = null;
+let chunkNumber   = 0;
+let pollInterval  = null;
+let audioCtx      = null;
+let processor     = null;
+let micStream     = null;
+let pcmBuffer     = [];
+let chunkInterval = null;
+const SAMPLE_RATE = 16000;
+const CHUNK_MS    = 5000;
+
+// ─────────────────────────────────────────────────────────────
+// Screens
+// ─────────────────────────────────────────────────────────────
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('mic-bar').style.display = (id === 'screen-monitoring') ? 'flex' : 'none';
+}
+
+// ─────────────────────────────────────────────────────────────
+// Init
+// ─────────────────────────────────────────────────────────────
+window.addEventListener('load', () => {
+  if (token) {
+    showWaiting();
+  } else {
+    showScreen('screen-login');
+  }
+});
+
+// ─────────────────────────────────────────────────────────────
+// Auth — Step 1: Request OTP
+// ─────────────────────────────────────────────────────────────
+async function requestOTP() {
+  const phoneVal = document.getElementById('input-phone').value.trim();
+  if (!phoneVal) { setMsg('msg-phone', 'Enter your phone number.', 'error'); return; }
+
+  setMsg('msg-phone', 'Sending OTP...', 'info');
+  try {
+    const res = await fetch('/api/auth/request-otp/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone_number: phoneVal }),
+    });
+    const data = await res.json();
+    if (res.ok) {
+      phone = phoneVal;
+      document.getElementById('step-phone').style.display = 'none';
+      document.getElementById('step-otp').style.display = 'block';
+      setMsg('msg-otp', 'OTP sent. Check your phone (or use 123456 in dev mode).', 'success');
+    } else {
+      setMsg('msg-phone', data.message || 'Failed to send OTP.', 'error');
+    }
+  } catch (e) {
+    setMsg('msg-phone', 'Cannot reach server. Is the backend running?', 'error');
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Auth — Step 2: Verify OTP
+// ─────────────────────────────────────────────────────────────
+async function verifyOTP() {
+  const otp = document.getElementById('input-otp').value.trim();
+  if (!otp) { setMsg('msg-otp', 'Enter the OTP.', 'error'); return; }
+
+  setMsg('msg-otp', 'Verifying...', 'info');
+  try {
+    const res = await fetch('/api/auth/verify-otp/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone_number: phone, otp: otp }),
+    });
+    const data = await res.json();
+    if (res.ok && data.access_token) {
+      token = data.access_token;
+      localStorage.setItem('cs_token', token);
+      localStorage.setItem('cs_phone', phone);
+      showWaiting();
+    } else {
+      setMsg('msg-otp', data.message || data.detail || 'Invalid OTP.', 'error');
+    }
+  } catch (e) {
+    setMsg('msg-otp', 'Cannot reach server.', 'error');
+  }
+}
+
+function backToPhone() {
+  document.getElementById('step-phone').style.display = 'block';
+  document.getElementById('step-otp').style.display = 'none';
+}
+
+function logout() {
+  token = null; phone = null;
+  localStorage.removeItem('cs_token');
+  localStorage.removeItem('cs_phone');
+  stopPolling(); stopRecording();
+  showScreen('screen-login');
+}
+
+// ─────────────────────────────────────────────────────────────
+// Waiting — poll for active session
+// ─────────────────────────────────────────────────────────────
+function showWaiting() {
+  stopRecording();
+  showScreen('screen-waiting');
+  document.getElementById('header-status').textContent =
+    phone ? `Signed in as ${phone}` : 'Browser Companion';
+  startPolling();
+}
+
+function startPolling() {
+  stopPolling();
+  pollInterval = setInterval(pollSessionStatus, 3000);
+}
+
+function stopPolling() {
+  if (pollInterval) { clearInterval(pollInterval); pollInterval = null; }
+}
+
+async function manualStart() {
+  // If Android already has an active session, join it instead of creating a new one
+  if (sessionId) {
+    stopPolling();
+    startMonitoring();
+    return;
+  }
+
+  const callerNumber = document.getElementById('input-caller').value.trim() || '+254000000000';
+
+  // Create a new session on the backend
+  try {
+    const res = await fetch('/api/detection/start-session/', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phone_number: callerNumber }),
+    });
+    const data = await res.json();
+    if (res.ok && data.session_id) {
+      sessionId = data.session_id;
+      stopPolling();
+      startMonitoring();
+    } else {
+      console.error('Session error:', data);
+      alert('Could not start session: ' + JSON.stringify(data));
+    }
+  } catch (e) {
+    alert('Cannot reach backend. Is the server running?');
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Monitoring — start microphone + chunked recording
+// ─────────────────────────────────────────────────────────────
+async function startMonitoring() {
+  chunkNumber = 0;
+  showScreen('screen-monitoring');
+  resetMonitorUI();
+
+  // Request microphone
+  try {
+    micStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+  } catch (e) {
+    alert('Microphone access denied. Please allow microphone and refresh.');
+    showWaiting(); return;
+  }
+
+  // AudioContext at 16 kHz — resume() required for Chrome autoplay policy
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: SAMPLE_RATE });
+  await audioCtx.resume();
+  console.log(`[CallShield] AudioContext sampleRate = ${audioCtx.sampleRate} Hz`);
+
+  const src = audioCtx.createMediaStreamSource(micStream);
+  processor = audioCtx.createScriptProcessor(4096, 1, 1);
+
+  processor.onaudioprocess = (e) => {
+    const data = e.inputBuffer.getChannelData(0);
+
+    // Calculate RMS for mic level indicator
+    let sum = 0;
+    for (let i = 0; i < data.length; i++) sum += data[i] * data[i];
+    const rms = Math.sqrt(sum / data.length);
+    const pct = Math.min(100, Math.round(rms * 400));
+    document.getElementById('mic-level-fill').style.width = `${pct}%`;
+    document.getElementById('mic-level-fill').style.background = pct > 5 ? '#3fb950' : '#f85149';
+    document.getElementById('mic-rms').textContent = `Vol: ${pct}%`;
+
+    for (let i = 0; i < data.length; i++) pcmBuffer.push(data[i]);
+  };
+
+  // Mute output to prevent feedback loop
+  const gain = audioCtx.createGain();
+  gain.gain.value = 0;
+  src.connect(processor);
+  processor.connect(gain);
+  gain.connect(audioCtx.destination);
+
+  // Send a chunk every CHUNK_MS milliseconds
+  chunkInterval = setInterval(sendChunk, CHUNK_MS);
+
+  // Poll to detect when session ends
+  pollInterval = setInterval(pollSessionStatus, 3000);
+}
+
+async function sendChunk() {
+  if (pcmBuffer.length === 0) return;
+
+  chunkNumber++;
+  const samples = new Float32Array(pcmBuffer.splice(0, pcmBuffer.length));
+  const wavBlob = buildWav(samples, SAMPLE_RATE);
+
+  document.getElementById('chunk-counter').textContent = `Chunk ${chunkNumber}`;
+
+  console.log(`[CallShield] Chunk ${chunkNumber}: ${samples.length} samples, WAV size = ${wavBlob.size} bytes`);
+
+  const formData = new FormData();
+  formData.append('session_id',   sessionId);
+  formData.append('audio_chunk',  wavBlob, `chunk_${chunkNumber}.wav`);
+  formData.append('chunk_number', chunkNumber);
+  formData.append('timestamp',    new Date().toISOString());
+
+  try {
+    const res = await fetch('/api/detection/process-chunk/', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${token}` },
+      body: formData,
+    });
+    if (res.ok) {
+      const result = await res.json();
+      updateMonitorUI(result);
+    }
+  } catch (_) { /* network hiccup */ }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Stop session manually
+// ─────────────────────────────────────────────────────────────
+async function stopSession() {
+  stopRecording();
+  stopPolling();
+  try {
+    await fetch('/api/detection/end-session/', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        session_id: sessionId,
+        user_consented_storage: false,
+      }),
+    });
+  } catch (_) {}
+  showSummary();
+}
+
+// ─────────────────────────────────────────────────────────────
+// Poll session status — detect when call ends from Android side
+// ─────────────────────────────────────────────────────────────
+async function pollSessionStatus() {
+  try {
+    const res = await fetch('/api/detection/active-session/', {
+      headers: { 'Authorization': `Bearer ${token}` },
+    });
+    const data = await res.json();
+
+    if (sessionId !== null) {
+      // We are monitoring — check if the session ended
+      if (!data.active) {
+        stopRecording();
+        stopPolling();
+        showSummary();
+      }
+    } else {
+      // We are waiting — check if Android started a session
+      if (data.active) {
+        // Auto-fill caller number from Android's session
+        if (data.caller_number) {
+          document.getElementById('input-caller').value = data.caller_number;
+        }
+        // Join the Android's session automatically
+        sessionId = data.session_id;
+        stopPolling();
+        startMonitoring();
+      }
+    }
+  } catch (_) { /* ignore */ }
+}
+
+// ─────────────────────────────────────────────────────────────
+// Stop recording
+// ─────────────────────────────────────────────────────────────
+function stopRecording() {
+  if (chunkInterval) { clearInterval(chunkInterval); chunkInterval = null; }
+  if (processor)     { processor.disconnect(); processor = null; }
+  if (audioCtx)      { audioCtx.close(); audioCtx = null; }
+  if (micStream)     { micStream.getTracks().forEach(t => t.stop()); micStream = null; }
+  pcmBuffer = [];
+}
+
+// ─────────────────────────────────────────────────────────────
+// UI updates
+// ─────────────────────────────────────────────────────────────
+function resetMonitorUI() {
+  setRisk(0);
+  document.getElementById('peak-score').textContent   = '0';
+  document.getElementById('ml-confidence').textContent = '—';
+  document.getElementById('transcript-box').textContent = 'Waiting for speech...';
+  document.getElementById('transcript-box').classList.add('empty');
+  document.getElementById('patterns-list').innerHTML  =
+    '<span style="font-size:12px;color:#8b949e;">None detected</span>';
+  document.getElementById('alert-box').style.display  = 'none';
+  document.getElementById('chunk-counter').textContent = 'Chunk 0';
+}
+
+function updateMonitorUI(r) {
+  const score = r.current_risk || 0;
+  setRisk(score);
+
+  if (r.peak_risk !== undefined)
+    document.getElementById('peak-score').textContent = r.peak_risk;
+
+  if (r.ml_confidence !== undefined)
+    document.getElementById('ml-confidence').textContent =
+      r.ml_confidence ? `${Math.round(r.ml_confidence * 100)}%` : '—';
+
+  if (r.transcript_chunk && r.transcript_chunk.trim()) {
+    const box = document.getElementById('transcript-box');
+    box.classList.remove('empty');
+    box.textContent = r.transcript_chunk;
+  }
+
+  if (r.patterns_detected && r.patterns_detected.length > 0) {
+    document.getElementById('patterns-list').innerHTML =
+      r.patterns_detected.map(p =>
+        `<span class="pattern-tag">${p.replace(/_/g,' ')}</span>`
+      ).join('');
+  }
+
+  if (r.should_alert) {
+    const box = document.getElementById('alert-box');
+    box.style.display = 'flex';
+    document.getElementById('alert-text').textContent =
+      r.alert_message || 'High risk detected!';
+    document.getElementById('alert-sub').textContent =
+      r.scam_type ? `Scam type: ${r.scam_type.replace(/_/g,' ')}` : '';
+  }
+}
+
+function setRisk(score) {
+  const el    = document.getElementById('risk-number');
+  const bar   = document.getElementById('risk-bar');
+  const badge = document.getElementById('risk-level-badge');
+
+  el.textContent    = score;
+  bar.style.width   = `${score}%`;
+
+  let color, bg, label;
+  if      (score < 20)  { color='#3fb950'; bg='#1a2e1a'; label='SAFE'; }
+  else if (score < 40)  { color='#d29922'; bg='#2d2210'; label='LOW'; }
+  else if (score < 60)  { color='#e3b341'; bg='#2d2710'; label='MODERATE'; }
+  else if (score < 80)  { color='#f0883e'; bg='#2d1c10'; label='HIGH'; }
+  else                   { color='#f85149'; bg='#2d1515'; label='CRITICAL'; }
+
+  el.style.color          = color;
+  bar.style.background    = color;
+  badge.style.color       = color;
+  badge.style.background  = bg;
+  badge.textContent       = label;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Summary screen
+// ─────────────────────────────────────────────────────────────
+function showSummary() {
+  showScreen('screen-summary');
+
+  const riskNum = parseInt(document.getElementById('risk-number').textContent) || 0;
+  const peak    = document.getElementById('peak-score').textContent;
+  const alerted = document.getElementById('alert-box').style.display !== 'none';
+
+  document.getElementById('sum-risk').textContent   = `${riskNum}/100`;
+  document.getElementById('sum-peak').textContent   = `${peak}/100`;
+  document.getElementById('sum-chunks').textContent = chunkNumber;
+  document.getElementById('sum-alert').textContent  = alerted ? '⚠️ Yes' : '✅ No';
+
+  if (riskNum >= 60) {
+    document.getElementById('summary-icon').textContent  = '🚨';
+    document.getElementById('summary-title').textContent = 'Scam Alert Detected';
+    document.getElementById('summary-title').style.color = '#f85149';
+  } else {
+    document.getElementById('summary-icon').textContent  = '✅';
+    document.getElementById('summary-title').textContent = 'Call Ended — Safe';
+    document.getElementById('summary-title').style.color = '#3fb950';
+  }
+
+  sessionId = null;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Build WAV file from Float32 PCM samples
+// ─────────────────────────────────────────────────────────────
+function buildWav(floatSamples, sampleRate) {
+  const numChannels  = 1;
+  const bitsPerSample = 16;
+  const byteRate     = sampleRate * numChannels * (bitsPerSample / 8);
+  const blockAlign   = numChannels * (bitsPerSample / 8);
+  const dataSize     = floatSamples.length * 2;
+  const bufSize      = 44 + dataSize;
+
+  const buf  = new ArrayBuffer(bufSize);
+  const view = new DataView(buf);
+
+  function str(offset, s) {
+    for (let i = 0; i < s.length; i++) view.setUint8(offset + i, s.charCodeAt(i));
+  }
+
+  str(0,  'RIFF');
+  view.setUint32(4,  bufSize - 8,   true);
+  str(8,  'WAVE');
+  str(12, 'fmt ');
+  view.setUint32(16, 16,            true);   // PCM chunk size
+  view.setUint16(20, 1,             true);   // PCM format
+  view.setUint16(22, numChannels,   true);
+  view.setUint32(24, sampleRate,    true);
+  view.setUint32(28, byteRate,      true);
+  view.setUint16(32, blockAlign,    true);
+  view.setUint16(34, bitsPerSample, true);
+  str(36, 'data');
+  view.setUint32(40, dataSize,      true);
+
+  for (let i = 0; i < floatSamples.length; i++) {
+    const s = Math.max(-1, Math.min(1, floatSamples[i]));
+    view.setInt16(44 + i * 2, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+  }
+
+  return new Blob([buf], { type: 'audio/wav' });
+}
+
+// ─────────────────────────────────────────────────────────────
+// Helpers
+// ─────────────────────────────────────────────────────────────
+function setMsg(id, text, type) {
+  const el = document.getElementById(id);
+  el.textContent  = text;
+  el.className    = `msg ${type}`;
+}
+</script>
+</body>
+</html>

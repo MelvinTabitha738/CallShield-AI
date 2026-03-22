@@ -9,38 +9,48 @@ class StartSessionSerializer(serializers.Serializer):
     """Validate a start-session request."""
 
     phone_number = PhoneNumberField(
-        required=True,
-        help_text="Caller's phone number (+254XXXXXXXXX or 07XXXXXXXX).",
+        required=False,
+        allow_blank=True,
+        default='',
+        help_text="Caller's phone number (+254XXXXXXXXX or 07XXXXXXXX). Optional — omit for private/unknown callers.",
     )
     device_id   = serializers.CharField(required=False, allow_blank=True, default='')
     app_version = serializers.CharField(required=False, allow_blank=True, default='')
+    user_consented = serializers.BooleanField(
+        required=False,
+        default=True,
+        help_text='User consent to record and analyze the call.',
+    )
 
 
 class ProcessChunkSerializer(serializers.Serializer):
-    """Validate a transcript chunk submitted for real-time analysis."""
+    """
+    Validate an audio chunk submitted for real-time analysis.
+    
+    Audio is sent as a file upload, analyzed immediately, then discarded.
+    Only the transcript is temporarily stored in the session.
+    """
 
     session_id = serializers.UUIDField(
         required=True,
         help_text='Session UUID returned by /start-session/.',
     )
-    transcript_text = serializers.CharField(
+    
+    # Audio file (multipart upload)
+    audio_chunk = serializers.FileField(
         required=True,
-        min_length=1,
-        help_text='Transcribed text of the most recent audio chunk.',
+        help_text='2-second audio chunk (WAV, MP3, or raw PCM).',
     )
+    
     chunk_number = serializers.IntegerField(
         required=True,
         min_value=1,
         help_text='Sequential position of this chunk (starts at 1).',
     )
+    
     timestamp = serializers.DateTimeField(
         required=True,
         help_text='ISO-8601 datetime when this chunk was captured on the device.',
-    )
-    speaker = serializers.ChoiceField(
-        choices=['user', 'caller', 'unknown'],
-        default='unknown',
-        help_text='Who was speaking in this chunk.',
     )
 
 
@@ -56,14 +66,19 @@ class EndSessionSerializer(serializers.Serializer):
         help_text='Total call duration in seconds.',
     )
 
-    # ← FIXED: BooleanField with allow_null instead of NullBooleanField
-    user_confirmed_scam = serializers.BooleanField(
-        required=False,
-        allow_null=True,
-        default=None,
-        help_text='True = scam, False = not a scam, null = user unsure.',
+    # User consent for storage (REQUIRED for post-call decision)
+    user_consented_storage = serializers.BooleanField(
+        required=True,
+        help_text='Did user consent to store conversation for training?',
     )
-
+    
+    user_consented_training = serializers.BooleanField(
+        required=False,
+        default=False,
+        help_text='User consents to using transcript for ML model training.',
+    )
+    
+    # Optional feedback
     user_feedback_notes = serializers.CharField(
         required=False,
         allow_blank=True,
@@ -71,18 +86,9 @@ class EndSessionSerializer(serializers.Serializer):
         default='',
         help_text='Optional free-text notes about the call.',
     )
-    user_consented_storage = serializers.BooleanField(
-        required=False,
-        default=False,
-        help_text='User consents to storing PII-redacted transcript for 90 days.',
-    )
-    user_consented_training = serializers.BooleanField(
-        required=False,
-        default=False,
-        help_text='User consents to using transcript for ML model training.',
-    )
 
     def validate(self, data):
+        """Training consent requires storage consent."""
         if data.get('user_consented_training') and not data.get('user_consented_storage'):
             raise serializers.ValidationError({
                 'user_consented_training':
@@ -111,7 +117,8 @@ class CallSessionSerializer(serializers.ModelSerializer):
             'call_duration_seconds',
             'duration_display',
             'chunks_processed',
-            'user_confirmed_scam',
+            'scam_detected_by_ai',  # ← ADDED
+            'user_consented_storage',  # ← ADDED
             'detected_patterns',
             'detected_scam_type',
             'auto_report_recommended',

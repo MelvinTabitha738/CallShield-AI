@@ -5,13 +5,14 @@ from rest_framework import serializers
 
 class UserStatsSerializer(serializers.Serializer):
     """Serializer for user analytics stats."""
-    
+
     protection = serializers.DictField()
     calls_summary = serializers.DictField()
     community = serializers.DictField()
     recent_activity = serializers.ListField()
     scam_types_encountered = serializers.ListField()
     most_common_scam = serializers.CharField(allow_null=True)
+    reports = serializers.DictField(required=False, allow_null=True)
 
 
 class SystemOverviewSerializer(serializers.Serializer):

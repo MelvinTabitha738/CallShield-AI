@@ -10,17 +10,20 @@ class PhoneNumberField(serializers.CharField):
     """Custom field for validating Kenyan phone numbers"""
     
     def to_internal_value(self, data):
+        # Allow blank/unknown for anonymous callers
+        if not data or str(data).strip() in ('', 'Unknown', 'unknown'):
+            return ''
         try:
             # Parse phone number
             parsed = phonenumbers.parse(data, 'KE')
-            
+
             # Validate
             if not phonenumbers.is_valid_number(parsed):
                 raise serializers.ValidationError('Invalid phone number')
-            
+
             # Return in international format
             return phonenumbers.format_number(parsed, phonenumbers.PhoneNumberFormat.E164)
-            
+
         except NumberParseException:
             raise serializers.ValidationError('Invalid phone number format. Use +254XXXXXXXXX or 07XXXXXXXX')
 

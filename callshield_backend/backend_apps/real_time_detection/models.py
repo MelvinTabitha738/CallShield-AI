@@ -13,10 +13,11 @@ class CallSession(models.Model):
 
     PRIVACY POLICY:
     ─────────────────────────────────────────────────────────────
-    - TranscriptChunks: TEMPORARY. Deleted when session ends.
+    - full_transcript: TEMPORARY. Built during call, deleted after.
     - Non-scam calls: Only metadata kept. No content stored.
     - Confirmed scams + consent: PII-redacted transcript stored
-      in ConfirmedScamConversation, then raw chunks deleted.
+      in ConfirmedScamConversation, then full_transcript cleared.
+    - No consent: ALL content deleted immediately.
     - All stored content: Auto-deleted after 90 days maximum.
     ─────────────────────────────────────────────────────────────
     """
@@ -54,6 +55,12 @@ class CallSession(models.Model):
 
     status = models.CharField(max_length=20, choices=SESSION_STATUS, default='active')
 
+    # ── CUMULATIVE TRANSCRIPT (TEMPORARY - deleted after session) ────
+    full_transcript = models.TextField(
+        blank=True,
+        help_text='Cumulative transcript built from all chunks. TEMPORARY - deleted post-call.',
+    )
+    
     # ── Risk Tracking (metadata only) ─────────────────────────────────
     initial_risk_score = models.IntegerField(
         default=0,
@@ -77,7 +84,7 @@ class CallSession(models.Model):
         help_text='ML model confidence at end of session (0.0–1.0).',
     )
 
-    #  Alert Tracking 
+    # ── Alert Tracking ────────────────────────────────────────────────
     alert_triggered = models.BooleanField(
         default=False,
         help_text='Whether a scam alert overlay was shown to the user.',
@@ -91,36 +98,45 @@ class CallSession(models.Model):
         help_text='Risk score at which an alert is triggered.',
     )
 
-    #Call Metadata (no conversation content)
+    # ── Call Metadata (no conversation content) ──────────────────────
     call_duration_seconds = models.IntegerField(null=True, blank=True)
     chunks_processed = models.IntegerField(
         default=0,
-        help_text='Number of transcript chunks analyzed by the ML model.',
+        help_text='Number of audio chunks analyzed by the ML model.',
     )
 
-    # User Feedback
+    # ── User Feedback ─────────────────────────────────────────────────
     user_confirmed_scam = models.BooleanField(
         null=True, blank=True,
-        help_text='True=scam, False=not scam, None=no feedback given.',
+        help_text='AI decides scam status. This is for user override only.',
+    )
+    user_consented_storage = models.BooleanField(
+        default=False,
+        help_text='Did user consent to store conversation for training?',
     )
     user_feedback_notes = models.TextField(blank=True)
 
-    #Detection Results (labels only, no raw transcript) 
+    # ── Detection Results (labels only, no raw transcript) ────────────
     detected_patterns = models.JSONField(
         default=list,
         help_text='Scam pattern labels returned by the ML model.',
     )
     detected_scam_type = models.CharField(max_length=50, blank=True)
 
+    scam_detected_by_ai = models.BooleanField(
+        default=False,
+        help_text='True if AI determined peak_risk >= 70%. AI decision, not user.',
+    )
+
     auto_report_recommended = models.BooleanField(
         default=False,
         help_text='True if risk score reached threshold for auto-reporting (≥70).',
     )
 
-    # Content Deletion Tracking 
+    # ── Content Deletion Tracking ─────────────────────────────────────
     content_deleted = models.BooleanField(
         default=False,
-        help_text='True once all transcript chunks have been deleted.',
+        help_text='True once full_transcript has been cleared.',
     )
     content_deleted_at = models.DateTimeField(null=True, blank=True)
     deletion_reason = models.CharField(
@@ -146,6 +162,7 @@ class CallSession(models.Model):
             models.Index(fields=['status']),
             models.Index(fields=['content_deleted']),
             models.Index(fields=['caller_number_hash']),
+            models.Index(fields=['scam_detected_by_ai']),
         ]
 
     def __str__(self):
@@ -160,99 +177,81 @@ class CallSession(models.Model):
         m, s = divmod(self.call_duration_seconds, 60)
         return f'{m}m {s}s'
 
-    def update_risk(self, new_risk_score, confidence=0.0):
+    def update_risk(self, new_risk_score, confidence=0.0, new_transcript_chunk='', patterns=None):
         """
         Update risk tracking during an active session.
-        Called after every transcript chunk is analyzed.
+        Called after every audio chunk is analyzed.
+        
+        Args:
+            new_risk_score: Risk score from ML model (0-100)
+            confidence: ML model confidence (0.0-1.0)
+            new_transcript_chunk: New text to append to full_transcript
+            patterns: List of detected patterns
         """
+        # Append to cumulative transcript
+        if new_transcript_chunk:
+            if self.full_transcript:
+                self.full_transcript += " " + new_transcript_chunk
+            else:
+                self.full_transcript = new_transcript_chunk
+        
+        # Update risk scores
         self.current_risk_score = new_risk_score
         self.ml_confidence = confidence
 
         if new_risk_score > self.peak_risk_score:
             self.peak_risk_score = new_risk_score
 
+        # Track patterns
+        if patterns:
+            for pattern in patterns:
+                if pattern not in self.detected_patterns:
+                    self.detected_patterns.append(pattern)
+
+        # Check if alert should trigger
         if new_risk_score >= self.alert_threshold and not self.alert_triggered:
             self.alert_triggered = True
             self.alert_count += 1
 
+        # Mark as scam if threshold crossed
+        if new_risk_score >= 70:
+            self.scam_detected_by_ai = True
+
+        # Increment chunks processed
+        self.chunks_processed += 1
+
         self.save(update_fields=[
-            'current_risk_score', 'ml_confidence',
-            'peak_risk_score', 'alert_triggered',
-            'alert_count', 'last_updated',
+            'full_transcript', 'current_risk_score', 'ml_confidence',
+            'peak_risk_score', 'alert_triggered', 'alert_count',
+            'detected_patterns', 'scam_detected_by_ai', 'chunks_processed',
+            'last_updated',
         ])
 
     def delete_content(self, reason='non_scam'):
         """
-        Delete all transcript chunks for this session.
+        Delete conversation content (full_transcript).
         Metadata (risk scores, duration, patterns) is kept.
+        
+        Args:
+            reason: Why content is being deleted (from DELETION_REASONS)
         """
-        deleted_count = self.transcript_chunks.all().delete()[0]
-
+        # Clear the transcript
+        self.full_transcript = ''
+        
+        # Delete confirmed scam conversation if exists
         if hasattr(self, 'confirmed_scam_conversation'):
             self.confirmed_scam_conversation.delete()
 
         self.content_deleted    = True
         self.content_deleted_at = timezone.now()
         self.deletion_reason    = reason
+        
         self.save(update_fields=[
-            'content_deleted', 'content_deleted_at', 'deletion_reason',
+            'full_transcript', 'content_deleted', 
+            'content_deleted_at', 'deletion_reason',
         ])
-        return deleted_count
-
-
-class TranscriptChunk(models.Model):
-    """
-    A single chunk of speech-to-text output from an active call.
-
-    PRIVACY: These records are TEMPORARY.
-    ─────────────────────────────────────────────────────────────
-    - Analyzed immediately for scam signals.
-    - For confirmed scams with consent: assembled into
-      ConfirmedScamConversation, THEN deleted.
-    - For all other cases: deleted immediately when session ends.
-    - NEVER retained for non-scam calls.
-    ─────────────────────────────────────────────────────────────
-    """
-
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-
-    session = models.ForeignKey(
-        CallSession, on_delete=models.CASCADE, related_name='transcript_chunks',
-    )
-
-    # Content (TEMPORARY)
-    chunk_number    = models.IntegerField(help_text='Sequential position (1, 2, 3 …)')
-    transcript_text = models.TextField(help_text='Transcribed text. TEMPORARY.')
-
-    speaker = models.CharField(
-        max_length=10,
-        choices=[('user', 'App User'), ('caller', 'Caller'), ('unknown', 'Unknown')],
-        default='unknown',
-    )
-
-    # Analysis results
-    chunk_risk_score = models.IntegerField(
-        default=0, validators=[MinValueValidator(0), MaxValueValidator(100)],
-    )
-    ml_analyzed  = models.BooleanField(default=False)
-    ml_confidence = models.FloatField(
-        default=0.0, validators=[MinValueValidator(0.0), MaxValueValidator(1.0)],
-    )
-
-    # Timing
-    timestamp   = models.DateTimeField(help_text='When chunk was captured on device.')
-    received_at = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        db_table = 'transcript_chunks'
-        verbose_name = 'Transcript Chunk (Temporary)'
-        verbose_name_plural = 'Transcript Chunks (Temporary)'
-        ordering = ['session', 'chunk_number']
-        unique_together = [['session', 'chunk_number']]
-        indexes = [models.Index(fields=['session', 'chunk_number'])]
-
-    def __str__(self):
-        return f'Chunk #{self.chunk_number} | Session {str(self.session.id)[:8]}'
+        
+        return True
 
 
 class RiskAlert(models.Model):
@@ -308,8 +307,8 @@ class ConfirmedScamConversation(models.Model):
 
     Created ONLY when ALL three conditions are met:
     ─────────────────────────────────────────────────────────────
-    1. user_confirmed_scam = True  (user tapped "Yes, this was a scam")
-    2. user_consented_storage = True (user explicitly agreed to store)
+    1. scam_detected_by_ai = True  (AI determined risk >= 70%)
+    2. user_consented_storage = True (user agreed to store)
     3. PII has been redacted from the transcript before saving
     ─────────────────────────────────────────────────────────────
 

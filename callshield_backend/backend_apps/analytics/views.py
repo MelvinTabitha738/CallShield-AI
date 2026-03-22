@@ -194,3 +194,105 @@ def scam_intelligence(request):
         'success': True,
         'data': serializer.data
     }, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def public_stats_mobile(request):
+    """
+    Get public stats optimized for mobile app.
+    Only shows scam types that have been detected.
+    
+    GET /api/analytics/public/mobile/
+    """
+    print("🔵 public_stats_mobile endpoint called")
+    
+    try:
+        from backend_apps.scam_database.models import ScamIncident
+        from backend_apps.authentication.models import User
+        from django.db.models import Count
+        
+        # 1. Total Users Protected
+        total_users_protected = User.objects.filter(is_active=True).count()
+        print(f"🔵 Total users: {total_users_protected}")
+        
+        # 2. Verified Reports Count (ONLY verified incidents)
+        verified_reports = ScamIncident.objects.filter(verified=True).count()
+        print(f"🔵 Verified reports: {verified_reports}")
+        
+        # 3. Get ALL scam detections (from reports AND AI detection)
+        # Combine ScamIncident scam_types with CallSession scam_types
+        
+        # Only verified/approved reports feed the distribution — no AI sessions, no pending
+        incident_scams = ScamIncident.objects.filter(
+            verified=True
+        ).values('scam_type').annotate(
+            count=Count('id')
+        ).filter(count__gt=0)
+
+        scam_counts = {}
+        for item in incident_scams:
+            scam_type = item['scam_type']
+            if scam_type:
+                scam_counts[scam_type] = scam_counts.get(scam_type, 0) + item['count']
+        
+        print(f"🔵 Combined scam types found: {len(scam_counts)}")
+        
+        # Sort by count (descending)
+        sorted_scams = sorted(scam_counts.items(), key=lambda x: x[1], reverse=True)
+        
+        # Get top scam type
+        if sorted_scams:
+            from backend_apps.scam_database.models import ScamType
+            top_scam_code = sorted_scams[0][0]
+            top_scam_count = sorted_scams[0][1]
+            top_scam_type = dict(ScamType.choices).get(top_scam_code, top_scam_code)
+        else:
+            top_scam_type = "No scams detected yet"
+            top_scam_count = 0
+        
+        print(f"🔵 Top scam: {top_scam_type} ({top_scam_count})")
+        
+        # 4. Create distribution (ONLY scam types that exist)
+        total_scam_count = sum(scam_counts.values())
+        
+        scam_distribution = []
+        for scam_code, count in sorted_scams[:5]:  # Top 5 only
+            from backend_apps.scam_database.models import ScamType
+            scam_label = dict(ScamType.choices).get(scam_code, scam_code)
+            percentage = round((count / total_scam_count * 100), 1) if total_scam_count > 0 else 0
+            
+            scam_distribution.append({
+                'scam_type': scam_label,
+                'count': count,
+                'percentage': percentage
+            })
+        
+        print(f"🔵 Distribution items: {len(scam_distribution)}")
+        
+        # 5. Return data
+        return Response({
+            'success': True,
+            'total_users_protected': total_users_protected,
+            'verified_reports': verified_reports,
+            'top_scam_type': top_scam_type,
+            'top_scam_count': top_scam_count,
+            'scam_distribution': scam_distribution,
+            'total_scam_types': len(scam_counts)  # How many different types detected
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        print(f"❌ ERROR: {e}")
+        import traceback
+        traceback.print_exc()
+        
+        # Return empty but valid response
+        return Response({
+            'success': True,
+            'total_users_protected': 0,
+            'verified_reports': 0,
+            'top_scam_type': 'No scams detected yet',
+            'top_scam_count': 0,
+            'scam_distribution': [],
+            'total_scam_types': 0
+        }, status=status.HTTP_200_OK)

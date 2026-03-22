@@ -6,30 +6,27 @@ import logging
 from django.utils import timezone
 from .models import (
     CallSession,
-    TranscriptChunk,
     RiskAlert,
     ConfirmedScamConversation,
 )
-from .ml_integration import RiskCalculator, MLModelInterface
+from .ml_integration import MLModelInterface
 
 logger = logging.getLogger(__name__)
-
-
 
 
 class CallSessionService:
     """Manages the full lifecycle of a call protection session."""
 
-    # start_session   
-
     @classmethod
-    def start_session(cls, user, phone_number, device_id='', app_version=''):
+    def start_session(cls, user, phone_number, device_id='', app_version='', user_consented=True):
         """Create a new active CallSession when the user taps the Shield button."""
-        phone_hash = hashlib.sha256(phone_number.encode()).hexdigest()
+        # Use a placeholder hash for unknown/private callers
+        safe_number = phone_number.strip() if phone_number else ''
+        phone_hash = hashlib.sha256(safe_number.encode()).hexdigest() if safe_number else 'unknown'
 
-        # Pre-call risk from scam database
+        # Pre-call risk from scam database (skip for unknown callers)
         from backend_apps.scam_database.services import NumberLookupService
-        lookup       = NumberLookupService.check_number(phone_number)
+        lookup = NumberLookupService.check_number(safe_number) if safe_number else {}
         initial_risk = lookup.get('risk_score', 0)
 
         session = CallSession.objects.create(
@@ -48,8 +45,6 @@ class CallSessionService:
             str(session.id)[:8], user.id, initial_risk,
         )
         return session
-   
-    # end_session -  with auto-reporting logic    
 
     @classmethod
     def end_session(
@@ -57,28 +52,24 @@ class CallSessionService:
         session_id,
         user,
         call_duration=None,
-        user_confirmed_scam=None,
-        user_feedback_notes='',
         user_consented_storage=False,
         user_consented_training=False,
+        user_feedback_notes='',
     ):
         """
-        End a session with AUTO-REPORTING for high-risk calls.
+        End a session with AI-BASED AUTO-DETECTION and privacy-aware storage.
 
-        NEW LOGIC:
+        LOGIC:
         ──────────
-        HIGH RISK (≥70):
-            → Auto-report to scam database (always)
-            → Store transcript ONLY if user explicitly consents
-            → Future users get warned automatically ✅
+        AI DETECTED SCAM (scam_detected_by_ai = True):
+            → ALWAYS update scam database (no consent needed)
+            → Store transcript ONLY if user_consented_storage = True
+            → Delete transcript if user_consented_storage = False
 
-        MEDIUM RISK (40-69):
-            → Report ONLY if user confirms
-            → No storage without consent
-
-        LOW RISK (<40):
-            → Delete immediately
-            → No reporting
+        AI SAYS CLEAN (scam_detected_by_ai = False):
+            → Don't update scam database
+            → Store transcript ONLY if user_consented_storage = True
+            → Delete transcript if user_consented_storage = False
         """
         try:
             session = CallSession.objects.get(
@@ -88,104 +79,88 @@ class CallSessionService:
             return {'success': False, 'message': 'Session not found or already ended.'}
 
         # Persist final metadata
-        session.status               = 'completed'
-        session.ended_at             = timezone.now()
+        session.status = 'completed'
+        session.ended_at = timezone.now()
         session.call_duration_seconds = call_duration
-        session.user_confirmed_scam  = user_confirmed_scam
-        session.user_feedback_notes  = user_feedback_notes
-        session.final_risk_score     = session.current_risk_score
+        session.user_consented_storage = user_consented_storage
+        session.user_feedback_notes = user_feedback_notes
+        session.final_risk_score = session.peak_risk_score
         session.save()
 
-        #AUTO-REPORTING LOGIC 
-        
-        if session.peak_risk_score >= 70:
-            # HIGH RISK: Always report to protect future users
-            cls._report_to_scam_database(session, user)
-            
-            # Store transcript ONLY if explicit consent given
-            if user_consented_storage and user_consented_training:
-                cls._store_confirmed_scam(session, user, user_consented_training)
-                storage_action = 'auto_reported_and_stored'
-            else:
-                storage_action = 'auto_reported_transcript_deleted'
-            
-            # Delete raw chunks
-            session.delete_content(reason='non_scam')
-            auto_reported = True
+        # DECISION VARIABLES
+        scam_detected = session.scam_detected_by_ai  # AI decides
+        user_consents = user_consented_storage  # User decides storage
+        scam_db_updated = False
+        storage_action = ''
 
-        elif session.peak_risk_score >= 40:
-            # MEDIUM RISK: Report only if user explicitly confirms
-            if user_confirmed_scam:
-                cls._report_to_scam_database(session, user)
-                
-                if user_consented_storage and user_consented_training:
-                    cls._store_confirmed_scam(session, user, user_consented_training)
-                    storage_action = 'user_confirmed_and_stored'
-                else:
-                    storage_action = 'user_confirmed_transcript_deleted'
+        # AUTO-REPORTING LOGIC (AI-based, no user input needed)
+        if scam_detected:
+            # AI says SCAM → Always report to database
+            cls._report_to_scam_database(session, user)
+            scam_db_updated = True
+
+            # Storage based on user consent
+            if user_consents:
+                cls._store_confirmed_scam(session, user, user_consented_training)
+                storage_action = 'scam_detected_stored'
             else:
-                storage_action = 'deleted_medium_risk_unconfirmed'
-            
-            session.delete_content(reason='non_scam')
-            auto_reported = False
+                session.delete_content(reason='no_consent')
+                storage_action = 'scam_detected_deleted'
 
         else:
-            # LOW RISK: Just delete everything
-            session.delete_content(reason='non_scam')
-            storage_action = 'deleted_low_risk'
-            auto_reported = False
+            # AI says CLEAN
+            if user_consents:
+                # User wants to keep even clean calls (for analytics)
+                storage_action = 'clean_call_stored'
+                # Don't create ConfirmedScamConversation for clean calls
+                # Just mark session as stored
+            else:
+                session.delete_content(reason='non_scam')
+                storage_action = 'clean_call_deleted'
 
         logger.info(
-            'Session ended: %s | action: %s | peak_risk: %d | auto_reported: %s',
-            str(session.id)[:8], storage_action, session.peak_risk_score, auto_reported,
+            'Session ended: %s | scam_detected: %s | storage: %s | db_updated: %s',
+            str(session.id)[:8], scam_detected, storage_action, scam_db_updated,
         )
 
         return {
-            'success':          True,
-            'session_id':       str(session.id),
+            'success': True,
+            'session_id': str(session.id),
+            'scam_detected': scam_detected,  # AI decision
             'final_risk_score': session.final_risk_score,
-            'peak_risk_score':  session.peak_risk_score,
-            'call_duration':    call_duration,
-            'alert_triggered':  session.alert_triggered,
-            'patterns_detected':session.detected_patterns,
-            'detected_scam_type':session.detected_scam_type,
-            'storage_action':   storage_action,
-            'auto_reported':    auto_reported,  # ← NEW
-            'recommendation':   cls._recommendation(session, auto_reported),
-            'privacy_notice':   cls._privacy_notice(storage_action, auto_reported),
+            'peak_risk_score': session.peak_risk_score,
+            'scam_type': session.detected_scam_type or None,
+            'call_duration': call_duration,
+            'alert_triggered': session.alert_triggered,
+            'patterns_detected': session.detected_patterns,
+            'storage_action': storage_action,
+            'scam_db_updated': scam_db_updated,
+            'recommendation': cls._recommendation(scam_detected, scam_db_updated),
+            'privacy_notice': cls._privacy_notice(storage_action, scam_detected),
         }
-
-    
-    # Private helpers 
 
     @classmethod
     def _store_confirmed_scam(cls, session, user, user_consented_training):
         """Store PII-redacted transcript for ML training."""
-        chunks = TranscriptChunk.objects.filter(
-            session=session
-        ).order_by('chunk_number')
-
-        if not chunks.exists():
-            logger.warning('No chunks to store for session %s', str(session.id)[:8])
+        if not session.full_transcript:
+            logger.warning('No transcript to store for session %s', str(session.id)[:8])
             return
 
-        full_transcript = '\n'.join(
-            f'[{c.speaker.upper()}]: {c.transcript_text}' for c in chunks
-        )
-        redacted = cls._redact_pii(full_transcript)
+        redacted = cls._redact_pii(session.full_transcript)
 
         ConfirmedScamConversation.objects.create(
             session=session,
             caller_number_hash=session.caller_number_hash,
             full_transcript=redacted,
             final_risk_score=session.final_risk_score,
-            final_scam_type=session.detected_scam_type,
+            final_scam_type=session.detected_scam_type or 'other',
             confidence_score=session.ml_confidence,
             all_patterns_detected=session.detected_patterns,
             pii_redacted=True,
             user_consented_storage=True,
             user_consented_training=user_consented_training,
         )
+        logger.info('Stored redacted transcript for session %s', str(session.id)[:8])
 
     @classmethod
     def _report_to_scam_database(cls, session, user):
@@ -206,18 +181,22 @@ class CallSessionService:
         active, is_new = PhoneNumberActive.objects.get_or_create(
             phone_number_hash=session.caller_number_hash,
             defaults={
-                'risk_score':        50,
+                'risk_score': session.peak_risk_score,
                 'primary_scam_type': session.detected_scam_type or 'other',
-                'report_count':      1,
-                'last_incident_at':  timezone.now(),
+                'report_count': 1,
+                'last_incident_at': timezone.now(),
             },
         )
         if not is_new:
-            active.report_count     += 1
-            active.last_incident_at  = timezone.now()
-            active.save(update_fields=['report_count', 'last_incident_at'])
+            active.report_count += 1
+            active.last_incident_at = timezone.now()
+            # Update risk if higher
+            if session.peak_risk_score > active.risk_score:
+                active.risk_score = session.peak_risk_score
+            active.save(update_fields=['report_count', 'last_incident_at', 'risk_score'])
 
         RiskScoringService.update_risk_score(session.caller_number_hash)
+        logger.info('Reported to scam DB: %s | risk: %d', str(session.id)[:8], session.peak_risk_score)
 
     @staticmethod
     def _redact_pii(text):
@@ -237,59 +216,57 @@ class CallSessionService:
         return text
 
     @staticmethod
-    def _recommendation(session, auto_reported):
+    def _recommendation(scam_detected, scam_db_updated):
         """Generate recommendation message."""
-        if auto_reported:
-            return (
-                'This number has been flagged automatically. '
-                'Future users will receive a warning.'
-            )
-        if session.user_confirmed_scam:
-            return 'Thank you for reporting! This number has been flagged.'
-        if session.peak_risk_score >= 40:
-            return 'Suspicious activity detected. Stay cautious.'
+        if scam_detected and scam_db_updated:
+            return 'Scam detected and reported automatically. Future users will be warned.'
+        if scam_detected:
+            return 'Scam detected. Stay safe!'
         return 'Call appears safe. Stay vigilant!'
 
     @staticmethod
-    def _privacy_notice(action, auto_reported):
+    def _privacy_notice(action, scam_detected):
         """Generate privacy notice."""
         notices = {
-            'auto_reported_and_stored': (
-                '✅ Number auto-reported to protect others. '
-                'Transcript stored for 90 days to improve AI. Thank you!'
+            'scam_detected_stored': (
+                'Scam reported to database. '
+                'Transcript stored for 90 days to improve AI detection.'
             ),
-            'auto_reported_transcript_deleted': (
-                '✅ Number auto-reported to protect future users. '
-                'Transcript deleted immediately.'
+            'scam_detected_deleted': (
+                'Scam reported to database. '
+                'Transcript deleted immediately per your choice.'
             ),
-            'user_confirmed_and_stored': (
-                '✅ Number reported. '
-                'Transcript stored for 90 days to improve scam detection.'
+            'clean_call_stored': (
+                'Transcript stored for 90 days to improve detection accuracy.'
             ),
-            'user_confirmed_transcript_deleted': (
-                '✅ Number reported. Transcript deleted.'
-            ),
-            'deleted_medium_risk_unconfirmed': (
-                '✅ Transcript deleted. No data stored.'
-            ),
-            'deleted_low_risk': (
-                '✅ Transcript deleted immediately. No data stored.'
+            'clean_call_deleted': (
+                'Transcript deleted immediately. No data stored.'
             ),
         }
-        return notices.get(
-            action,
-            '✅ Data handled per privacy policy.'
-        )
+        return notices.get(action, 'Data handled per privacy policy.')
 
-class TranscriptProcessingService:
-    """Handles real-time processing of transcript chunks during a call."""
+
+class AudioProcessingService:
+    """Handles real-time processing of audio chunks during a call."""
 
     @classmethod
-    def process_chunk(
-        cls, session_id, user, transcript_text,
-        chunk_number, timestamp, speaker='unknown',
+    def process_audio_chunk(
+        cls, session_id, user, audio_file,
+        chunk_number, timestamp, caller_number="",
     ):
-        """Process chunk and flag for auto-reporting if needed."""
+        """
+        Process audio chunk: transcribe + detect scam in one AI call → update session.
+
+        Args:
+            session_id:   UUID of active session
+            user:         Current user
+            audio_file:   Binary audio file (UploadedFile)
+            chunk_number: Sequential chunk number
+            timestamp:    When chunk was captured
+
+        Returns:
+            dict with analysis results
+        """
         try:
             session = CallSession.objects.get(
                 id=session_id, user=user, status='active',
@@ -297,120 +274,119 @@ class TranscriptProcessingService:
         except CallSession.DoesNotExist:
             return {'success': False, 'message': 'Session not found or not active.'}
 
-        # Build full transcript
-        previous = TranscriptChunk.objects.filter(
-            session=session
-        ).order_by('chunk_number')
-
-        full_transcript = (
-            '\n'.join(c.transcript_text for c in previous)
-            + '\n' + transcript_text
-        )
-
-        # Elapsed time
+        # Read audio bytes
         try:
-            elapsed = int((timestamp - session.started_at).total_seconds())
-        except Exception:
-            elapsed = 0
+            audio_bytes = audio_file.read()
+        except Exception as e:
+            logger.error('Failed to read audio file: %s', str(e))
+            return {'success': False, 'message': 'Failed to read audio file.'}
 
-        # Run ML analysis
-        risk_result = RiskCalculator.calculate_risk(
-            transcript=transcript_text,
-            full_transcript=full_transcript,
-            metadata={
-                'duration_seconds': elapsed,
-                'chunk_count':      previous.count() + 1,
-            },
-        )
+        # Single AI call: speech-to-text + scam detection
+        try:
+            result = MLModelInterface.transcribe_and_detect(
+                audio_bytes=audio_bytes,
+                chunk_number=chunk_number,
+                session_id=str(session_id),
+                caller_number=caller_number,
+            )
+            transcript_chunk = result.get('transcript', '')
+            analysis = {
+                'risk_score':   result.get('risk_score', 0),
+                'confidence':   result.get('confidence', 0.0),
+                'scam_type':    result.get('scam_type'),
+                'patterns':     result.get('patterns', []),
+                'should_alert': result.get('should_alert', False),
+                'alert_message': result.get('alert_message'),
+            }
+        except Exception as e:
+            logger.error('AI model error — chunk %d: %s', chunk_number, str(e))
+            transcript_chunk = '[analysis failed]'
+            analysis = {
+                'risk_score': 0, 'confidence': 0.0, 'scam_type': None,
+                'patterns': [], 'should_alert': False, 'alert_message': None,
+            }
 
-        # Persist chunk
-        chunk = TranscriptChunk.objects.create(
-            session=session,
-            chunk_number=chunk_number,
-            transcript_text=transcript_text,
-            speaker=speaker,
-            chunk_risk_score=risk_result['risk_score'],
-            ml_analyzed=risk_result['ml_model_used'],
-            ml_confidence=risk_result['ml_confidence'],
-            timestamp=timestamp,
-        )
-
-        # Update session metadata
+        # Update session risk + transcript
         session.update_risk(
-            risk_result['risk_score'],
-            confidence=risk_result['ml_confidence'],
+            new_risk_score=analysis['risk_score'],
+            confidence=analysis['confidence'],
+            new_transcript_chunk=transcript_chunk,
+            patterns=analysis['patterns'],
         )
-        session.chunks_processed += 1
 
-        #  Flag for auto-reporting if high risk
-        if risk_result['risk_score'] >= 70:
-            session.auto_report_recommended = True
+        # Persist first detected scam type
+        if analysis['scam_type'] and not session.detected_scam_type:
+            session.detected_scam_type = analysis['scam_type']
+            session.save(update_fields=['detected_scam_type'])
 
-        if risk_result['patterns_detected']:
-            merged = set(session.detected_patterns) | set(risk_result['patterns_detected'])
-            session.detected_patterns = list(merged)
+        # Trigger alert once when threshold crossed
+        if analysis['should_alert']:
+            cls._create_alert(session, analysis)
 
-        if risk_result['scam_type'] and not session.detected_scam_type:
-            session.detected_scam_type = risk_result['scam_type']
+        risk_level = cls._get_risk_level(analysis['risk_score'])
 
-        session.save(update_fields=[
-            'chunks_processed',
-            'detected_patterns',
-            'detected_scam_type',
-            'auto_report_recommended',  # ← NEW
-        ])
-
-        # Create alert if needed
-        if risk_result['should_alert']:
-            cls._create_alert(session, risk_result)
+        logger.info(
+            'Chunk processed: session=%s chunk=%d risk=%d transcript="%s..."',
+            str(session.id)[:8], chunk_number, analysis['risk_score'],
+            transcript_chunk[:50],
+        )
 
         return {
-            'success':        True,
-            'session_id':     str(session.id),
-            'chunk_number':   chunk_number,
-            'current_risk':   risk_result['risk_score'],
-            'risk_level':     risk_result['risk_level'],
-            'should_alert':   risk_result['should_alert'],
-            'alert_message':  risk_result['alert_message'],
-            'patterns_detected': risk_result['patterns_detected'],
-            'scam_type':      risk_result['scam_type'],
-            'ml_confidence':  risk_result['ml_confidence'],
-            'ml_model_used':  risk_result['ml_model_used'],
-            'analyzed':       risk_result['analyzed'],
-            'error':          risk_result['error'],
-            
-            #Tell Android this call will be auto-reported
-            'auto_report_recommended': risk_result['risk_score'] >= 70,
-            
-            'privacy_notice': (
-                '⚠️ Transcript is temporary and will be deleted when the call ends.'
-            ),
+            'success':          True,
+            'session_id':       str(session.id),
+            'chunk_number':     chunk_number,
+            'analyzed':         True,
+            'current_risk':     analysis['risk_score'],
+            'peak_risk':        session.peak_risk_score,
+            'risk_level':       risk_level,
+            'should_alert':     analysis['should_alert'],
+            'alert_message':    analysis.get('alert_message'),
+            'patterns_detected': analysis['patterns'],
+            'scam_type':        analysis['scam_type'],
+            'transcript_chunk': transcript_chunk,
+            'ml_confidence':    analysis['confidence'],
+            'ml_model_used':    True,
         }
 
     @classmethod
-    def _create_alert(cls, session, risk_result):
-        """Persist RiskAlert."""
-        if risk_result['risk_score'] < 40:
+    def _create_alert(cls, session, analysis):
+        """Create RiskAlert record when threshold crossed."""
+        if session.alert_triggered:
+            # Only create one alert per session
             return
 
-        if risk_result['ml_model_used'] and risk_result['ml_confidence'] >= 0.70:
-            alert_type = 'ml_detection'
-        elif risk_result['patterns_detected']:
-            alert_type = 'pattern_detected'
-        else:
-            alert_type = 'high_risk_threshold'
+        alert_message = analysis.get('alert_message') or '⚠️ Scam detected - hang up now!'
 
         RiskAlert.objects.create(
             session=session,
-            alert_type=alert_type,
-            risk_score_at_alert=risk_result['risk_score'],
-            confidence_at_alert=risk_result['ml_confidence'],
-            trigger_patterns=risk_result['patterns_detected'],
-            detected_scam_type=risk_result['scam_type'] or '',
-            alert_message=(
-                risk_result['alert_message'] or '⚠️ Suspicious activity detected.'
-            ),
+            alert_type='ml_detection',
+            risk_score_at_alert=analysis['risk_score'],
+            confidence_at_alert=analysis['confidence'],
+            trigger_patterns=analysis['patterns'],
+            detected_scam_type=analysis['scam_type'] or '',
+            alert_message=alert_message,
         )
+
+        logger.warning(
+            'Alert triggered: session=%s risk=%d type=%s',
+            str(session.id)[:8], analysis['risk_score'], analysis['scam_type'],
+        )
+
+    @staticmethod
+    def _get_risk_level(risk_score):
+        """Convert numeric risk to label."""
+        if risk_score >= 80:
+            return 'CRITICAL'
+        elif risk_score >= 70:
+            return 'HIGH'
+        elif risk_score >= 50:
+            return 'MODERATE'
+        elif risk_score >= 30:
+            return 'LOW'
+        else:
+            return 'SAFE'
+
+
 class PrivacyCleanupService:
     """
     Automated cleanup tasks that enforce the privacy policy.
@@ -434,19 +410,22 @@ class PrivacyCleanupService:
         return count
 
     @classmethod
-    def delete_orphaned_chunks(cls):
+    def delete_orphaned_sessions(cls):
         """
-        Safety net: delete any TranscriptChunks that remain attached to
-        completed sessions (should already have been cleaned up by end_session).
+        Safety net: delete full_transcript from completed sessions
+        that haven't been properly cleaned up.
         """
         orphaned = CallSession.objects.filter(
-            status='completed', content_deleted=False,
+            status='completed',
+            content_deleted=False,
         )
         count = 0
         for session in orphaned:
-            count += session.transcript_chunks.count()
+            if session.full_transcript:
+                count += 1
             session.delete_content(reason='auto_expired')
-        logger.info('Privacy cleanup: cleaned %d orphaned chunks.', count)
+
+        logger.info('Privacy cleanup: cleaned %d orphaned sessions.', count)
         return count
 
     @classmethod
@@ -455,5 +434,5 @@ class PrivacyCleanupService:
         logger.info('Running full privacy cleanup…')
         return {
             'expired_conversations_deleted': cls.delete_expired_conversations(),
-            'orphaned_chunks_deleted':       cls.delete_orphaned_chunks(),
+            'orphaned_sessions_deleted': cls.delete_orphaned_sessions(),
         }

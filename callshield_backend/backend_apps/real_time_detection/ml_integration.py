@@ -1,504 +1,406 @@
 # backend_apps/real_time_detection/ml_integration.py
 #
 # ═══════════════════════════════════════════════════════════════════════
-#  CALLSHIELD – ML MODEL INTEGRATION
-# ═══════════════════════════════════════════════════════════════════════
-#
-#  This is the ONLY file in the project that talks to the ML model.
-#  All other files call RiskCalculator.calculate_risk() which
-#  delegates here.
-#
-#  WHEN YOUR ML TEAM DELIVERS THE MODEL
-#  ──────────────────────────────────────
-#  Search this file for the tag:
-#
-#       # ⚙️ INTEGRATION POINT
-#
-#  There are exactly 4 integration points:
-#
-#       POINT 1 – Model file path & loading method
-#       POINT 2 – Model file structure (plain model vs dict)
-#       POINT 3 – Input format  (what model.predict() expects)
-#       POINT 4 – Output format (what model.predict() returns)
-#
-#  Everything else in this file should remain unchanged.
-#
+#  CALLSHIELD – REAL AI MODEL INTEGRATION
+#  Deployed endpoint: POST https://carolinembithe-scam-detector.hf.space/analyze-audio
 # ═══════════════════════════════════════════════════════════════════════
 
-import os
 import logging
-from django.conf import settings
+import requests
+from typing import Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
+# ── Endpoint ──────────────────────────────────────────────────────────
+AI_MODEL_URL = "https://carolinembithe-scam-detector.hf.space/analyze-audio"
+REQUEST_TIMEOUT = 60  # seconds
+
+
+class RealAIModel:
+    """
+    Calls the deployed HuggingFace scam-detection model.
+
+    Single HTTP call combines:
+        1. Speech-to-Text  → transcript
+        2. Scam Detection  → risk_score, confidence, scam_type, patterns
+
+    Request:
+        POST /analyze-audio
+        Content-Type: multipart/form-data
+        Fields:
+            audio        (file)  – audio chunk (WAV preferred, any format accepted)
+            chunk_number (int)   – sequential 1-based index
+            session_id   (str)   – UUID of active CallSession
+
+    Response (all known field-name variants handled):
+        {
+            "transcript":  "...",
+            "risk_score":  85,       # integer 0-100 OR float 0.0-1.0
+            "confidence":  0.92,     # float 0.0-1.0
+            "scam_type":   "kra_impersonation",
+            "patterns":    ["urgency_language", ...],
+            "should_alert": true
+        }
+    """
+
+    def __init__(self):
+        self.api_url = AI_MODEL_URL
+        self.timeout = REQUEST_TIMEOUT
+        logger.info("RealAIModel ready → %s", self.api_url)
+
+    # ──────────────────────────────────────────────────────────────────
+    # Primary entry-point
+    # ──────────────────────────────────────────────────────────────────
+
+    def transcribe_and_detect(
+        self,
+        audio_bytes: bytes,
+        chunk_number: int,
+        session_id: str = "",
+        caller_number: str = "",
+    ) -> Dict:
+        """
+        Send audio to the AI model; receive transcript + scam analysis.
+
+        Returns a normalised dict with keys:
+            transcript, risk_score, confidence, scam_type,
+            patterns, should_alert, alert_message
+        """
+        try:
+            data = {"chunk_number": chunk_number, "session_id": session_id}
+            if caller_number:
+                data["caller_number"] = caller_number
+            response = requests.post(
+                self.api_url,
+                files={"audio": ("chunk.wav", audio_bytes, "audio/wav")},
+                data=data,
+                timeout=self.timeout,
+            )
+            response.raise_for_status()
+            raw = response.json()
+            logger.debug(
+                "AI raw response chunk=%d: %s", chunk_number, str(raw)[:300]
+            )
+            return self._normalize(raw, chunk_number)
+
+        except requests.exceptions.Timeout:
+            logger.warning("AI model timeout — chunk %d", chunk_number)
+            return self._fallback("timeout")
+        except requests.exceptions.ConnectionError as exc:
+            logger.error("AI model connection error — chunk %d: %s", chunk_number, exc)
+            return self._fallback("connection_error")
+        except requests.exceptions.HTTPError as exc:
+            body = getattr(exc.response, "text", "")[:300]
+            logger.error("AI model HTTP %s — chunk %d body: %s", exc, chunk_number, body)
+            return self._fallback("http_error")
+        except ValueError as exc:
+            logger.error("AI model JSON parse error — chunk %d: %s", chunk_number, exc)
+            return self._fallback("json_error")
+        except Exception as exc:
+            logger.error("Unexpected AI model error — chunk %d: %s", chunk_number, exc)
+            return self._fallback("unknown_error")
+
+    # Compatibility shim used by services.py
+    def transcribe_audio(self, audio_bytes: bytes, chunk_number: int) -> str:
+        """Return only the transcript portion (used by legacy code paths)."""
+        return self.transcribe_and_detect(audio_bytes, chunk_number).get("transcript", "")
+
+    # ──────────────────────────────────────────────────────────────────
+    # Normalisation
+    # ──────────────────────────────────────────────────────────────────
+
+    def _normalize(self, data: Dict, chunk_number: int) -> Dict:
+        """Map any plausible field-naming from the model to our standard schema."""
+
+        # Transcript
+        transcript: str = (
+            data.get("transcribed_text")
+            or data.get("transcript")
+            or data.get("transcription")
+            or data.get("text")
+            or data.get("speech_text")
+            or data.get("recognized_text")
+            or ""
+        )
+
+        # Risk score → int 0-100
+        raw_risk = (
+            data.get("scam_risk")
+            if data.get("scam_risk") is not None
+            else data.get("risk_score")
+            if data.get("risk_score") is not None
+            else data.get("ml_score")
+            if data.get("ml_score") is not None
+            else data.get("risk")
+            if data.get("risk") is not None
+            else data.get("scam_probability")
+            if data.get("scam_probability") is not None
+            else data.get("probability")
+            if data.get("probability") is not None
+            else data.get("scam_score", 0)
+        )
+        try:
+            raw_risk = float(raw_risk)
+        except (TypeError, ValueError):
+            raw_risk = 0.0
+        risk_score = int(raw_risk * 100) if raw_risk <= 1.0 else int(raw_risk)
+        risk_score = max(0, min(100, risk_score))
+
+        # Confidence → float 0.0-1.0
+        # model returns ml_score (0-100), convert to 0.0-1.0
+        raw_conf = (
+            data.get("confidence")
+            if data.get("confidence") is not None
+            else data.get("confidence_score")
+            if data.get("confidence_score") is not None
+            else data.get("ml_score")
+            if data.get("ml_score") is not None
+            else data.get("certainty", 0.5)
+        )
+        try:
+            confidence = float(raw_conf)
+        except (TypeError, ValueError):
+            confidence = 0.5
+        if confidence > 1.0:
+            confidence /= 100.0
+        confidence = round(max(0.0, min(1.0, confidence)), 2)
+
+        # Scam type
+        raw_type = (
+            data.get("scam_type")
+            or data.get("scam_category")
+            or data.get("category")
+            or data.get("label")
+            or None
+        )
+        scam_type: Optional[str] = None
+        if raw_type and str(raw_type).lower() not in ("none", "safe", "clean", "normal", ""):
+            scam_type = str(raw_type).lower().replace(" ", "_")
+
+        # Patterns
+        raw_patterns = (
+            data.get("matched_flags")
+            or data.get("patterns")
+            or data.get("detected_patterns")
+            or data.get("features")
+            or data.get("indicators")
+            or []
+        )
+        patterns: List[str] = (
+            [str(p) for p in raw_patterns] if isinstance(raw_patterns, list) else []
+        )
+
+        # Should alert — alertable threshold is 60 %
+        raw_alert = (
+            data.get("is_spam")
+            if data.get("is_spam") is not None
+            else data.get("should_alert")
+            if data.get("should_alert") is not None
+            else data.get("is_scam")
+        )
+        should_alert = bool(raw_alert) if raw_alert is not None else risk_score >= 60
+
+        alert_message = (
+            self._alert_message(scam_type, risk_score) if should_alert else None
+        )
+
+        logger.info(
+            "AI analysis — chunk=%d risk=%d type=%s patterns=%d transcript_len=%d",
+            chunk_number, risk_score, scam_type, len(patterns), len(transcript),
+        )
+
+        return {
+            "transcript": transcript,
+            "risk_score": risk_score,
+            "confidence": confidence,
+            "scam_type": scam_type,
+            "patterns": patterns,
+            "should_alert": should_alert,
+            "alert_message": alert_message,
+        }
+
+    def _fallback(self, error_type: str) -> Dict:
+        """Zero-risk safe response when the model cannot be reached."""
+        return {
+            "transcript": "",
+            "risk_score": 0,
+            "confidence": 0.0,
+            "scam_type": None,
+            "patterns": [],
+            "should_alert": False,
+            "alert_message": None,
+            "error": error_type,
+        }
+
+    def _alert_message(self, scam_type: Optional[str], risk_score: int) -> str:
+        messages = {
+            "kra_impersonation": "SCAM ALERT: KRA Impersonation - Hang up now!",
+            "mpesa_fraud": "SCAM ALERT: M-Pesa Fraud - Do NOT send money!",
+            "bank_impersonation": "SCAM ALERT: Bank Impersonation - Do NOT share your PIN!",
+            "lottery_prize": "SCAM ALERT: Fake Prize Scam - Hang up immediately!",
+            "emergency_scam": "SCAM ALERT: Emergency Scam - Verify with family first!",
+            "loan_scam": "SCAM ALERT: Loan Scam - Do NOT share personal info!",
+        }
+        if scam_type and scam_type in messages:
+            return messages[scam_type]
+        if risk_score >= 80:
+            return "CRITICAL: High-risk scam detected - End call immediately!"
+        return "WARNING: Suspicious call detected - Be very cautious!"
+
+    def is_ready(self) -> bool:
+        """Lightweight reachability check (does not analyse audio)."""
+        try:
+            base = self.api_url.rsplit("/", 1)[0]
+            resp = requests.head(base, timeout=5)
+            return resp.status_code < 500
+        except Exception:
+            return True  # Assume reachable; errors surface on real requests
+
+    def get_model_info(self) -> Dict:
+        return {
+            "name": "CallShield Scam Detector (HuggingFace)",
+            "version": "1.0.0",
+            "type": "deployed_api",
+            "endpoint": self.api_url,
+            "speech_to_text": "integrated",
+            "scam_detection": "active",
+            "status": "production",
+            "ready": True,
+        }
+
+
+# ──────────────────────────────────────────────────────────────────────
+# Singleton facade — used by AudioProcessingService and analytics
+# ──────────────────────────────────────────────────────────────────────
 
 class MLModelInterface:
     """
-    Wraps the trained scam-detection ML model.
+    Singleton wrapper around RealAIModel.
 
-    DETECTION PHILOSOPHY
-    ────────────────────
-    Detection is done exclusively by the ML model.
-    No keyword lists. No hardcoded rules. No score constants.
+    Keeps one instance alive for the Django process so connection-pool
+    resources are shared across all requests.
 
-    Why:
-    • Keywords produce false positives – a real KRA call gets flagged.
-    • Keywords miss sophisticated scammers who avoid trigger words.
-    • The model understands context, tone, intent, and conversation flow.
-    • The model supports English, Swahili, and Sheng.
-    • The model improves over time as more training data is added.
-
-    When the model file is absent the interface returns analyzed=False
-    and risk_score=0. The Android app shows "Analysis unavailable –
-    stay cautious." No guessing. No false alerts.
+    Used by:
+        • AudioProcessingService  (real-time chunk analysis)
+        • AdminAnalyticsService   (get_model_info for admin dashboard)
     """
 
-    _model         = None
-    _model_loaded  = False
-    _model_version = None
-    _model_meta    = {}
-
-    # ───────────────────────────────────────────────────────────────────
-    # ⚙️ INTEGRATION POINT 1 – MODEL FILE PATH AND LOADING METHOD
-    # ───────────────────────────────────────────────────────────────────
-    # Triggered once when Django starts (via apps.py → ready()).
-    #
-    # Steps for your ML team:
-    #   1. Create the directory:  callshield_backend/ml_models/
-    #   2. Place the model file inside that directory.
-    #   3. Update `model_filename` to match the file name.
-    #   4. Uncomment the loader that matches the file format
-    #      (pickle / joblib / TensorFlow / PyTorch / HuggingFace / ONNX).
-    #   5. Leave everything else in this method unchanged.
-    # ───────────────────────────────────────────────────────────────────
-    @classmethod
-    def load_model(cls):
-        """Load the trained model once when the server starts."""
-
-        # ⚙️ INTEGRATION POINT 1a – update this filename
-        model_filename = 'scam_detector.pkl'
-        # ── other examples ──────────────────────────────────────────
-        # model_filename = 'scam_detector.joblib'
-        # model_filename = 'scam_detector.h5'
-        # model_filename = 'scam_detector.pt'
-        # model_filename = 'scam_detector.onnx'
-
-        model_path = os.path.join(settings.BASE_DIR, 'ml_models', model_filename)
-
-        if not os.path.exists(model_path):
-            logger.warning(
-                '⚠️  ML model not found at: %s\n'
-                '    Detection will return "unanalyzed" until the model is deployed.\n'
-                '    Place the model file at the path above to enable detection.',
-                model_path,
-            )
-            cls._model_loaded = False
-            return
-
-        try:
-            # ⚙️ INTEGRATION POINT 1b – uncomment the loader for your format
-            # Only ONE loader should be active at a time.
-
-            # ── Option A: Pickle (.pkl) ──────────────────────────────
-            import pickle
-            with open(model_path, 'rb') as f:
-                raw = pickle.load(f)
-
-            # ── Option B: Joblib (.joblib) ───────────────────────────
-            # import joblib
-            # raw = joblib.load(model_path)
-
-            # ── Option C: TensorFlow / Keras (.h5 or SavedModel dir) ─
-            # import tensorflow as tf
-            # raw = tf.keras.models.load_model(model_path)
-
-            # ── Option D: PyTorch (.pt) ──────────────────────────────
-            # import torch
-            # raw = torch.load(model_path, map_location='cpu')
-
-            # ── Option E: HuggingFace pipeline ───────────────────────
-            # from transformers import pipeline
-            # raw = pipeline('text-classification', model=model_path)
-
-            # ── Option F: ONNX Runtime (.onnx) ───────────────────────
-            # import onnxruntime as ort
-            # raw = ort.InferenceSession(model_path)
-
-            # ───────────────────────────────────────────────────────────
-            # ⚙️ INTEGRATION POINT 2 – MODEL FILE STRUCTURE
-            # ───────────────────────────────────────────────────────────
-            # Tell us how your file is structured.
-            #
-            # Structure A – file contains ONLY the model object:
-            #   cls._model         = raw
-            #   cls._model_version = 'unknown'
-            #   cls._model_meta    = {}
-            #
-            # Structure B – file contains a dict with model + metadata:
-            #   {
-            #     'model':               <trained model object>,
-            #     'version':             '1.0.0',
-            #     'trained_at':          '2024-02-15',
-            #     'accuracy':            0.94,
-            #     'supported_languages': ['en', 'sw', 'sheng'],
-            #   }
-            # ───────────────────────────────────────────────────────────
-            if isinstance(raw, dict) and 'model' in raw:
-                # Structure B
-                cls._model         = raw['model']
-                cls._model_version = raw.get('version', 'unknown')
-                cls._model_meta    = {
-                    'trained_at':          raw.get('trained_at', 'unknown'),
-                    'accuracy':            raw.get('accuracy', 'unknown'),
-                    'supported_languages': raw.get('supported_languages', ['en']),
-                }
-            else:
-                # Structure A
-                cls._model         = raw
-                cls._model_version = 'unknown'
-                cls._model_meta    = {}
-
-            cls._model_loaded = True
-            logger.info('✅ ML model loaded. Version: %s', cls._model_version)
-
-        except Exception as exc:
-            logger.error(
-                '❌ ML model loading failed: %s\n'
-                '   Detection will be unavailable until this is fixed.',
-                exc,
-            )
-            cls._model_loaded = False
-
-    # ───────────────────────────────────────────────────────────────────
-    # ⚙️ INTEGRATION POINT 3 – INPUT FORMAT
-    # ───────────────────────────────────────────────────────────────────
-    # Converts our standard data into whatever structure
-    # your model's predict() method expects.
-    #
-    # Common formats:
-    #
-    #   Format A – raw string:
-    #       return full_transcript
-    #
-    #   Format B – dict with text only:
-    #       return {'text': full_transcript}
-    #
-    #   Format C – dict with text + metadata (current default):
-    #       return {
-    #           'text':             full_transcript,
-    #           'duration_seconds': metadata.get('duration_seconds', 0),
-    #           'language':         metadata.get('language', 'en'),
-    #       }
-    #
-    #   Format D – pre-tokenised tensors:
-    #       tokens = your_tokenizer(full_transcript, return_tensors='pt')
-    #       return tokens
-    # ───────────────────────────────────────────────────────────────────
-    @classmethod
-    def _prepare_input(cls, full_transcript, metadata):
-        """
-        Build the input structure that model.predict() expects.
-
-        ⚙️ INTEGRATION POINT 3 – replace the return value below
-        with the format your model requires.
-        """
-        # ── Default (Format C) – update when model is provided ──────
-        return {
-            'text': full_transcript,
-            'metadata': {
-                'duration_seconds': metadata.get('duration_seconds', 0),
-                'chunk_count':      metadata.get('chunk_count', 0),
-                'language':         metadata.get('language', 'en'),
-            },
-        }
-
-    # ───────────────────────────────────────────────────────────────────
-    # ⚙️ INTEGRATION POINT 4 – OUTPUT FORMAT
-    # ───────────────────────────────────────────────────────────────────
-    # Converts your model's raw output into the standard dict
-    # that the rest of CallShield uses.
-    #
-    # Common output formats:
-    #
-    #   Format A – label + confidence dict:
-    #       {
-    #           'label':      'SCAM',            # or 'SAFE'
-    #           'confidence': 0.95,
-    #           'scam_type':  'kra_impersonation',
-    #           'patterns':   ['urgency', 'impersonation'],
-    #       }
-    #
-    #   Format B – probability pair [safe_prob, scam_prob]:
-    #       [0.05, 0.95]
-    #
-    #   Format C – detailed dict:
-    #       {
-    #           'is_scam':          True,
-    #           'scam_probability': 0.95,
-    #           'safe_probability': 0.05,
-    #           'scam_type':        'mpesa_fraud',
-    #           'detected_tactics': ['urgency', 'pin_request'],
-    #           'confidence':       0.95,
-    #       }
-    #
-    #   Format D – HuggingFace pipeline list:
-    #       [{'label': 'SCAM', 'score': 0.95}]
-    # ───────────────────────────────────────────────────────────────────
-    @classmethod
-    def _parse_prediction(cls, raw):
-        """
-        Parse the model's raw output into CallShield's standard dict.
-
-        ⚙️ INTEGRATION POINT 4 – add or replace a branch below to
-        match your model's output format.
-        """
-
-        # ── Format A / C: dict output ───────────────────────────────
-        if isinstance(raw, dict):
-            is_scam = (
-                raw.get('label') == 'SCAM'
-                or raw.get('is_scam', False)
-            )
-            confidence = float(
-                raw.get('confidence')
-                or raw.get('scam_probability', 0.0)
-            )
-            scam_type = raw.get('scam_type') or raw.get('type')
-            patterns  = (
-                raw.get('patterns')
-                or raw.get('detected_tactics')
-                or []
-            )
-
-        # ── Format D: HuggingFace pipeline list ─────────────────────
-        elif (isinstance(raw, (list, tuple))
-              and len(raw) > 0
-              and isinstance(raw[0], dict)):
-            top        = raw[0]
-            is_scam    = top.get('label') == 'SCAM'
-            confidence = float(top.get('score', 0.0))
-            scam_type  = None
-            patterns   = []
-
-        # ── Format B: [safe_prob, scam_prob] ────────────────────────
-        elif isinstance(raw, (list, tuple)) and len(raw) == 2:
-            safe_prob, scam_prob = float(raw[0]), float(raw[1])
-            is_scam    = scam_prob > 0.5
-            confidence = scam_prob if is_scam else safe_prob
-            scam_type  = None
-            patterns   = []
-
-        else:
-            logger.warning('Unrecognised model output type: %s', type(raw))
-            return cls._error_response('Unrecognised model output format.')
-
-        # ── Derive risk score ────────────────────────────────────────
-        # Scam  → risk proportional to confidence  (20–100)
-        # Safe  → low risk capped at 15
-        risk_score = int(confidence * 100) if is_scam else int((1.0 - confidence) * 15)
-        risk_level = cls._risk_level(risk_score)
-
-        # Alert when model is ≥ 70 % confident it is a scam
-        should_alert  = is_scam and confidence >= 0.70
-        alert_message = (
-            cls._build_alert_message(confidence, scam_type, patterns)
-            if should_alert else None
-        )
-
-        return {
-            'analyzed':         True,
-            'is_scam':          is_scam,
-            'confidence':       confidence,
-            'risk_score':       risk_score,
-            'risk_level':       risk_level,
-            'scam_type':        scam_type,
-            'patterns_detected':patterns,
-            'should_alert':     should_alert,
-            'alert_message':    alert_message,
-            'model_version':    cls._model_version,
-            'error':            None,
-        }
-
-    # ───────────────────────────────────────────────────────────────────
-    # PUBLIC API  (do not change)
-    # ───────────────────────────────────────────────────────────────────
+    _model: Optional[RealAIModel] = None
 
     @classmethod
-    def is_ready(cls):
-        """True if the model is loaded and ready to run inference."""
-        return cls._model_loaded and cls._model is not None
+    def _get(cls) -> RealAIModel:
+        if cls._model is None:
+            cls._model = RealAIModel()
+        return cls._model
 
     @classmethod
-    def get_model_info(cls):
-        """Return current model status for health-check endpoint."""
-        return {
-            'loaded':   cls._model_loaded,
-            'version':  cls._model_version,
-            'ready':    cls.is_ready(),
-            'metadata': cls._model_meta,
-        }
+    def transcribe_and_detect(
+        cls,
+        audio_bytes: bytes,
+        chunk_number: int,
+        session_id: str = "",
+        caller_number: str = "",
+    ) -> Dict:
+        return cls._get().transcribe_and_detect(audio_bytes, chunk_number, session_id, caller_number)
 
     @classmethod
-    def analyze(cls, full_transcript, metadata=None):
-        """
-        Run the ML model on the full conversation transcript so far.
+    def get_model_info(cls) -> Dict:
+        """Called by AdminAnalyticsService → populate admin dashboard."""
+        model = cls._get()
+        info = model.get_model_info()
+        info["ready"] = model.is_ready()
+        return info
 
-        Args:
-            full_transcript (str): The complete conversation text.
-            metadata (dict | None): Optional session context:
-                {
-                    'duration_seconds': int,
-                    'chunk_count':      int,
-                    'language':         str,   # 'en' / 'sw' / 'mixed'
-                }
-
-        Returns:
-            dict with keys:
-                analyzed         bool    – False when model not ready
-                is_scam          bool|None
-                confidence       float   – 0.0–1.0
-                risk_score       int     – 0–100
-                risk_level       str     – SAFE / LOW / MEDIUM / HIGH
-                scam_type        str|None
-                patterns_detected list
-                should_alert     bool
-                alert_message    str|None
-                model_version    str|None
-                error            str|None
-        """
-        if not cls.is_ready():
-            return cls._not_ready_response()
-
-        if not full_transcript or not full_transcript.strip():
-            return cls._empty_response()
-
-        try:
-            model_input = cls._prepare_input(full_transcript, metadata or {})
-            raw         = cls._model.predict(model_input)
-            result      = cls._parse_prediction(raw)
-            logger.info(
-                'ML analysis complete: is_scam=%s confidence=%.2f risk=%d',
-                result['is_scam'], result['confidence'], result['risk_score'],
-            )
-            return result
-
-        except Exception as exc:
-            logger.error('ML inference error: %s', exc, exc_info=True)
-            return cls._error_response(str(exc))
-
-    # ───────────────────────────────────────────────────────────────────
-    # PRIVATE HELPERS  (do not change)
-    # ───────────────────────────────────────────────────────────────────
-
+    # Legacy method expected by analytics/services.py AdminAnalyticsService
     @classmethod
-    def _risk_level(cls, score):
-        if score >= 70: return 'HIGH'
-        if score >= 40: return 'MEDIUM'
-        if score >= 20: return 'LOW'
-        return 'SAFE'
+    def is_ready(cls) -> bool:
+        return cls._get().is_ready()
 
-    @classmethod
-    def _build_alert_message(cls, confidence, scam_type, patterns):
-        """Build the overlay message shown on the user's phone."""
-        certainty = (
-            'Very likely' if confidence >= 0.90
-            else 'Likely'   if confidence >= 0.75
-            else 'Possibly'
-        )
 
-        # ⚙️ INTEGRATION POINT – update keys to match your model's
-        #    scam_type strings if they differ from those below.
-        labels = {
-            'kra_impersonation':  'KRA / Government Impersonation',
-            'mpesa_fraud':        'M-Pesa Fraud',
-            'bank_impersonation': 'Bank Impersonation',
-            'lottery_prize':      'Lottery / Prize Scam',
-            'emergency_scam':     'Emergency / Family Scam',
-            'investment_scam':    'Investment Fraud',
-            'loan_scam':          'Loan Scam',
-            'romance_scam':       'Romance Scam',
-            'other':              'Phone Scam',
-        }
-        label   = labels.get(scam_type, 'Suspicious Activity')
-        message = f'⚠️ {certainty} a {label}!'
-        if patterns:
-            message += f'\nDetected: {", ".join(patterns[:2])}'
-        message += f'\nConfidence: {int(confidence * 100)}%'
-        return message
-
-    @classmethod
-    def _not_ready_response(cls):
-        return {
-            'analyzed': False, 'is_scam': None, 'confidence': 0.0,
-            'risk_score': 0, 'risk_level': 'UNKNOWN', 'scam_type': None,
-            'patterns_detected': [], 'should_alert': False,
-            'alert_message': None, 'model_version': None,
-            'error': 'ML model not loaded. Detection unavailable.',
-        }
-
-    @classmethod
-    def _empty_response(cls):
-        return {
-            'analyzed': False, 'is_scam': None, 'confidence': 0.0,
-            'risk_score': 0, 'risk_level': 'UNKNOWN', 'scam_type': None,
-            'patterns_detected': [], 'should_alert': False,
-            'alert_message': None, 'model_version': cls._model_version,
-            'error': 'Empty transcript – nothing to analyze.',
-        }
-
-    @classmethod
-    def _error_response(cls, msg):
-        return {
-            'analyzed': False, 'is_scam': None, 'confidence': 0.0,
-            'risk_score': 0, 'risk_level': 'UNKNOWN', 'scam_type': None,
-            'patterns_detected': [], 'should_alert': False,
-            'alert_message': None, 'model_version': cls._model_version,
-            'error': msg,
-        }
-
+# ──────────────────────────────────────────────────────────────────────
+# RiskCalculator (kept for any code that calls calculate_risk directly)
+# ──────────────────────────────────────────────────────────────────────
 
 class RiskCalculator:
     """
-    Thin wrapper that calls MLModelInterface and returns
-    a clean risk dict to services.py and views.py.
-    No logic lives here – everything is in MLModelInterface.
+    Text-only fallback risk calculator.
+
+    AudioProcessingService uses the full audio pipeline (transcribe_and_detect).
+    This class is retained for any analytics or testing code that works with
+    already-transcribed text.
     """
 
     @classmethod
-    def calculate_risk(cls, transcript, full_transcript=None, metadata=None):
-        """
-        Calculate the current risk score for the conversation.
+    def calculate_risk(cls, transcript: str, full_transcript: str = "", metadata: dict = None) -> Dict:
+        """Analyse a text transcript and return a risk dict."""
+        text = (full_transcript or transcript or "").lower()
+        if not text.strip():
+            return cls._empty()
 
-        Args:
-            transcript      (str): Most recent chunk text.
-            full_transcript (str): Entire conversation so far (preferred).
-            metadata       (dict): Optional session context.
+        scam_keyword_map = {
+            "kra_impersonation": ["kra", "tax", "kenya revenue", "tax compliance", "revenue authority"],
+            "mpesa_fraud": ["mpesa", "send money", "paybill", "till number", "lipa na"],
+            "bank_impersonation": ["bank account", "atm", "pin", "account suspended", "blocked card"],
+            "lottery_prize": ["winner", "prize", "lottery", "congratulations", "claim reward"],
+            "emergency_scam": ["accident", "hospital", "emergency", "police custody", "bail"],
+            "loan_scam": ["instant loan", "collateral", "processing fee", "loan approved"],
+        }
 
-        Returns:
-            dict: Standardised risk result used by the rest of the system.
-        """
-        result = MLModelInterface.analyze(
-            full_transcript=full_transcript or transcript,
-            metadata=metadata or {},
+        pattern_map = {
+            "urgency_language": ["urgent", "immediately", "right now", "asap", "deadline"],
+            "authority_impersonation": ["officer", "official", "government", "kra", "police", "detective"],
+            "threatens_legal_action": ["arrest", "warrant", "court", "prosecute", "legal action"],
+            "requests_money": ["send money", "pay", "transfer", "deposit", "top up"],
+            "requests_otp": ["otp", "pin", "code", "verify", "confirmation code"],
+        }
+
+        detected_type = None
+        keyword_hits = 0
+        for stype, keywords in scam_keyword_map.items():
+            hits = sum(1 for k in keywords if k in text)
+            if hits > keyword_hits:
+                keyword_hits = hits
+                detected_type = stype
+
+        detected_patterns = [
+            p for p, words in pattern_map.items() if any(w in text for w in words)
+        ]
+
+        risk_score = min(keyword_hits * 15 + len(detected_patterns) * 8, 95)
+        confidence = round(min(0.3 + risk_score / 150, 0.90), 2)
+        should_alert = risk_score >= 60
+
+        risk_level = (
+            "CRITICAL" if risk_score >= 80
+            else "HIGH" if risk_score >= 70
+            else "MODERATE" if risk_score >= 50
+            else "LOW" if risk_score >= 30
+            else "SAFE"
         )
 
         return {
-            # Core decision
-            'risk_score':       result['risk_score'],
-            'risk_level':       result['risk_level'],
-            'should_alert':     result['should_alert'],
-            # Detection detail
-            'is_scam':          result['is_scam'],
-            'confidence':       result['confidence'],
-            'scam_type':        result['scam_type'],
-            'patterns_detected':result['patterns_detected'],
-            # Alert
-            'alert_message':    result['alert_message'],
-            # Model meta
-            'ml_model_used':    result['analyzed'],
-            'ml_confidence':    result['confidence'],
-            'model_version':    result['model_version'],
-            # Status
-            'analyzed':         result['analyzed'],
-            'error':            result['error'],
+            "risk_score": risk_score,
+            "risk_level": risk_level,
+            "should_alert": should_alert,
+            "is_scam": risk_score >= 60,
+            "confidence": confidence,
+            "scam_type": detected_type,
+            "patterns_detected": detected_patterns,
+            "alert_message": None,
+            "ml_model_used": False,
+            "ml_confidence": confidence,
+            "model_version": "text_fallback",
+            "analyzed": True,
+            "error": None,
+        }
+
+    @staticmethod
+    def _empty() -> Dict:
+        return {
+            "risk_score": 0, "risk_level": "SAFE", "should_alert": False,
+            "is_scam": False, "confidence": 0.0, "scam_type": None,
+            "patterns_detected": [], "alert_message": None,
+            "ml_model_used": False, "ml_confidence": 0.0,
+            "model_version": None, "analyzed": False,
+            "error": "Empty transcript.",
         }

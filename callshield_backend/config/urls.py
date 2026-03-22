@@ -20,9 +20,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from backend_apps.real_time_detection.views import monitor_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('monitor/', monitor_view, name='monitor'),
     path('api/auth/', include('backend_apps.authentication.urls')),
     path('api/scam-db/', include('backend_apps.scam_database.urls')),
     path('api/detection/', include('backend_apps.real_time_detection.urls')),

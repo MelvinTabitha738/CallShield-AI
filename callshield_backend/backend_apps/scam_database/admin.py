@@ -1,6 +1,6 @@
 # backend_apps/scam_database/admin.py
 
-from django.contrib import admin
+from django.contrib import admin, messages
 from .models import (
     PhoneNumberActive,
     PhoneNumberArchived,
@@ -116,6 +116,25 @@ class ScamIncidentAdmin(admin.ModelAdmin):
     search_fields = ('phone_number_hash',)
     readonly_fields = ('phone_number_hash', 'reported_at', 'get_full_hash')
     ordering = ('-incident_datetime',)
+    actions = ['approve_incidents', 'reject_incidents']
+
+    def approve_incidents(self, request, queryset):
+        updated = queryset.update(verified=True)
+        self.message_user(
+            request,
+            f'{updated} incident(s) approved and marked as verified.',
+            messages.SUCCESS
+        )
+    approve_incidents.short_description = 'Approve selected incidents (mark as verified)'
+
+    def reject_incidents(self, request, queryset):
+        updated = queryset.update(verified=False)
+        self.message_user(
+            request,
+            f'{updated} incident(s) rejected (marked as unverified).',
+            messages.WARNING
+        )
+    reject_incidents.short_description = 'Reject selected incidents (mark as unverified)'
     
     fieldsets = (
         ('Phone Number (Hashed)', {
